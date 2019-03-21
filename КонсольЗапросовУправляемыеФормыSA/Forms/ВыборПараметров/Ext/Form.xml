@@ -12,123 +12,145 @@
 		</ChildItems>
 	</AutoCommandBar>
 	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
 	</Events>
 	<ChildItems>
-		<Table name="ДеревоНастроек" id="1">
-			<Representation>Tree</Representation>
-			<ChangeRowSet>false</ChangeRowSet>
-			<ChangeRowOrder>false</ChangeRowOrder>
-			<ChoiceMode>true</ChoiceMode>
-			<AutoInsertNewRow>true</AutoInsertNewRow>
-			<EnableStartDrag>true</EnableStartDrag>
-			<EnableDrag>true</EnableDrag>
-			<FileDragMode>AsFile</FileDragMode>
-			<DataPath>ДеревоНастроек</DataPath>
-			<ContextMenu name="ДеревоНастроекКонтекстноеМеню" id="2"/>
-			<AutoCommandBar name="ДеревоНастроекКоманднаяПанель" id="3">
-				<Autofill>false</Autofill>
-			</AutoCommandBar>
-			<ExtendedTooltip name="ДеревоНастроекРасширеннаяПодсказка" id="4"/>
-			<SearchStringAddition name="ДеревоНастроекСтрокаПоиска" id="5">
-				<AdditionSource>
-					<Item>ДеревоНастроек</Item>
-					<Type>SearchStringRepresentation</Type>
-				</AdditionSource>
-				<ContextMenu name="ДеревоНастроекСтрокаПоискаКонтекстноеМеню" id="6"/>
-				<ExtendedTooltip name="ДеревоНастроекСтрокаПоискаРасширеннаяПодсказка" id="7"/>
-			</SearchStringAddition>
-			<ViewStatusAddition name="ДеревоНастроекСостояниеПросмотра" id="8">
-				<AdditionSource>
-					<Item>ДеревоНастроек</Item>
-					<Type>ViewStatusRepresentation</Type>
-				</AdditionSource>
-				<ContextMenu name="ДеревоНастроекСостояниеПросмотраКонтекстноеМеню" id="9"/>
-				<ExtendedTooltip name="ДеревоНастроекСостояниеПросмотраРасширеннаяПодсказка" id="10"/>
-			</ViewStatusAddition>
-			<SearchControlAddition name="ДеревоНастроекУправлениеПоиском" id="11">
-				<AdditionSource>
-					<Item>ДеревоНастроек</Item>
-					<Type>SearchControl</Type>
-				</AdditionSource>
-				<ContextMenu name="ДеревоНастроекУправлениеПоискомКонтекстноеМеню" id="12"/>
-				<ExtendedTooltip name="ДеревоНастроекУправлениеПоискомРасширеннаяПодсказка" id="13"/>
-			</SearchControlAddition>
+		<UsualGroup name="ГруппаДеревоНастроек" id="44">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дерево настроек</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа дерево настроек</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаДеревоНастроекРасширеннаяПодсказка" id="45"/>
 			<ChildItems>
-				<InputField name="ДеревоНастроекИмяНастройки" id="14">
-					<DataPath>ДеревоНастроек.ИмяНастройки</DataPath>
-					<EditMode>EnterOnInput</EditMode>
-					<ContextMenu name="ДеревоНастроекИмяНастройкиКонтекстноеМеню" id="15"/>
-					<ExtendedTooltip name="ДеревоНастроекИмяНастройкиРасширеннаяПодсказка" id="16"/>
-				</InputField>
-				<InputField name="ДеревоНастроекТекстЗапроса" id="17">
-					<DataPath>ДеревоНастроек.ТекстЗапроса</DataPath>
-					<EditMode>EnterOnInput</EditMode>
-					<ContextMenu name="ДеревоНастроекТекстЗапросаКонтекстноеМеню" id="18"/>
-					<ExtendedTooltip name="ДеревоНастроекТекстЗапросаРасширеннаяПодсказка" id="19"/>
-				</InputField>
-				<InputField name="ДеревоНастроекПроизвольныйКод" id="20">
-					<DataPath>ДеревоНастроек.ПроизвольныйКод</DataPath>
-					<EditMode>EnterOnInput</EditMode>
-					<ContextMenu name="ДеревоНастроекПроизвольныйКодКонтекстноеМеню" id="21"/>
-					<ExtendedTooltip name="ДеревоНастроекПроизвольныйКодРасширеннаяПодсказка" id="22"/>
-				</InputField>
+				<Table name="ДеревоНастроек" id="1">
+					<Representation>Tree</Representation>
+					<ChangeRowSet>false</ChangeRowSet>
+					<ChangeRowOrder>false</ChangeRowOrder>
+					<ChoiceMode>true</ChoiceMode>
+					<AutoInsertNewRow>true</AutoInsertNewRow>
+					<EnableStartDrag>true</EnableStartDrag>
+					<EnableDrag>true</EnableDrag>
+					<FileDragMode>AsFile</FileDragMode>
+					<DataPath>ДеревоНастроек</DataPath>
+					<ContextMenu name="ДеревоНастроекКонтекстноеМеню" id="2"/>
+					<AutoCommandBar name="ДеревоНастроекКоманднаяПанель" id="3">
+						<Autofill>false</Autofill>
+					</AutoCommandBar>
+					<ExtendedTooltip name="ДеревоНастроекРасширеннаяПодсказка" id="4"/>
+					<SearchStringAddition name="ДеревоНастроекСтрокаПоиска" id="5">
+						<AdditionSource>
+							<Item>ДеревоНастроек</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ДеревоНастроекСтрокаПоискаКонтекстноеМеню" id="6"/>
+						<ExtendedTooltip name="ДеревоНастроекСтрокаПоискаРасширеннаяПодсказка" id="7"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="ДеревоНастроекСостояниеПросмотра" id="8">
+						<AdditionSource>
+							<Item>ДеревоНастроек</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ДеревоНастроекСостояниеПросмотраКонтекстноеМеню" id="9"/>
+						<ExtendedTooltip name="ДеревоНастроекСостояниеПросмотраРасширеннаяПодсказка" id="10"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="ДеревоНастроекУправлениеПоиском" id="11">
+						<AdditionSource>
+							<Item>ДеревоНастроек</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="ДеревоНастроекУправлениеПоискомКонтекстноеМеню" id="12"/>
+						<ExtendedTooltip name="ДеревоНастроекУправлениеПоискомРасширеннаяПодсказка" id="13"/>
+					</SearchControlAddition>
+					<Events>
+						<Event name="Selection">ДеревоНастроекВыбор</Event>
+					</Events>
+					<ChildItems>
+						<InputField name="ДеревоНастроекИмяНастройки" id="14">
+							<DataPath>ДеревоНастроек.ИмяНастройки</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ДеревоНастроекИмяНастройкиКонтекстноеМеню" id="15"/>
+							<ExtendedTooltip name="ДеревоНастроекИмяНастройкиРасширеннаяПодсказка" id="16"/>
+						</InputField>
+						<InputField name="ДеревоНастроекТекстЗапроса" id="17">
+							<DataPath>ДеревоНастроек.ТекстЗапроса</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ДеревоНастроекТекстЗапросаКонтекстноеМеню" id="18"/>
+							<ExtendedTooltip name="ДеревоНастроекТекстЗапросаРасширеннаяПодсказка" id="19"/>
+						</InputField>
+						<InputField name="ДеревоНастроекПроизвольныйКод" id="20">
+							<DataPath>ДеревоНастроек.ПроизвольныйКод</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ДеревоНастроекПроизвольныйКодКонтекстноеМеню" id="21"/>
+							<ExtendedTooltip name="ДеревоНастроекПроизвольныйКодРасширеннаяПодсказка" id="22"/>
+						</InputField>
+					</ChildItems>
+				</Table>
+				<Table name="ДеревоНастроекСписокПараметров" id="23">
+					<Representation>List</Representation>
+					<ChangeRowSet>false</ChangeRowSet>
+					<ChangeRowOrder>false</ChangeRowOrder>
+					<AutoInsertNewRow>true</AutoInsertNewRow>
+					<EnableStartDrag>true</EnableStartDrag>
+					<EnableDrag>true</EnableDrag>
+					<FileDragMode>AsFile</FileDragMode>
+					<DataPath>Items.ДеревоНастроек.CurrentData.СписокПараметров</DataPath>
+					<RowFilter xsi:nil="true"/>
+					<ContextMenu name="ДеревоНастроекСписокПараметровКонтекстноеМеню" id="24"/>
+					<AutoCommandBar name="ДеревоНастроекСписокПараметровКоманднаяПанель" id="25">
+						<Autofill>false</Autofill>
+					</AutoCommandBar>
+					<ExtendedTooltip name="ДеревоНастроекСписокПараметровРасширеннаяПодсказка" id="26"/>
+					<SearchStringAddition name="ДеревоНастроекСписокПараметровСтрокаПоиска" id="27">
+						<AdditionSource>
+							<Item>ДеревоНастроекСписокПараметров</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ДеревоНастроекСписокПараметровСтрокаПоискаКонтекстноеМеню" id="28"/>
+						<ExtendedTooltip name="ДеревоНастроекСписокПараметровСтрокаПоискаРасширеннаяПодсказка" id="29"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="ДеревоНастроекСписокПараметровСостояниеПросмотра" id="30">
+						<AdditionSource>
+							<Item>ДеревоНастроекСписокПараметров</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ДеревоНастроекСписокПараметровСостояниеПросмотраКонтекстноеМеню" id="31"/>
+						<ExtendedTooltip name="ДеревоНастроекСписокПараметровСостояниеПросмотраРасширеннаяПодсказка" id="32"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="ДеревоНастроекСписокПараметровУправлениеПоиском" id="33">
+						<AdditionSource>
+							<Item>ДеревоНастроекСписокПараметров</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="ДеревоНастроекСписокПараметровУправлениеПоискомКонтекстноеМеню" id="34"/>
+						<ExtendedTooltip name="ДеревоНастроекСписокПараметровУправлениеПоискомРасширеннаяПодсказка" id="35"/>
+					</SearchControlAddition>
+					<ChildItems>
+						<InputField name="ДеревоНастроекСписокПараметровИмяПараметра" id="36">
+							<DataPath>Items.ДеревоНастроек.CurrentData.СписокПараметров.Имя</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ДеревоНастроекСписокПараметровИмяПараметраКонтекстноеМеню" id="37"/>
+							<ExtendedTooltip name="ДеревоНастроекСписокПараметровИмяПараметраРасширеннаяПодсказка" id="38"/>
+						</InputField>
+						<InputField name="ДеревоНастроекСписокПараметровЗначение" id="39">
+							<DataPath>Items.ДеревоНастроек.CurrentData.СписокПараметров.Значение</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ДеревоНастроекСписокПараметровЗначениеКонтекстноеМеню" id="40"/>
+							<ExtendedTooltip name="ДеревоНастроекСписокПараметровЗначениеРасширеннаяПодсказка" id="41"/>
+						</InputField>
+					</ChildItems>
+				</Table>
 			</ChildItems>
-		</Table>
-		<Table name="ДеревоНастроекСписокПараметров" id="23">
-			<Representation>List</Representation>
-			<ChangeRowSet>false</ChangeRowSet>
-			<ChangeRowOrder>false</ChangeRowOrder>
-			<AutoInsertNewRow>true</AutoInsertNewRow>
-			<EnableStartDrag>true</EnableStartDrag>
-			<EnableDrag>true</EnableDrag>
-			<FileDragMode>AsFile</FileDragMode>
-			<DataPath>Items.ДеревоНастроек.CurrentData.СписокПараметров</DataPath>
-			<RowFilter xsi:nil="true"/>
-			<ContextMenu name="ДеревоНастроекСписокПараметровКонтекстноеМеню" id="24"/>
-			<AutoCommandBar name="ДеревоНастроекСписокПараметровКоманднаяПанель" id="25">
-				<Autofill>false</Autofill>
-			</AutoCommandBar>
-			<ExtendedTooltip name="ДеревоНастроекСписокПараметровРасширеннаяПодсказка" id="26"/>
-			<SearchStringAddition name="ДеревоНастроекСписокПараметровСтрокаПоиска" id="27">
-				<AdditionSource>
-					<Item>ДеревоНастроекСписокПараметров</Item>
-					<Type>SearchStringRepresentation</Type>
-				</AdditionSource>
-				<ContextMenu name="ДеревоНастроекСписокПараметровСтрокаПоискаКонтекстноеМеню" id="28"/>
-				<ExtendedTooltip name="ДеревоНастроекСписокПараметровСтрокаПоискаРасширеннаяПодсказка" id="29"/>
-			</SearchStringAddition>
-			<ViewStatusAddition name="ДеревоНастроекСписокПараметровСостояниеПросмотра" id="30">
-				<AdditionSource>
-					<Item>ДеревоНастроекСписокПараметров</Item>
-					<Type>ViewStatusRepresentation</Type>
-				</AdditionSource>
-				<ContextMenu name="ДеревоНастроекСписокПараметровСостояниеПросмотраКонтекстноеМеню" id="31"/>
-				<ExtendedTooltip name="ДеревоНастроекСписокПараметровСостояниеПросмотраРасширеннаяПодсказка" id="32"/>
-			</ViewStatusAddition>
-			<SearchControlAddition name="ДеревоНастроекСписокПараметровУправлениеПоиском" id="33">
-				<AdditionSource>
-					<Item>ДеревоНастроекСписокПараметров</Item>
-					<Type>SearchControl</Type>
-				</AdditionSource>
-				<ContextMenu name="ДеревоНастроекСписокПараметровУправлениеПоискомКонтекстноеМеню" id="34"/>
-				<ExtendedTooltip name="ДеревоНастроекСписокПараметровУправлениеПоискомРасширеннаяПодсказка" id="35"/>
-			</SearchControlAddition>
-			<ChildItems>
-				<InputField name="ДеревоНастроекСписокПараметровИмяПараметра" id="36">
-					<DataPath>Items.ДеревоНастроек.CurrentData.СписокПараметров.Имя</DataPath>
-					<EditMode>EnterOnInput</EditMode>
-					<ContextMenu name="ДеревоНастроекСписокПараметровИмяПараметраКонтекстноеМеню" id="37"/>
-					<ExtendedTooltip name="ДеревоНастроекСписокПараметровИмяПараметраРасширеннаяПодсказка" id="38"/>
-				</InputField>
-				<InputField name="ДеревоНастроекСписокПараметровЗначение" id="39">
-					<DataPath>Items.ДеревоНастроек.CurrentData.СписокПараметров.Значение</DataPath>
-					<EditMode>EnterOnInput</EditMode>
-					<ContextMenu name="ДеревоНастроекСписокПараметровЗначениеКонтекстноеМеню" id="40"/>
-					<ExtendedTooltip name="ДеревоНастроекСписокПараметровЗначениеРасширеннаяПодсказка" id="41"/>
-				</InputField>
-			</ChildItems>
-		</Table>
+		</UsualGroup>
 	</ChildItems>
 	<Attributes>
 		<Attribute name="Объект" id="1">
