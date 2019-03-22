@@ -26,11 +26,11 @@
 		<ChildObjects>
 			<Attribute uuid="9b266622-bb8c-4e10-ace2-7b92ebd8d131">
 				<Properties>
-					<Name>КонтекстЗадания</Name>
+					<Name>ТекущееЗадание</Name>
 					<Synonym>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Контекст задания</v8:content>
+							<v8:content>Текущее задание</v8:content>
 						</v8:item>
 					</Synonym>
 					<Comment/>
@@ -305,7 +305,7 @@
 							<Synonym>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>Время выполнения</v8:content>
+									<v8:content>t выполнения, мсек</v8:content>
 								</v8:item>
 							</Synonym>
 							<Comment/>
@@ -346,7 +346,7 @@
 							<Synonym>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>Время общее</v8:content>
+									<v8:content>t общее, сек.</v8:content>
 								</v8:item>
 							</Synonym>
 							<Comment/>

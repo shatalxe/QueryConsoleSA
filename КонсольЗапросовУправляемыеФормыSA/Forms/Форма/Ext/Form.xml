@@ -745,7 +745,7 @@
 								</v8:item>
 							</ToolTip>
 							<Picture>
-								<xr:Ref>StdPicture.AddToFavorites</xr:Ref>
+								<xr:Ref>StdPicture.ListViewMode</xr:Ref>
 								<xr:LoadTransparent>true</xr:LoadTransparent>
 							</Picture>
 							<ShowTitle>false</ShowTitle>
@@ -794,7 +794,7 @@
 								</v8:item>
 							</ToolTip>
 							<Picture>
-								<xr:Ref>StdPicture.QueryWizardTempTable</xr:Ref>
+								<xr:Ref>StdPicture.ListViewModeList</xr:Ref>
 								<xr:LoadTransparent>true</xr:LoadTransparent>
 							</Picture>
 							<ShowTitle>false</ShowTitle>
@@ -825,6 +825,54 @@
 									</ToolTip>
 									<ShowTitle>false</ShowTitle>
 									<ExtendedTooltip name="ГруппаТаблицыЗначенийРасширеннаяПодсказка" id="317"/>
+								</UsualGroup>
+							</ChildItems>
+						</Page>
+						<Page name="СтраницаДеревоЗначений" id="354">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Дерево значений</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Таблица значений</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Picture>
+								<xr:Ref>StdPicture.ListViewModeTree</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</Picture>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="СтраницаДеревоЗначенийРасширеннаяПодсказка" id="355"/>
+							<ChildItems>
+								<LabelDecoration name="ДекорацияНетДанныхСтраницаДеревоЗначений" id="356">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Нет данных</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ДекорацияНетДанныхСтраницаДеревоЗначенийКонтекстноеМеню" id="357"/>
+									<ExtendedTooltip name="ДекорацияНетДанныхСтраницаДеревоЗначенийРасширеннаяПодсказка" id="358"/>
+								</LabelDecoration>
+								<UsualGroup name="ГруппаДереваЗначений" id="359">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Дерево значений</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа таблицы значений</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаДереваЗначенийРасширеннаяПодсказка" id="360"/>
 								</UsualGroup>
 							</ChildItems>
 						</Page>
@@ -933,6 +981,9 @@
 												<ContextMenu name="РезультатыУправлениеПоискомКонтекстноеМеню" id="249"/>
 												<ExtendedTooltip name="РезультатыУправлениеПоискомРасширеннаяПодсказка" id="250"/>
 											</SearchControlAddition>
+											<Events>
+												<Event name="1282f000-23b6-4887-87f4-9e8e79db3d32">РезультатыВыбор</Event>
+											</Events>
 											<ChildItems>
 												<LabelField name="РезультатыНомерСтроки" id="251">
 													<DataPath>Объект.Результаты.LineNumber</DataPath>
@@ -945,36 +996,37 @@
 												<InputField name="РезультатыСтрокаВыполнения" id="254">
 													<DataPath>Объект.Результаты.СтрокаВыполнения</DataPath>
 													<EditMode>EnterOnInput</EditMode>
+													<CellHyperlink>true</CellHyperlink>
 													<ContextMenu name="РезультатыСтрокаВыполненияКонтекстноеМеню" id="255"/>
 													<ExtendedTooltip name="РезультатыСтрокаВыполненияРасширеннаяПодсказка" id="256"/>
 												</InputField>
 												<InputField name="РезультатыВремяВыполнения" id="266">
 													<DataPath>Объект.Результаты.ВремяВыполнения</DataPath>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Время, затраченное платформой на выполнение кода или запроса</v8:content>
+														</v8:item>
+													</ToolTip>
+													<ToolTipRepresentation>Balloon</ToolTipRepresentation>
+													<HorizontalAlign>Right</HorizontalAlign>
 													<EditMode>EnterOnInput</EditMode>
+													<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
 													<ContextMenu name="РезультатыВремяВыполненияКонтекстноеМеню" id="267"/>
 													<ExtendedTooltip name="РезультатыВремяВыполненияРасширеннаяПодсказка" id="268"/>
 												</InputField>
-												<InputField name="РезультатыВремяНачала" id="257">
-													<DataPath>Объект.Результаты.ВремяНачала</DataPath>
-													<EditMode>EnterOnInput</EditMode>
-													<ContextMenu name="РезультатыВремяНачалаКонтекстноеМеню" id="258"/>
-													<ExtendedTooltip name="РезультатыВремяНачалаРасширеннаяПодсказка" id="259"/>
-												</InputField>
-												<InputField name="РезультатыВремяНачалаЧисло" id="260">
-													<DataPath>Объект.Результаты.ВремяНачалаЧисло</DataPath>
-													<EditMode>EnterOnInput</EditMode>
-													<ContextMenu name="РезультатыВремяНачалаЧислоКонтекстноеМеню" id="261"/>
-													<ExtendedTooltip name="РезультатыВремяНачалаЧислоРасширеннаяПодсказка" id="262"/>
-												</InputField>
-												<InputField name="РезультатыВремяОкончания" id="263">
-													<DataPath>Объект.Результаты.ВремяОкончания</DataPath>
-													<EditMode>EnterOnInput</EditMode>
-													<ContextMenu name="РезультатыВремяОкончанияКонтекстноеМеню" id="264"/>
-													<ExtendedTooltip name="РезультатыВремяОкончанияРасширеннаяПодсказка" id="265"/>
-												</InputField>
 												<InputField name="РезультатыВремяОбщее" id="274">
 													<DataPath>Объект.Результаты.ВремяОбщее</DataPath>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Время, затраченное на инициализацию, выполнение и вывод</v8:content>
+														</v8:item>
+													</ToolTip>
+													<ToolTipRepresentation>Balloon</ToolTipRepresentation>
+													<HorizontalAlign>Right</HorizontalAlign>
 													<EditMode>EnterOnInput</EditMode>
+													<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
 													<ContextMenu name="РезультатыВремяОбщееКонтекстноеМеню" id="275"/>
 													<ExtendedTooltip name="РезультатыВремяОбщееРасширеннаяПодсказка" id="276"/>
 												</InputField>
@@ -982,6 +1034,7 @@
 										</Table>
 										<ChartField name="ДиаграммаЗамеров" id="269">
 											<DataPath>ДиаграммаЗамеров</DataPath>
+											<TitleLocation>None</TitleLocation>
 											<ContextMenu name="ДиаграммаЗамеровКонтекстноеМеню" id="270"/>
 											<ExtendedTooltip name="ДиаграммаЗамеровРасширеннаяПодсказка" id="271"/>
 										</ChartField>
@@ -1534,6 +1587,17 @@
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Результат загружен</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ДеревоЗначенийЗагружено" id="24">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дерево значений загружено</v8:content>
 				</v8:item>
 			</Title>
 			<Type>
