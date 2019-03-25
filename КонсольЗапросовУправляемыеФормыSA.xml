@@ -390,8 +390,8 @@
 			<Form>ВыборПараметров</Form>
 			<Form>РасшифровкаЯчеек</Form>
 			<Form>ВычислениеВыражения</Form>
+			<Form>ОбщиеМодулиКлиент</Form>
 			<Template>ОформлениеРезультата</Template>
-			<Template>СписокЗадач</Template>
 			<Template>ПредопределенныеНастройки</Template>
 			<Template>СкриптРаскрашивания</Template>
 		</ChildObjects>

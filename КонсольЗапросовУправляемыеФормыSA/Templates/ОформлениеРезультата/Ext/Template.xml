@@ -29,21 +29,43 @@
 		</row>
 	</rowsItem>
 	<rowsItem>
+		<index>1</index>
+		<row>
+			<c>
+				<c>
+					<f>2</f>
+					<parameter>Значение</parameter>
+					<detailParameter>Расшифровка</detailParameter>
+				</c>
+			</c>
+		</row>
+	</rowsItem>
+	<rowsItem>
 		<index>15</index>
 		<row>
 			<empty>true</empty>
 		</row>
 	</rowsItem>
 	<templateMode>true</templateMode>
-	<defaultFormatIndex>2</defaultFormatIndex>
-	<height>1</height>
-	<vgRows>1</vgRows>
+	<defaultFormatIndex>3</defaultFormatIndex>
+	<height>2</height>
+	<vgRows>2</vgRows>
 	<namedItem xsi:type="NamedItemCells">
 		<name>ЯчейкаЗаголовка</name>
 		<area>
 			<type>Rectangle</type>
 			<beginRow>0</beginRow>
 			<endRow>0</endRow>
+			<beginColumn>0</beginColumn>
+			<endColumn>0</endColumn>
+		</area>
+	</namedItem>
+	<namedItem xsi:type="NamedItemCells">
+		<name>ЯчейкаЗначения</name>
+		<area>
+			<type>Rectangle</type>
+			<beginRow>1</beginRow>
+			<endRow>1</endRow>
 			<beginColumn>0</beginColumn>
 			<endColumn>0</endColumn>
 		</area>
@@ -59,6 +81,9 @@
 		<backColor>style:ReportHeaderBackColor</backColor>
 		<fillType>Parameter</fillType>
 		<protection>true</protection>
+	</format>
+	<format>
+		<fillType>Parameter</fillType>
 	</format>
 	<format>
 		<width>72</width>
