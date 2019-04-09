@@ -394,6 +394,7 @@
 			<Template>ОформлениеРезультата</Template>
 			<Template>ПредопределенныеНастройки</Template>
 			<Template>СкриптРаскрашивания</Template>
+			<Template>СкриптРаскрашивания1</Template>
 		</ChildObjects>
 	</ExternalDataProcessor>
 </MetaDataObject>

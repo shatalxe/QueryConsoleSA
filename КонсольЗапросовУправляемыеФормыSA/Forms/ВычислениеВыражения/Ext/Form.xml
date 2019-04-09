@@ -50,6 +50,11 @@
 					<ContextMenu name="НаКлиентеКонтекстноеМеню" id="34"/>
 					<ExtendedTooltip name="НаКлиентеРасширеннаяПодсказка" id="35"/>
 				</CheckBoxField>
+				<Button name="ВыполнитьВыражение" id="36">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.ВыполнитьВыражение</CommandName>
+					<ExtendedTooltip name="ВыполнитьВыражениеРасширеннаяПодсказка" id="37"/>
+				</Button>
 			</ChildItems>
 		</UsualGroup>
 		<Table name="Результат" id="4">
@@ -258,6 +263,26 @@
 			</Picture>
 			<Action>ПоказатьЗначениеВОтдельномОкне</Action>
 			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="ВыполнитьВыражение" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполнить выражение</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполнить выражение</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.GenerateReport</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ВыполнитьВыражение</Action>
+			<Representation>Picture</Representation>
 		</Command>
 	</Commands>
 </Form>
