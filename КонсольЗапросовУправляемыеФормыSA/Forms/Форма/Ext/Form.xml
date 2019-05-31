@@ -86,17 +86,17 @@
 								<CommandName>Form.Command.ОткрытьНастройки</CommandName>
 								<ExtendedTooltip name="ДеревоНастроекОткрытьНастройкиРасширеннаяПодсказка" id="139"/>
 							</Button>
-							<Button name="ДеревоНастроекВниз" id="207">
-								<Type>CommandBarButton</Type>
-								<OnlyInAllActions>true</OnlyInAllActions>
-								<CommandName>Form.Item.ДеревоНастроек.StandardCommand.MoveDown</CommandName>
-								<ExtendedTooltip name="ДеревоНастроекВнизРасширеннаяПодсказка" id="208"/>
-							</Button>
 							<Button name="ДеревоНастроекВверх" id="205">
 								<Type>CommandBarButton</Type>
 								<OnlyInAllActions>true</OnlyInAllActions>
 								<CommandName>Form.Item.ДеревоНастроек.StandardCommand.MoveUp</CommandName>
 								<ExtendedTooltip name="ДеревоНастроекВверхРасширеннаяПодсказка" id="206"/>
+							</Button>
+							<Button name="ДеревоНастроекВниз" id="207">
+								<Type>CommandBarButton</Type>
+								<OnlyInAllActions>true</OnlyInAllActions>
+								<CommandName>Form.Item.ДеревоНастроек.StandardCommand.MoveDown</CommandName>
+								<ExtendedTooltip name="ДеревоНастроекВнизРасширеннаяПодсказка" id="208"/>
 							</Button>
 							<Button name="ДеревоНастроекРазбитьЗапросПоЧастям" id="337">
 								<Type>CommandBarButton</Type>
