@@ -271,6 +271,7 @@
 				</v8:item>
 			</ToolTip>
 			<Action>Выбрать</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 	</Commands>
 </Form>

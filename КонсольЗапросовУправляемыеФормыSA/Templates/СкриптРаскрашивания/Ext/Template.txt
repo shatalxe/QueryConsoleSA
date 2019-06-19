@@ -84,7 +84,7 @@ function textToHtml1CScript(text)
   var result =  
     ('<p>&shy;'+
     text.
-	  replace(/;/g, '&semicolon_char;').
+      replace(/;/g, '&semicolon_char;').
       replace(/&/g, '&amp;').
       replace(/&amp;semicolon_char;/g, '&semicolon_char;').
       replace(/</g, '&lt;').
@@ -95,9 +95,6 @@ function textToHtml1CScript(text)
       replace(/\r/g, '').
       replace(/\t/g, '&emsp;').
       replace(/<spanclass=/g, '<span class=').
-       
-      //replace(/[0-9]+\)/g, '<span class="numberline">$0</span>').
-	
       replace(/(\/\/.*?)(<\/p><p[^>]*>|$)/g, '<span class="comment">$1</span>$2').
       replace(/(&amp;[^\s\(\)\[\]<>&]*)/g, '<span class="attribute">$1</span>').
       replace(/(#.*?)(<\/p><p[^>]*>)/g, '<span class="macro">$1</span>$2').
@@ -122,7 +119,6 @@ function textToHtml1CScript(text)
     '</p>').replace(/<p><\/p>/ig, '<p class="empty">&shy;</p>');
     
     result = result.replace(/<\/p>/g, '&#x000D;&#x000A;').replace(/<p[^>]*>/g, '').replace(/&shy;/g, '').replace(/&emsp;/g, '&#x0009;');
-    
     result = '<pre>' + result  + '</pre>';
     
   return result;

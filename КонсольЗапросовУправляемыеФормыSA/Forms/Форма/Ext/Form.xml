@@ -56,6 +56,12 @@
 								<CommandName>Form.Command.РазбитьЗапросПоЧастям</CommandName>
 								<ExtendedTooltip name="ДеревоНастроекКонтекстноеМенюРазбитьЗапросПоЧастямРасширеннаяПодсказка" id="336"/>
 							</Button>
+							<Button name="ДеревоНастроекКонтекстноеМенюОбновитьПредопределенныеЗапросы" id="373">
+								<Type>CommandBarButton</Type>
+								<OnlyInAllActions>false</OnlyInAllActions>
+								<CommandName>Form.Command.ОбновитьПредопределенныеЗапросы</CommandName>
+								<ExtendedTooltip name="ДеревоНастроекКонтекстноеМенюОбновитьПредопределенныеЗапросыРасширеннаяПодсказка" id="374"/>
+							</Button>
 						</ChildItems>
 					</ContextMenu>
 					<AutoCommandBar name="ДеревоНастроекКоманднаяПанель" id="67">
@@ -102,6 +108,12 @@
 								<Type>CommandBarButton</Type>
 								<CommandName>Form.Command.РазбитьЗапросПоЧастям</CommandName>
 								<ExtendedTooltip name="ДеревоНастроекРазбитьЗапросПоЧастямРасширеннаяПодсказка" id="338"/>
+							</Button>
+							<Button name="ДеревоНастроекОбновитьПредопределенныеЗапросы" id="371">
+								<Type>CommandBarButton</Type>
+								<OnlyInAllActions>false</OnlyInAllActions>
+								<CommandName>Form.Command.ОбновитьПредопределенныеЗапросы</CommandName>
+								<ExtendedTooltip name="ДеревоНастроекОбновитьПредопределенныеЗапросыРасширеннаяПодсказка" id="372"/>
 							</Button>
 						</ChildItems>
 					</AutoCommandBar>
@@ -330,7 +342,7 @@
 											<v8:content>Панель настроек произвольный код</v8:content>
 										</v8:item>
 									</ToolTip>
-									<Group>AlwaysHorizontal</Group>
+									<Group>Horizontal</Group>
 									<ShowTitle>false</ShowTitle>
 									<ExtendedTooltip name="ПанельНастроекПроизвольныйКодРасширеннаяПодсказка" id="299"/>
 									<ChildItems>
@@ -749,7 +761,7 @@
 					<v8:content>Группа результаты</v8:content>
 				</v8:item>
 			</ToolTip>
-			<Group>AlwaysHorizontal</Group>
+			<Group>Horizontal</Group>
 			<Behavior>Collapsible</Behavior>
 			<Representation>None</Representation>
 			<ShowTitle>false</ShowTitle>
@@ -986,7 +998,7 @@
 											<v8:content>Группа замеры</v8:content>
 										</v8:item>
 									</ToolTip>
-									<Group>AlwaysHorizontal</Group>
+									<Group>Horizontal</Group>
 									<ShowTitle>false</ShowTitle>
 									<ExtendedTooltip name="ГруппаЗамерыРасширеннаяПодсказка" id="230"/>
 									<ChildItems>
@@ -1481,21 +1493,21 @@
 				<d4p1:chartIsInit>true</d4p1:chartIsInit>
 				<d4p1:elementsChart>
 					<d4p1:left>0</d4p1:left>
-					<d4p1:right>0.17</d4p1:right>
+					<d4p1:right>0.170833333333333</d4p1:right>
 					<d4p1:top>0</d4p1:top>
 					<d4p1:bottom>0</d4p1:bottom>
 				</d4p1:elementsChart>
 				<d4p1:elementsLegend>
-					<d4p1:left>0.83</d4p1:left>
+					<d4p1:left>0.829166666666666</d4p1:left>
 					<d4p1:right>0</d4p1:right>
-					<d4p1:top>0.08</d4p1:top>
+					<d4p1:top>0.0805555555555553</d4p1:top>
 					<d4p1:bottom>0</d4p1:bottom>
 				</d4p1:elementsLegend>
 				<d4p1:elementsTitle>
-					<d4p1:left>0.83</d4p1:left>
+					<d4p1:left>0.829166666666666</d4p1:left>
 					<d4p1:right>0</d4p1:right>
 					<d4p1:top>0</d4p1:top>
-					<d4p1:bottom>0.92</d4p1:bottom>
+					<d4p1:bottom>0.919444444444444</d4p1:bottom>
 				</d4p1:elementsTitle>
 				<d4p1:borderColor>style:BorderColor</d4p1:borderColor>
 				<d4p1:border width="1">
@@ -1973,6 +1985,7 @@
 			</Picture>
 			<Action>ПоднятьНастройкуВверх</Action>
 			<Representation>Picture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="РедактироватьТекст" id="17">
 			<Title>
@@ -1993,6 +2006,7 @@
 			</Picture>
 			<Action>РедактироватьТекст</Action>
 			<Representation>Picture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="УменьшитьОтступ" id="18">
 			<Title>
@@ -2008,6 +2022,7 @@
 				</v8:item>
 			</ToolTip>
 			<Action>УменьшитьОтступ</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="АнализЗапроса" id="19">
 			<Title>
@@ -2028,6 +2043,7 @@
 			</Picture>
 			<Action>АнализЗапроса</Action>
 			<Representation>Picture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="СохранитьНастройкиКак" id="20">
 			<Title>
@@ -2048,6 +2064,7 @@
 			</Picture>
 			<Action>СохранитьНастройкиКак</Action>
 			<Representation>Picture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ЗаполнитьПараметрыИзДругойНастройки" id="21">
 			<Title>
@@ -2067,6 +2084,7 @@
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
 			<Action>ЗаполнитьПараметрыИзДругойНастройки</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="РазбитьЗапросПоЧастям" id="22">
 			<Title>
@@ -2086,6 +2104,27 @@
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
 			<Action>РазбитьЗапросПоЧастям</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОбновитьПредопределенныеЗапросы" id="23">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить предопределенные запросы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить предопределенные запросы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Reread</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ОбновитьПредопределенныеЗапросы</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 	</Commands>
 </Form>

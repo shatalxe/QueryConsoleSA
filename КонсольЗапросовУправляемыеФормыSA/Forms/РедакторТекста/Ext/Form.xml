@@ -109,6 +109,7 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ОК</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="Раскомментировать" id="2">
 			<Title>
