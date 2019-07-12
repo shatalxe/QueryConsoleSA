@@ -398,6 +398,11 @@
 															<CommandName>Form.Command.ОткрытьКонструкторЗапроса</CommandName>
 															<ExtendedTooltip name="ОткрытьКонструкторЗапроса1РасширеннаяПодсказка" id="159"/>
 														</Button>
+														<Button name="УменьшитьОтступ" id="307">
+															<Type>CommandBarButton</Type>
+															<CommandName>Form.Command.УменьшитьОтступ</CommandName>
+															<ExtendedTooltip name="УменьшитьОтступРасширеннаяПодсказка" id="308"/>
+														</Button>
 														<Button name="Закомментировать1" id="160">
 															<Type>CommandBarButton</Type>
 															<CommandName>Form.Command.Закомментировать</CommandName>
@@ -415,11 +420,6 @@
 																<xr:LoadTransparent>false</xr:LoadTransparent>
 															</Picture>
 															<ExtendedTooltip name="Раскомментировать1РасширеннаяПодсказка" id="163"/>
-														</Button>
-														<Button name="УменьшитьОтступ" id="307">
-															<Type>CommandBarButton</Type>
-															<CommandName>Form.Command.УменьшитьОтступ</CommandName>
-															<ExtendedTooltip name="УменьшитьОтступРасширеннаяПодсказка" id="308"/>
 														</Button>
 														<Button name="ДобавитьПереносСтроки1" id="164">
 															<Type>CommandBarButton</Type>
@@ -1834,7 +1834,7 @@
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Закомментировать</v8:content>
+					<v8:content>//</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>
@@ -1845,14 +1845,14 @@
 			</ToolTip>
 			<Shortcut>Ctrl+Num /</Shortcut>
 			<Action>Закомментировать</Action>
-			<Representation>Picture</Representation>
+			<Representation>Text</Representation>
 			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="Раскомментировать" id="9">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Раскомментировать</v8:content>
+					<v8:content>//х</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>
@@ -1863,7 +1863,7 @@
 			</ToolTip>
 			<Shortcut>Ctrl+Shift+Num /</Shortcut>
 			<Action>Раскомментировать</Action>
-			<Representation>Picture</Representation>
+			<Representation>Text</Representation>
 			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ДобавитьПереносСтроки" id="10">
