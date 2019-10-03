@@ -148,6 +148,7 @@
 						<ExtendedTooltip name="ДеревоНастроекУправлениеПоискомРасширеннаяПодсказка" id="77"/>
 					</SearchControlAddition>
 					<Events>
+						<Event name="BeforeAddRow">ДеревоНастроекПередНачаломДобавления</Event>
 						<Event name="OnActivateRow">ДеревоНастроекПриАктивизацииСтроки</Event>
 						<Event name="Drag">ДеревоНастроекПеретаскивание</Event>
 					</Events>
