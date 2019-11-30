@@ -119,6 +119,43 @@
 	<rowsItem>
 		<index>2</index>
 		<row>
+			<c>
+				<c>
+					<f>0</f>
+					<tl>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ПодпискиНаСобытия</v8:content>
+						</v8:item>
+					</tl>
+				</c>
+			</c>
+			<c>
+				<i>2</i>
+				<c>
+					<f>0</f>
+					<tl>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Результат = Новый ТаблицаЗначений;
+Результат.Колонки.Добавить("Подписка");
+Результат.Колонки.Добавить("Обработчик");
+
+Для Каждого Подписка Из Метаданные.ПодпискиНаСобытия Цикл
+	НоваяСтрока = Результат.Добавить();
+	НоваяСтрока.Подписка = Подписка.ПолноеИмя();
+	НоваяСтрока.Обработчик = Подписка.Обработчик;
+КонецЦикла
+</v8:content>
+						</v8:item>
+					</tl>
+				</c>
+			</c>
+		</row>
+	</rowsItem>
+	<rowsItem>
+		<index>3</index>
+		<row>
 			<formatIndex>4</formatIndex>
 			<c>
 				<c>
@@ -187,7 +224,7 @@
 		</row>
 	</rowsItem>
 	<rowsItem>
-		<index>3</index>
+		<index>4</index>
 		<row>
 			<c>
 				<c>
@@ -216,8 +253,8 @@
 	</rowsItem>
 	<templateMode>true</templateMode>
 	<defaultFormatIndex>5</defaultFormatIndex>
-	<height>4</height>
-	<vgRows>4</vgRows>
+	<height>5</height>
+	<vgRows>5</vgRows>
 	<format>
 		<width>203</width>
 	</format>

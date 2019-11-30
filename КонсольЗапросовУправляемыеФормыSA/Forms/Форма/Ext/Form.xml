@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.7">
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9">
 	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
 	<VerticalScroll>useIfNecessary</VerticalScroll>
 	<ScalingMode>Compact</ScalingMode>
@@ -49,6 +49,7 @@
 						<ExcludedCommand>SortListDesc</ExcludedCommand>
 						<ExcludedCommand>Tree</ExcludedCommand>
 					</CommandSet>
+					<TreeSpecialSearch>false</TreeSpecialSearch>
 					<ContextMenu name="ДеревоНастроекКонтекстноеМеню" id="66">
 						<ChildItems>
 							<Button name="ДеревоНастроекКонтекстноеМенюРазбитьЗапросПоЧастям" id="335">
@@ -58,8 +59,8 @@
 							</Button>
 							<Button name="ДеревоНастроекКонтекстноеМенюОбновитьПредопределенныеЗапросы" id="373">
 								<Type>CommandBarButton</Type>
-								<OnlyInAllActions>false</OnlyInAllActions>
 								<CommandName>Form.Command.ОбновитьПредопределенныеЗапросы</CommandName>
+								<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
 								<ExtendedTooltip name="ДеревоНастроекКонтекстноеМенюОбновитьПредопределенныеЗапросыРасширеннаяПодсказка" id="374"/>
 							</Button>
 						</ChildItems>
@@ -83,8 +84,8 @@
 							</Button>
 							<Button name="ДеревоНастроекСохранитьНастройкиКак" id="331">
 								<Type>CommandBarButton</Type>
-								<OnlyInAllActions>false</OnlyInAllActions>
 								<CommandName>Form.Command.СохранитьНастройкиКак</CommandName>
+								<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
 								<ExtendedTooltip name="ДеревоНастроекСохранитьНастройкиКакРасширеннаяПодсказка" id="332"/>
 							</Button>
 							<Button name="ДеревоНастроекОткрытьНастройки" id="138">
@@ -94,14 +95,14 @@
 							</Button>
 							<Button name="ДеревоНастроекВверх" id="205">
 								<Type>CommandBarButton</Type>
-								<OnlyInAllActions>true</OnlyInAllActions>
 								<CommandName>Form.Item.ДеревоНастроек.StandardCommand.MoveUp</CommandName>
+								<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
 								<ExtendedTooltip name="ДеревоНастроекВверхРасширеннаяПодсказка" id="206"/>
 							</Button>
 							<Button name="ДеревоНастроекВниз" id="207">
 								<Type>CommandBarButton</Type>
-								<OnlyInAllActions>true</OnlyInAllActions>
 								<CommandName>Form.Item.ДеревоНастроек.StandardCommand.MoveDown</CommandName>
+								<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
 								<ExtendedTooltip name="ДеревоНастроекВнизРасширеннаяПодсказка" id="208"/>
 							</Button>
 							<Button name="ДеревоНастроекРазбитьЗапросПоЧастям" id="337">
@@ -111,8 +112,8 @@
 							</Button>
 							<Button name="ДеревоНастроекОбновитьПредопределенныеЗапросы" id="371">
 								<Type>CommandBarButton</Type>
-								<OnlyInAllActions>false</OnlyInAllActions>
 								<CommandName>Form.Command.ОбновитьПредопределенныеЗапросы</CommandName>
+								<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
 								<ExtendedTooltip name="ДеревоНастроекОбновитьПредопределенныеЗапросыРасширеннаяПодсказка" id="372"/>
 							</Button>
 							<Button name="ДеревоНастроекПроверитьОбновление" id="375">
