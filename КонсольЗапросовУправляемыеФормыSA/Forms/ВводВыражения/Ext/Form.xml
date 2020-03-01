@@ -5,13 +5,17 @@
 		<HorizontalAlign>Right</HorizontalAlign>
 		<Autofill>false</Autofill>
 		<ChildItems>
-			<Button name="ФормаЗакрыть" id="21">
+			<Button name="ФормаЗакрытьФорму" id="21">
 				<Type>CommandBarButton</Type>
-				<CommandName>Form.Command.Закрыть</CommandName>
-				<ExtendedTooltip name="ФормаЗакрытьРасширеннаяПодсказка" id="22"/>
+				<CommandName>Form.Command.ЗакрытьФорму</CommandName>
+				<ExtendedTooltip name="ФормаЗакрытьФормуРасширеннаяПодсказка" id="22"/>
 			</Button>
 		</ChildItems>
 	</AutoCommandBar>
+	<Events>
+		<Event name="BeforeClose">ПередЗакрытием</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
 	<ChildItems>
 		<LabelDecoration name="НадписьВведитеВыражение" id="10">
 			<AutoMaxWidth>false</AutoMaxWidth>
@@ -172,6 +176,26 @@
 				<v8:Type>xs:boolean</v8:Type>
 			</Type>
 		</Attribute>
+		<Attribute name="СсылкаНаИзменяемыйОбъект" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ссылка на изменяемый объект</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:TypeSet>cfg:AnyRef</v8:TypeSet>
+			</Type>
+		</Attribute>
+		<Attribute name="Результат" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Результат</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
 	</Attributes>
 	<Commands>
 		<Command name="Установить" id="1">
@@ -189,19 +213,20 @@
 			</ToolTip>
 			<Action>Установить</Action>
 		</Command>
-		<Command name="Закрыть" id="2">
+		<Command name="ЗакрытьФорму" id="2">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Закрыть</v8:content>
+					<v8:content>Закрыть форму</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Закрыть</v8:content>
+					<v8:content>Закрыть форму</v8:content>
 				</v8:item>
 			</ToolTip>
+			<Action>ЗакрытьФорму</Action>
 		</Command>
 	</Commands>
 </Form>
