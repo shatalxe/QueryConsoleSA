@@ -42,7 +42,6 @@
 					<EnableDrag>true</EnableDrag>
 					<FileDragMode>AsFile</FileDragMode>
 					<DataPath>ДеревоНастроек</DataPath>
-					<TreeSpecialSearch>false</TreeSpecialSearch>
 					<ContextMenu name="ДеревоНастроекКонтекстноеМеню" id="2"/>
 					<AutoCommandBar name="ДеревоНастроекКоманднаяПанель" id="3">
 						<Autofill>false</Autofill>

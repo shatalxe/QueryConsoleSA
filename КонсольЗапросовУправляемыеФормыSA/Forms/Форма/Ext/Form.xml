@@ -49,7 +49,6 @@
 						<ExcludedCommand>SortListDesc</ExcludedCommand>
 						<ExcludedCommand>Tree</ExcludedCommand>
 					</CommandSet>
-					<TreeSpecialSearch>false</TreeSpecialSearch>
 					<ContextMenu name="ДеревоНастроекКонтекстноеМеню" id="66">
 						<ChildItems>
 							<Button name="ДеревоНастроекКонтекстноеМенюРазбитьЗапросПоЧастям" id="335">
@@ -444,11 +443,6 @@
 															<CommandName>Form.Command.РедактироватьТекст</CommandName>
 															<ExtendedTooltip name="РедактироватьТекст1РасширеннаяПодсказка" id="282"/>
 														</Button>
-														<Button name="Помощь" id="379">
-															<Type>CommandBarButton</Type>
-															<CommandName>Form.Command.ПоказатьПодсказку</CommandName>
-															<ExtendedTooltip name="ПомощьРасширеннаяПодсказка" id="380"/>
-														</Button>
 													</ChildItems>
 												</ButtonGroup>
 												<Button name="ВыполнитьПроизвольныйКод" id="154">
@@ -829,10 +823,6 @@
 									<v8:content>Страница результата по умолчанию</v8:content>
 								</v8:item>
 							</ToolTip>
-							<Picture>
-								<xr:Ref>StdPicture.ListViewMode</xr:Ref>
-								<xr:LoadTransparent>true</xr:LoadTransparent>
-							</Picture>
 							<ShowTitle>false</ShowTitle>
 							<ExtendedTooltip name="СтраницаРезультатаПоУмолчаниюРасширеннаяПодсказка" id="348"/>
 							<ChildItems>
@@ -923,7 +913,7 @@
 							<ToolTip>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>Таблица значений</v8:content>
+									<v8:content>Дерево значений</v8:content>
 								</v8:item>
 							</ToolTip>
 							<Picture>
@@ -965,7 +955,7 @@
 							<ToolTip>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>Страница табличный документ</v8:content>
+									<v8:content>Табличный документ</v8:content>
 								</v8:item>
 							</ToolTip>
 							<Picture>
@@ -1040,7 +1030,9 @@
 											<DataPath>Объект.Результаты</DataPath>
 											<RowFilter xsi:nil="true"/>
 											<ContextMenu name="РезультатыКонтекстноеМеню" id="239"/>
-											<AutoCommandBar name="РезультатыКоманднаяПанель" id="240"/>
+											<AutoCommandBar name="РезультатыКоманднаяПанель" id="240">
+												<Autofill>false</Autofill>
+											</AutoCommandBar>
 											<ExtendedTooltip name="РезультатыРасширеннаяПодсказка" id="241"/>
 											<SearchStringAddition name="РезультатыСтрокаПоиска" id="242">
 												<AdditionSource>
@@ -1443,8 +1435,6 @@
 					<d4p1:isExpand>false</d4p1:isExpand>
 					<d4p1:isIndicator>false</d4p1:isIndicator>
 					<d4p1:colorPriority>false</d4p1:colorPriority>
-					<d4p1:showGraphicalDataRepresentationInChartLegend>Auto</d4p1:showGraphicalDataRepresentationInChartLegend>
-					<d4p1:showGraphicalDataRepresentationInChart>Auto</d4p1:showGraphicalDataRepresentationInChart>
 				</d4p1:realExSeriesData>
 				<d4p1:isPointsDesign>true</d4p1:isPointsDesign>
 				<d4p1:realPointCount>0</d4p1:realPointCount>
@@ -1625,6 +1615,18 @@
 				<d4p1:titleAreaPlacement>UseCoordinates</d4p1:titleAreaPlacement>
 				<d4p1:colorPaletteDescription/>
 				<d4p1:referenceBandsColorPaletteDescription/>
+				<d4p1:additionalValuesScale>
+					<d4p1:titleArea>
+						<d4p1:font kind="AutoFont"/>
+						<d4p1:textColor>auto</d4p1:textColor>
+						<d4p1:backColor>auto</d4p1:backColor>
+						<d4p1:border width="1">
+							<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
+						</d4p1:border>
+						<d4p1:borderColor>auto</d4p1:borderColor>
+					</d4p1:titleArea>
+				</d4p1:additionalValuesScale>
+				<d4p1:additionalValuesAxis/>
 			</Settings>
 		</Attribute>
 		<Attribute name="ТекущаяСтраницаДеревоНастроек" id="18">
@@ -2200,21 +2202,6 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ПроверитьОбновление</Action>
-		</Command>
-		<Command name="ПоказатьПодсказку" id="25">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>?</v8:content>
-				</v8:item>
-			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Показать подсказку</v8:content>
-				</v8:item>
-			</ToolTip>
-			<Action>ПоказатьПодсказку</Action>
 		</Command>
 	</Commands>
 </Form>

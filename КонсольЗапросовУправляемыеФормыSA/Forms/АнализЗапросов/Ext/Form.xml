@@ -86,7 +86,6 @@
 							<EnableDrag>true</EnableDrag>
 							<FileDragMode>AsFile</FileDragMode>
 							<DataPath>СтуктураЗапроса</DataPath>
-							<TreeSpecialSearch>false</TreeSpecialSearch>
 							<ContextMenu name="СтуктураЗапросаКонтекстноеМеню" id="11"/>
 							<AutoCommandBar name="СтуктураЗапросаКоманднаяПанель" id="12">
 								<Autofill>false</Autofill>
@@ -196,7 +195,6 @@
 									<EnableDrag>true</EnableDrag>
 									<FileDragMode>AsFile</FileDragMode>
 									<DataPath>ДеревоИндексов</DataPath>
-									<TreeSpecialSearch>false</TreeSpecialSearch>
 									<ContextMenu name="ИндексыКонтекстноеМеню" id="41"/>
 									<AutoCommandBar name="ИндексыКоманднаяПанель" id="42"/>
 									<ExtendedTooltip name="ИндексыРасширеннаяПодсказка" id="43"/>
