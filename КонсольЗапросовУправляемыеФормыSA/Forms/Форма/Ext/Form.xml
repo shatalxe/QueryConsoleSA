@@ -71,11 +71,6 @@
 								<CommandName>Form.Command.ДобавитьНастройку</CommandName>
 								<ExtendedTooltip name="ДеревоНастроекДобавитьНастройкуРасширеннаяПодсказка" id="143"/>
 							</Button>
-							<Button name="ДеревоНастроекПоднятьНастройкуВверх" id="272">
-								<Type>CommandBarButton</Type>
-								<CommandName>Form.Command.ПоднятьНастройкуВверх</CommandName>
-								<ExtendedTooltip name="ДеревоНастроекПоднятьНастройкуВверхРасширеннаяПодсказка" id="273"/>
-							</Button>
 							<Button name="ДеревоНастроекСохранитьНастройки" id="136">
 								<Type>CommandBarButton</Type>
 								<CommandName>Form.Command.СохранитьНастройки</CommandName>
@@ -103,6 +98,11 @@
 								<CommandName>Form.Item.ДеревоНастроек.StandardCommand.MoveDown</CommandName>
 								<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
 								<ExtendedTooltip name="ДеревоНастроекВнизРасширеннаяПодсказка" id="208"/>
+							</Button>
+							<Button name="ДеревоНастроекПоднятьНастройкуВверх" id="272">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.ПоднятьНастройкуВверх</CommandName>
+								<ExtendedTooltip name="ДеревоНастроекПоднятьНастройкуВверхРасширеннаяПодсказка" id="273"/>
 							</Button>
 							<Button name="ДеревоНастроекРазбитьЗапросПоЧастям" id="337">
 								<Type>CommandBarButton</Type>
@@ -274,26 +274,43 @@
 													<Font ref="style:TextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
 													<ExtendedTooltip name="ВыполнитьЗапросВТекущейБазеРасширеннаяПодсказка" id="47"/>
 												</Button>
-												<Button name="ВыполнитьПакет" id="201">
-													<Type>CommandBarButton</Type>
-													<CommandName>Form.Command.ВыполнитьПакет</CommandName>
-													<ExtendedTooltip name="ВыполнитьПакетРасширеннаяПодсказка" id="202"/>
-												</Button>
-												<Popup name="ГруппаКнопокВременныеТаблицы" id="227">
+												<ButtonGroup name="ГруппаКнопокВариантыВыполнения" id="379">
 													<Title>
 														<v8:item>
 															<v8:lang>ru</v8:lang>
-															<v8:content>Вернуть временную таблицу</v8:content>
+															<v8:content>Группа кнопок варианты выполнения</v8:content>
 														</v8:item>
 													</Title>
 													<ToolTip>
 														<v8:item>
 															<v8:lang>ru</v8:lang>
-															<v8:content>Группа кнопок временные таблицы</v8:content>
+															<v8:content>Группа кнопок варианты выполнения</v8:content>
 														</v8:item>
 													</ToolTip>
-													<ExtendedTooltip name="ГруппаКнопокВременныеТаблицыРасширеннаяПодсказка" id="228"/>
-												</Popup>
+													<ExtendedTooltip name="ГруппаКнопокВариантыВыполненияРасширеннаяПодсказка" id="380"/>
+													<ChildItems>
+														<Button name="ВыполнитьПакет" id="201">
+															<Type>CommandBarButton</Type>
+															<CommandName>Form.Command.ВыполнитьПакет</CommandName>
+															<ExtendedTooltip name="ВыполнитьПакетРасширеннаяПодсказка" id="202"/>
+														</Button>
+														<Popup name="ГруппаКнопокВременныеТаблицы" id="227">
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Вернуть временную таблицу</v8:content>
+																</v8:item>
+															</Title>
+															<ToolTip>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Группа кнопок временные таблицы</v8:content>
+																</v8:item>
+															</ToolTip>
+															<ExtendedTooltip name="ГруппаКнопокВременныеТаблицыРасширеннаяПодсказка" id="228"/>
+														</Popup>
+													</ChildItems>
+												</ButtonGroup>
 											</ChildItems>
 										</ButtonGroup>
 									</ChildItems>
@@ -400,48 +417,44 @@
 													<Representation>Compact</Representation>
 													<ExtendedTooltip name="ПанельНастроекПроизвольныйКодКомандыКомпактноExtendedTooltip" id="303"/>
 													<ChildItems>
-														<Button name="ОткрытьКонструкторЗапроса1" id="158">
+														<Button name="ПроизвольныйКодОткрытьКонструкторЗапроса" id="158">
 															<Type>CommandBarButton</Type>
 															<CommandName>Form.Command.ОткрытьКонструкторЗапроса</CommandName>
-															<ExtendedTooltip name="ОткрытьКонструкторЗапроса1РасширеннаяПодсказка" id="159"/>
+															<ExtendedTooltip name="ПроизвольныйКодОткрытьКонструкторЗапросаРасширеннаяПодсказка" id="159"/>
 														</Button>
-														<Button name="УменьшитьОтступ" id="307">
+														<Button name="ПроизвольныйКодУменьшитьОтступ" id="307">
 															<Type>CommandBarButton</Type>
 															<CommandName>Form.Command.УменьшитьОтступ</CommandName>
-															<ExtendedTooltip name="УменьшитьОтступРасширеннаяПодсказка" id="308"/>
+															<ExtendedTooltip name="ПроизвольныйКодУменьшитьОтступРасширеннаяПодсказка" id="308"/>
 														</Button>
-														<Button name="Закомментировать1" id="160">
+														<Button name="ПроизвольныйКодЗакомментировать" id="160">
 															<Type>CommandBarButton</Type>
 															<CommandName>Form.Command.Закомментировать</CommandName>
 															<Picture>
 																<xr:Abs>Picture.bmp</xr:Abs>
 																<xr:LoadTransparent>false</xr:LoadTransparent>
 															</Picture>
-															<ExtendedTooltip name="Закомментировать1РасширеннаяПодсказка" id="161"/>
+															<ExtendedTooltip name="ПроизвольныйКодЗакомментироватьРасширеннаяПодсказка" id="161"/>
 														</Button>
-														<Button name="Раскомментировать1" id="162">
+														<Button name="ПроизвольныйКодРаскомментировать" id="162">
 															<Type>CommandBarButton</Type>
 															<CommandName>Form.Command.Раскомментировать</CommandName>
-															<Picture>
-																<xr:Abs>Picture.bmp</xr:Abs>
-																<xr:LoadTransparent>false</xr:LoadTransparent>
-															</Picture>
-															<ExtendedTooltip name="Раскомментировать1РасширеннаяПодсказка" id="163"/>
+															<ExtendedTooltip name="ПроизвольныйКодРаскомментироватьРасширеннаяПодсказка" id="163"/>
 														</Button>
-														<Button name="ДобавитьПереносСтроки1" id="164">
+														<Button name="ПроизвольныйКодДобавитьПереносСтроки" id="164">
 															<Type>CommandBarButton</Type>
 															<CommandName>Form.Command.ДобавитьПереносСтроки</CommandName>
-															<ExtendedTooltip name="ДобавитьПереносСтроки1РасширеннаяПодсказка" id="165"/>
+															<ExtendedTooltip name="ПроизвольныйКодДобавитьПереносСтрокиРасширеннаяПодсказка" id="165"/>
 														</Button>
-														<Button name="УбратьПереносСтроки1" id="166">
+														<Button name="ПроизвольныйКодУбратьПереносСтроки" id="166">
 															<Type>CommandBarButton</Type>
 															<CommandName>Form.Command.УбратьПереносСтроки</CommandName>
-															<ExtendedTooltip name="УбратьПереносСтроки1РасширеннаяПодсказка" id="167"/>
+															<ExtendedTooltip name="ПроизвольныйКодУбратьПереносСтрокиРасширеннаяПодсказка" id="167"/>
 														</Button>
-														<Button name="РедактироватьТекст1" id="281">
+														<Button name="ПроизвольныйКодРедактироватьТекст" id="281">
 															<Type>CommandBarButton</Type>
 															<CommandName>Form.Command.РедактироватьТекст</CommandName>
-															<ExtendedTooltip name="РедактироватьТекст1РасширеннаяПодсказка" id="282"/>
+															<ExtendedTooltip name="ПроизвольныйКодРедактироватьТекстРасширеннаяПодсказка" id="282"/>
 														</Button>
 													</ChildItems>
 												</ButtonGroup>
@@ -672,17 +685,18 @@
 							<RowFilter xsi:nil="true"/>
 							<ContextMenu name="ДеревоНастроекСписокПараметровКонтекстноеМеню" id="96"/>
 							<AutoCommandBar name="ДеревоНастроекСписокПараметровКоманднаяПанель" id="97">
+								<Autofill>false</Autofill>
 								<ChildItems>
+									<Button name="ДеревоНастроекСписокПараметровПолучитьПараметрыИзЗапроса" id="114">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ПолучитьПараметрыИзЗапроса</CommandName>
+										<ExtendedTooltip name="ДеревоНастроекСписокПараметровПолучитьПараметрыИзЗапросаРасширеннаяПодсказка" id="115"/>
+									</Button>
 									<Button name="ДеревоНастроекСписокПараметровДобавить" id="209">
 										<Type>CommandBarButton</Type>
 										<Representation>Picture</Representation>
 										<CommandName>Form.Item.ДеревоНастроекСписокПараметров.StandardCommand.Add</CommandName>
 										<ExtendedTooltip name="ДеревоНастроекСписокПараметровДобавитьРасширеннаяПодсказка" id="210"/>
-									</Button>
-									<Button name="ДеревоНастроекСписокПараметровПолучитьПараметрыИзЗапроса" id="114">
-										<Type>CommandBarButton</Type>
-										<CommandName>Form.Command.ПолучитьПараметрыИзЗапроса</CommandName>
-										<ExtendedTooltip name="ДеревоНастроекСписокПараметровПолучитьПараметрыИзЗапросаРасширеннаяПодсказка" id="115"/>
 									</Button>
 									<Button name="ДеревоНастроекСписокПараметровЗаполнитьПараметрыИзДругойНастройки" id="333">
 										<Type>CommandBarButton</Type>
@@ -823,6 +837,10 @@
 									<v8:content>Страница результата по умолчанию</v8:content>
 								</v8:item>
 							</ToolTip>
+							<Picture>
+								<xr:Ref>StdPicture.Select</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</Picture>
 							<ShowTitle>false</ShowTitle>
 							<ExtendedTooltip name="СтраницаРезультатаПоУмолчаниюРасширеннаяПодсказка" id="348"/>
 							<ChildItems>
