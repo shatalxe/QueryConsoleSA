@@ -117,7 +117,7 @@
 							</Button>
 							<Button name="ДеревоНастроекПроверитьОбновление" id="375">
 								<Type>CommandBarButton</Type>
-								<CommandName>Form.Command.ПроверитьОбновление</CommandName>
+								<CommandName>Form.Command.ОбОбработке</CommandName>
 								<ExtendedTooltip name="ДеревоНастроекПроверитьОбновлениеРасширеннаяПодсказка" id="376"/>
 							</Button>
 						</ChildItems>
@@ -1771,6 +1771,32 @@
 				<Field>ПутьКБазе</Field>
 			</Save>
 		</Attribute>
+		<Attribute name="ИспользуемоеИмяФайла" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Используемое имя файла</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ЗавершитьОбновление" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Завершить обновление</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
 	</Attributes>
 	<Commands>
 		<Command name="ПроверитьПодключение" id="1">
@@ -2206,20 +2232,20 @@
 			<Action>ОбновитьПредопределенныеЗапросы</Action>
 			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
-		<Command name="ПроверитьОбновление" id="24">
+		<Command name="ОбОбработке" id="24">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>GitHub</v8:content>
+					<v8:content>Об обработке</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Проверить обновление</v8:content>
+					<v8:content>Об обработке</v8:content>
 				</v8:item>
 			</ToolTip>
-			<Action>ПроверитьОбновление</Action>
+			<Action>ОбОбработке</Action>
 		</Command>
 	</Commands>
 </Form>

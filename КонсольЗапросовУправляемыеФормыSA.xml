@@ -397,6 +397,7 @@
 			<Form>ФормаЗначенияВОтдельномОкне</Form>
 			<Form>ОбщиеМодулиКлиент</Form>
 			<Form>ВводВыражения</Form>
+			<Form>ОбОбработке</Form>
 			<Template>ОформлениеРезультата</Template>
 			<Template>ПредопределенныеНастройки</Template>
 			<Template>СкриптРаскрашивания</Template>
