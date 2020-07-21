@@ -26,7 +26,6 @@
 			<ExtendedTooltip name="ГруппаВерсияРасширеннаяПодсказка" id="11"/>
 			<ChildItems>
 				<LabelDecoration name="ДекорацияВерсия" id="4">
-					<TextColor>0:fe63db47-3ece-4518-b6a2-0b6499f60a61</TextColor>
 					<Title formatted="false">
 						<v8:item>
 							<v8:lang>ru</v8:lang>
