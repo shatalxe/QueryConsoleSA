@@ -109,6 +109,7 @@
 		</UsualGroup>
 		<TextDocumentField name="Сообщения" id="4">
 			<DataPath>Сообщения</DataPath>
+			<Height>5</Height>
 			<ContextMenu name="СообщенияКонтекстноеМеню" id="5"/>
 			<ExtendedTooltip name="СообщенияРасширеннаяПодсказка" id="6"/>
 		</TextDocumentField>
@@ -217,7 +218,7 @@
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Закрыть форму</v8:content>
+					<v8:content>Закрыть</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>
