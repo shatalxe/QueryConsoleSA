@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.10">
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9">
 	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
 	<VerticalScroll>useIfNecessary</VerticalScroll>
 	<ScalingMode>Compact</ScalingMode>
@@ -531,115 +531,238 @@
 							</ToolTip>
 							<ExtendedTooltip name="СтраницаВнешнееСоединениеРасширеннаяПодсказка" id="141"/>
 							<ChildItems>
-								<CheckBoxField name="ВнешняяБазаФайловая" id="361">
-									<DataPath>ВнешняяБазаФайловая</DataPath>
+								<Pages name="СтраницыВнешнееСоединение" id="381">
 									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
-											<v8:content>Внешняя база</v8:content>
-										</v8:item>
-									</Title>
-									<CheckBoxType>Tumbler</CheckBoxType>
-									<EditFormat>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>БЛ=Серверная; БИ=Файловая</v8:content>
-										</v8:item>
-									</EditFormat>
-									<ContextMenu name="ВнешняяБазаФайловаяКонтекстноеМеню" id="362"/>
-									<ExtendedTooltip name="ВнешняяБазаФайловаяРасширеннаяПодсказка" id="363"/>
-									<Events>
-										<Event name="OnChange">ВнешняяБазаФайловаяПриИзменении</Event>
-									</Events>
-								</CheckBoxField>
-								<UsualGroup name="ГруппаПараметрыПодключения" id="377">
-									<Title>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Группа параметры подключения</v8:content>
+											<v8:content>Страницы внешнее соединение</v8:content>
 										</v8:item>
 									</Title>
 									<ToolTip>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
-											<v8:content>Группа параметры подключения</v8:content>
+											<v8:content>Страницы внешнее соединение</v8:content>
 										</v8:item>
 									</ToolTip>
-									<Group>AlwaysHorizontal</Group>
-									<Representation>None</Representation>
-									<ShowTitle>false</ShowTitle>
-									<ExtendedTooltip name="ГруппаПараметрыПодключенияРасширеннаяПодсказка" id="378"/>
+									<ToolTipRepresentation>Balloon</ToolTipRepresentation>
+									<PagesRepresentation>TabsOnLeftHorizontal</PagesRepresentation>
+									<ExtendedTooltip name="СтраницыВнешнееСоединениеРасширеннаяПодсказка" id="382"/>
 									<ChildItems>
-										<UsualGroup name="ГруппаАдресВнешнейБазы" id="367">
+										<Page name="СтраницаВнешнееСоединениеНастройки" id="383">
 											<Title>
 												<v8:item>
 													<v8:lang>ru</v8:lang>
-													<v8:content>Группа адрес внешней базы</v8:content>
+													<v8:content>Настройки</v8:content>
 												</v8:item>
 											</Title>
 											<ToolTip>
 												<v8:item>
 													<v8:lang>ru</v8:lang>
-													<v8:content>Группа адрес внешней базы</v8:content>
+													<v8:content>Страница внешнее соединение настройки</v8:content>
 												</v8:item>
 											</ToolTip>
-											<ShowTitle>false</ShowTitle>
-											<ExtendedTooltip name="ГруппаАдресВнешнейБазыРасширеннаяПодсказка" id="368"/>
+											<VerticalStretch>true</VerticalStretch>
+											<Picture>
+												<xr:Ref>StdPicture.ReportSettings</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+											</Picture>
+											<ExtendedTooltip name="СтраницаВнешнееСоединениеНастройкиРасширеннаяПодсказка" id="384"/>
 											<ChildItems>
-												<InputField name="ИмяБазы" id="215">
-													<DataPath>ИмяБазы</DataPath>
-													<ContextMenu name="ИмяБазыКонтекстноеМеню" id="216"/>
-													<ExtendedTooltip name="ИмяБазыРасширеннаяПодсказка" id="217"/>
-												</InputField>
-												<InputField name="ИмяСервера" id="221">
-													<DataPath>ИмяСервера</DataPath>
-													<ContextMenu name="ИмяСервераКонтекстноеМеню" id="222"/>
-													<ExtendedTooltip name="ИмяСервераРасширеннаяПодсказка" id="223"/>
-												</InputField>
-												<InputField name="ПутьКБазе" id="364">
-													<DataPath>ПутьКБазе</DataPath>
-													<AutoMaxWidth>false</AutoMaxWidth>
-													<ContextMenu name="ПутьКБазеКонтекстноеМеню" id="365"/>
-													<ExtendedTooltip name="ПутьКБазеРасширеннаяПодсказка" id="366"/>
-												</InputField>
+												<RadioButtonField name="ВариантСоединения" id="413">
+													<DataPath>ВариантСоединения</DataPath>
+													<RadioButtonType>Tumbler</RadioButtonType>
+													<ChoiceList>
+														<xr:Item>
+															<xr:Presentation/>
+															<xr:CheckState>0</xr:CheckState>
+															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																<Presentation/>
+																<Value xsi:type="xs:string">V83COMConnector</Value>
+															</xr:Value>
+														</xr:Item>
+														<xr:Item>
+															<xr:Presentation/>
+															<xr:CheckState>0</xr:CheckState>
+															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																<Presentation/>
+																<Value xsi:type="xs:string">ADODB</Value>
+															</xr:Value>
+														</xr:Item>
+													</ChoiceList>
+													<ContextMenu name="ВариантСоединенияКонтекстноеМеню" id="414"/>
+													<ExtendedTooltip name="ВариантСоединенияРасширеннаяПодсказка" id="415"/>
+													<Events>
+														<Event name="OnChange">ВариантСоединенияПриИзменении</Event>
+													</Events>
+												</RadioButtonField>
+												<CheckBoxField name="ВнешняяБазаФайловая" id="387">
+													<DataPath>ВнешняяБазаФайловая</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Внешняя база</v8:content>
+														</v8:item>
+													</Title>
+													<CheckBoxType>Tumbler</CheckBoxType>
+													<EditFormat>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>БЛ=Серверная; БИ=Файловая</v8:content>
+														</v8:item>
+													</EditFormat>
+													<ContextMenu name="ВнешняяБазаФайловаяКонтекстноеМеню" id="388"/>
+													<ExtendedTooltip name="ВнешняяБазаФайловаяРасширеннаяПодсказка" id="389"/>
+													<Events>
+														<Event name="OnChange">ВнешняяБазаФайловаяПриИзменении</Event>
+													</Events>
+												</CheckBoxField>
+												<UsualGroup name="ГруппаПараметрыПодключения" id="390">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа параметры подключения</v8:content>
+														</v8:item>
+													</Title>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа параметры подключения</v8:content>
+														</v8:item>
+													</ToolTip>
+													<Group>AlwaysHorizontal</Group>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="ГруппаПараметрыПодключенияРасширеннаяПодсказка" id="391"/>
+													<ChildItems>
+														<UsualGroup name="ГруппаАдресВнешнейБазы" id="392">
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Группа адрес внешней базы</v8:content>
+																</v8:item>
+															</Title>
+															<ToolTip>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Группа адрес внешней базы</v8:content>
+																</v8:item>
+															</ToolTip>
+															<ShowTitle>false</ShowTitle>
+															<ExtendedTooltip name="ГруппаАдресВнешнейБазыРасширеннаяПодсказка" id="393"/>
+															<ChildItems>
+																<InputField name="ИмяБазы" id="394">
+																	<DataPath>ИмяБазы</DataPath>
+																	<ContextMenu name="ИмяБазыКонтекстноеМеню" id="395"/>
+																	<ExtendedTooltip name="ИмяБазыРасширеннаяПодсказка" id="396"/>
+																</InputField>
+																<InputField name="ИмяСервера" id="397">
+																	<DataPath>ИмяСервера</DataPath>
+																	<ContextMenu name="ИмяСервераКонтекстноеМеню" id="398"/>
+																	<ExtendedTooltip name="ИмяСервераРасширеннаяПодсказка" id="399"/>
+																</InputField>
+																<InputField name="ПутьКБазе" id="400">
+																	<DataPath>ПутьКБазе</DataPath>
+																	<AutoMaxWidth>false</AutoMaxWidth>
+																	<ContextMenu name="ПутьКБазеКонтекстноеМеню" id="401"/>
+																	<ExtendedTooltip name="ПутьКБазеРасширеннаяПодсказка" id="402"/>
+																</InputField>
+															</ChildItems>
+														</UsualGroup>
+														<UsualGroup name="ГруппаПараметрыПодключенияВнешнейБазы" id="403">
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Параметры подключения внешней базы</v8:content>
+																</v8:item>
+															</Title>
+															<ToolTip>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Группа адрес внешней базы</v8:content>
+																</v8:item>
+															</ToolTip>
+															<ShowTitle>false</ShowTitle>
+															<ExtendedTooltip name="ГруппаПараметрыПодключенияВнешнейБазыРасширеннаяПодсказка" id="404"/>
+															<ChildItems>
+																<InputField name="Пользователь" id="405">
+																	<DataPath>Пользователь</DataPath>
+																	<ContextMenu name="ПользовательКонтекстноеМеню" id="406"/>
+																	<ExtendedTooltip name="ПользовательРасширеннаяПодсказка" id="407"/>
+																</InputField>
+																<InputField name="Пароль" id="408">
+																	<DataPath>Пароль</DataPath>
+																	<PasswordMode>true</PasswordMode>
+																	<ContextMenu name="ПарольКонтекстноеМеню" id="409"/>
+																	<ExtendedTooltip name="ПарольРасширеннаяПодсказка" id="410"/>
+																</InputField>
+															</ChildItems>
+														</UsualGroup>
+													</ChildItems>
+												</UsualGroup>
+												<Button name="ПроверитьПодключение" id="411">
+													<Type>UsualButton</Type>
+													<CommandName>Form.Command.ПроверитьПодключение</CommandName>
+													<ExtendedTooltip name="ПроверитьПодключениеРасширеннаяПодсказка" id="412"/>
+												</Button>
 											</ChildItems>
-										</UsualGroup>
-										<UsualGroup name="ГруппаПараметрыПодключенияВнешнейБазы" id="369">
+										</Page>
+										<Page name="СтраницаВнешнееСоединениеВыполнение" id="385">
 											<Title>
 												<v8:item>
 													<v8:lang>ru</v8:lang>
-													<v8:content>Параметры подключения внешней базы</v8:content>
+													<v8:content>Выполнение</v8:content>
 												</v8:item>
 											</Title>
 											<ToolTip>
 												<v8:item>
 													<v8:lang>ru</v8:lang>
-													<v8:content>Группа адрес внешней базы</v8:content>
+													<v8:content>Страница внешнее соединение выполнение</v8:content>
 												</v8:item>
 											</ToolTip>
-											<ShowTitle>false</ShowTitle>
-											<ExtendedTooltip name="ГруппаПараметрыПодключенияВнешнейБазыРасширеннаяПодсказка" id="370"/>
+											<Picture>
+												<xr:Ref>StdPicture.GenerateReport</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+											</Picture>
+											<ExtendedTooltip name="СтраницаВнешнееСоединениеВыполнениеРасширеннаяПодсказка" id="386"/>
 											<ChildItems>
-												<InputField name="Пользователь" id="218">
-													<DataPath>Пользователь</DataPath>
-													<ContextMenu name="ПользовательКонтекстноеМеню" id="219"/>
-													<ExtendedTooltip name="ПользовательРасширеннаяПодсказка" id="220"/>
-												</InputField>
-												<InputField name="Пароль" id="224">
-													<DataPath>Пароль</DataPath>
-													<PasswordMode>true</PasswordMode>
-													<ContextMenu name="ПарольКонтекстноеМеню" id="225"/>
-													<ExtendedTooltip name="ПарольРасширеннаяПодсказка" id="226"/>
-												</InputField>
+												<CommandBar name="ПанельНастроекВнешнееСоединение" id="419">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Панель настроек внешнее соединение</v8:content>
+														</v8:item>
+													</Title>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Панель настроек внешнее соединение</v8:content>
+														</v8:item>
+													</ToolTip>
+													<ExtendedTooltip name="ПанельНастроекВнешнееСоединениеРасширеннаяПодсказка" id="420"/>
+													<ChildItems>
+														<Button name="ВыполнитьВнешнееСоединение" id="421">
+															<Type>CommandBarButton</Type>
+															<CommandName>Form.Command.ВыполнитьВнешнееСоединение</CommandName>
+															<Font ref="style:TextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+															<ExtendedTooltip name="ВыполнитьВнешнееСоединениеРасширеннаяПодсказка" id="422"/>
+														</Button>
+														<Button name="ВнешнееСоединениеРедактироватьТекст" id="423">
+															<Type>CommandBarButton</Type>
+															<CommandName>Form.Command.РедактироватьТекст</CommandName>
+															<ExtendedTooltip name="ВнешнееСоединениеРедактироватьТекстРасширеннаяПодсказка" id="424"/>
+														</Button>
+													</ChildItems>
+												</CommandBar>
+												<TextDocumentField name="ДеревоНастроекТекстВнешнегоСоединения" id="416">
+													<DataPath>Items.ДеревоНастроек.CurrentData.ТекстВнешнегоСоединения</DataPath>
+													<TitleLocation>None</TitleLocation>
+													<ContextMenu name="ДеревоНастроекТекстВнешнегоСоединенияКонтекстноеМеню" id="417"/>
+													<ExtendedTooltip name="ДеревоНастроекТекстВнешнегоСоединенияРасширеннаяПодсказка" id="418"/>
+												</TextDocumentField>
 											</ChildItems>
-										</UsualGroup>
+										</Page>
 									</ChildItems>
-								</UsualGroup>
-								<Button name="ПроверитьПодключение" id="15">
-									<Type>UsualButton</Type>
-									<CommandName>Form.Command.ПроверитьПодключение</CommandName>
-									<ExtendedTooltip name="ПроверитьПодключениеРасширеннаяПодсказка" id="16"/>
-								</Button>
+								</Pages>
 							</ChildItems>
 						</Page>
 					</ChildItems>
@@ -654,7 +777,7 @@
 					<ToolTip>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Группа параметры</v8:content>
+							<v8:content>Параметры</v8:content>
 						</v8:item>
 					</ToolTip>
 					<Behavior>Collapsible</Behavior>
@@ -838,7 +961,7 @@
 								</v8:item>
 							</ToolTip>
 							<Picture>
-								<xr:Ref>StdPicture.InputFieldSelect</xr:Ref>
+								<xr:Ref>StdPicture.Select</xr:Ref>
 								<xr:LoadTransparent>true</xr:LoadTransparent>
 							</Picture>
 							<ShowTitle>false</ShowTitle>
@@ -1289,6 +1412,21 @@
 						</v8:StringQualifiers>
 					</Type>
 				</Column>
+				<Column name="ТекстВнешнегоСоединения" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Текст внешнего соединения</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
 				<AdditionalColumns table="ДеревоНастроек.СписокПараметров">
 					<Column name="Имя" id="2">
 						<Title>
@@ -1595,9 +1733,56 @@
 				<d4p1:multiStageLinkColor>#000000</d4p1:multiStageLinkColor>
 				<d4p1:valuesAxis/>
 				<d4p1:pointsAxis/>
+				<d4p1:pointsScale>
+					<d4p1:titleArea>
+						<d4p1:font kind="AutoFont"/>
+						<d4p1:textColor>auto</d4p1:textColor>
+						<d4p1:backColor>auto</d4p1:backColor>
+						<d4p1:border width="1">
+							<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
+						</d4p1:border>
+						<d4p1:borderColor>auto</d4p1:borderColor>
+					</d4p1:titleArea>
+				</d4p1:pointsScale>
+				<d4p1:valuesScale>
+					<d4p1:titleArea>
+						<d4p1:font kind="AutoFont"/>
+						<d4p1:textColor>auto</d4p1:textColor>
+						<d4p1:backColor>auto</d4p1:backColor>
+						<d4p1:border width="1">
+							<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
+						</d4p1:border>
+						<d4p1:borderColor>auto</d4p1:borderColor>
+					</d4p1:titleArea>
+				</d4p1:valuesScale>
+				<d4p1:seriesScale>
+					<d4p1:titleArea>
+						<d4p1:font kind="AutoFont"/>
+						<d4p1:textColor>auto</d4p1:textColor>
+						<d4p1:backColor>auto</d4p1:backColor>
+						<d4p1:border width="1">
+							<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
+						</d4p1:border>
+						<d4p1:borderColor>auto</d4p1:borderColor>
+					</d4p1:titleArea>
+				</d4p1:seriesScale>
 				<d4p1:legendPlacement>UseCoordinates</d4p1:legendPlacement>
 				<d4p1:plotAreaPlacement>UseCoordinates</d4p1:plotAreaPlacement>
 				<d4p1:titleAreaPlacement>UseCoordinates</d4p1:titleAreaPlacement>
+				<d4p1:colorPaletteDescription/>
+				<d4p1:referenceBandsColorPaletteDescription/>
+				<d4p1:additionalValuesScale>
+					<d4p1:titleArea>
+						<d4p1:font kind="AutoFont"/>
+						<d4p1:textColor>auto</d4p1:textColor>
+						<d4p1:backColor>auto</d4p1:backColor>
+						<d4p1:border width="1">
+							<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
+						</d4p1:border>
+						<d4p1:borderColor>auto</d4p1:borderColor>
+					</d4p1:titleArea>
+				</d4p1:additionalValuesScale>
+				<d4p1:additionalValuesAxis/>
 			</Settings>
 		</Attribute>
 		<Attribute name="ТекущаяСтраницаДеревоНастроек" id="18">
@@ -1750,6 +1935,47 @@
 				<v8:Type>xs:boolean</v8:Type>
 			</Type>
 		</Attribute>
+		<Attribute name="ВариантСоединения" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вариант соединения</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+			<Save>
+				<Field>ВариантСоединения</Field>
+			</Save>
+		</Attribute>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>Результаты</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Объект.Результаты.НомерСтроки</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:decimal">1</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Шрифт</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Font" ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
 	</Attributes>
 	<Commands>
 		<Command name="ПроверитьПодключение" id="1">
@@ -2003,7 +2229,7 @@
 				</v8:item>
 			</ToolTip>
 			<Picture>
-				<xr:Ref>StdPicture.InputFieldOpen</xr:Ref>
+				<xr:Ref>StdPicture.Magnifier</xr:Ref>
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
 			<Action>ОткрытьТабличныйДокументВОтдельномОкне</Action>
@@ -2199,6 +2425,21 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ОбОбработке</Action>
+		</Command>
+		<Command name="ВыполнитьВнешнееСоединение" id="25">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполнить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполнить внешнее соединение</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВыполнитьВнешнееСоединение</Action>
 		</Command>
 	</Commands>
 </Form>
