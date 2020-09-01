@@ -430,10 +430,6 @@
 														<Button name="ПроизвольныйКодЗакомментировать" id="160">
 															<Type>CommandBarButton</Type>
 															<CommandName>Form.Command.Закомментировать</CommandName>
-															<Picture>
-																<xr:Abs>Picture.bmp</xr:Abs>
-																<xr:LoadTransparent>false</xr:LoadTransparent>
-															</Picture>
 															<ExtendedTooltip name="ПроизвольныйКодЗакомментироватьРасширеннаяПодсказка" id="161"/>
 														</Button>
 														<Button name="ПроизвольныйКодРаскомментировать" id="162">
@@ -650,15 +646,15 @@
 															<ShowTitle>false</ShowTitle>
 															<ExtendedTooltip name="ГруппаАдресВнешнейБазыРасширеннаяПодсказка" id="393"/>
 															<ChildItems>
-																<InputField name="ИмяБазы" id="394">
-																	<DataPath>ИмяБазы</DataPath>
-																	<ContextMenu name="ИмяБазыКонтекстноеМеню" id="395"/>
-																	<ExtendedTooltip name="ИмяБазыРасширеннаяПодсказка" id="396"/>
-																</InputField>
 																<InputField name="ИмяСервера" id="397">
 																	<DataPath>ИмяСервера</DataPath>
 																	<ContextMenu name="ИмяСервераКонтекстноеМеню" id="398"/>
 																	<ExtendedTooltip name="ИмяСервераРасширеннаяПодсказка" id="399"/>
+																</InputField>
+																<InputField name="ИмяБазы" id="394">
+																	<DataPath>ИмяБазы</DataPath>
+																	<ContextMenu name="ИмяБазыКонтекстноеМеню" id="395"/>
+																	<ExtendedTooltip name="ИмяБазыРасширеннаяПодсказка" id="396"/>
 																</InputField>
 																<InputField name="ПутьКБазе" id="400">
 																	<DataPath>ПутьКБазе</DataPath>
@@ -750,6 +746,17 @@
 															<Type>CommandBarButton</Type>
 															<CommandName>Form.Command.РедактироватьТекст</CommandName>
 															<ExtendedTooltip name="ВнешнееСоединениеРедактироватьТекстРасширеннаяПодсказка" id="424"/>
+														</Button>
+														<Button name="ВнешнееСоединениеЗакомментировать" id="425">
+															<Type>CommandBarButton</Type>
+															<CommandName>Form.Command.Закомментировать</CommandName>
+															<Font ref="style:TextFont" kind="StyleItem"/>
+															<ExtendedTooltip name="ВнешнееСоединениеЗакомментироватьРасширеннаяПодсказка" id="426"/>
+														</Button>
+														<Button name="ВнешнееСоединениеРаскомментировать" id="427">
+															<Type>CommandBarButton</Type>
+															<CommandName>Form.Command.Раскомментировать</CommandName>
+															<ExtendedTooltip name="ВнешнееСоединениеРаскомментироватьРасширеннаяПодсказка" id="428"/>
 														</Button>
 													</ChildItems>
 												</CommandBar>
@@ -1286,6 +1293,7 @@
 					<v8:AllowedLength>Variable</v8:AllowedLength>
 				</v8:StringQualifiers>
 			</Type>
+			<FillCheck>ShowError</FillCheck>
 			<Save>
 				<Field>ИмяСервера</Field>
 			</Save>
@@ -1304,6 +1312,7 @@
 					<v8:AllowedLength>Variable</v8:AllowedLength>
 				</v8:StringQualifiers>
 			</Type>
+			<FillCheck>ShowError</FillCheck>
 			<Save>
 				<Field>ИмяБазы</Field>
 			</Save>
@@ -1322,6 +1331,7 @@
 					<v8:AllowedLength>Variable</v8:AllowedLength>
 				</v8:StringQualifiers>
 			</Type>
+			<FillCheck>ShowError</FillCheck>
 			<Save>
 				<Field>Пользователь</Field>
 			</Save>
@@ -1905,6 +1915,7 @@
 					<v8:AllowedLength>Variable</v8:AllowedLength>
 				</v8:StringQualifiers>
 			</Type>
+			<FillCheck>ShowError</FillCheck>
 			<Save>
 				<Field>ПутьКБазе</Field>
 			</Save>
@@ -2143,7 +2154,7 @@
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Закомментировать</v8:content>
+					<v8:content>Раскомментировать</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Shortcut>Ctrl+Shift+Num /</Shortcut>
