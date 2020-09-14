@@ -41,8 +41,7 @@
 		</row>
 	</rowsItem>
 	<rowsItem>
-		<index>2</index>
-		<indexTo>15</indexTo>
+		<index>15</index>
 		<row>
 			<empty>true</empty>
 		</row>
@@ -89,4 +88,5 @@
 	<format>
 		<width>72</width>
 	</format>
+	<textDirection>LeftToRight</textDirection>
 </document>
