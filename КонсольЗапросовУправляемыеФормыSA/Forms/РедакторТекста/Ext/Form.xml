@@ -54,6 +54,16 @@
 						<CommandName>Form.Command.Раскомментировать</CommandName>
 						<ExtendedTooltip name="РаскомментироватьРасширеннаяПодсказка" id="11"/>
 					</Button>
+					<Button name="ФормаДобавитьПереносСтроки" id="14">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ДобавитьПереносСтроки</CommandName>
+						<ExtendedTooltip name="ФормаДобавитьПереносСтрокиРасширеннаяПодсказка" id="15"/>
+					</Button>
+					<Button name="ФормаУбратьПереносСтроки" id="16">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.УбратьПереносСтроки</CommandName>
+						<ExtendedTooltip name="ФормаУбратьПереносСтрокиРасширеннаяПодсказка" id="17"/>
+					</Button>
 				</ChildItems>
 			</ButtonGroup>
 		</ChildItems>
@@ -144,6 +154,38 @@
 			<Shortcut>Ctrl+Num /</Shortcut>
 			<Action>Закомментировать</Action>
 			<Representation>Picture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ДобавитьПереносСтроки" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content> | </v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить перенос строки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ДобавитьПереносСтроки</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="УбратьПереносСтроки" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content> |х</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Убрать перенос строки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>УбратьПереносСтроки</Action>
 			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 	</Commands>

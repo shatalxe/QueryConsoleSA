@@ -1,0 +1,456 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.10">
+	<ScalingMode>Compact</ScalingMode>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаДеревоМетаданных" id="49">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дерево метаданных</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа дерево метаданных</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>AlwaysHorizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаДеревоМетаданныхРасширеннаяПодсказка" id="50"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаЛево" id="61">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа лево</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа лево</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаЛевоРасширеннаяПодсказка" id="62"/>
+					<ChildItems>
+						<RadioButtonField name="ОграничениеВыборки" id="58">
+							<DataPath>ОграничениеВыборки</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<RadioButtonType>Tumbler</RadioButtonType>
+							<ChoiceList>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Все</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:string"/>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>ПЕРВЫЕ 1</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:string">ПЕРВЫЕ 1</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>ПЕРВЫЕ 100</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:string">ПЕРВЫЕ 100</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>ПЕРВЫЕ 1000</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:string">ПЕРВЫЕ 1000</Value>
+									</xr:Value>
+								</xr:Item>
+							</ChoiceList>
+							<ContextMenu name="ОграничениеВыборкиКонтекстноеМеню" id="59"/>
+							<ExtendedTooltip name="ОграничениеВыборкиРасширеннаяПодсказка" id="60"/>
+						</RadioButtonField>
+						<Table name="ДеревоМетаданных" id="1">
+							<Representation>Tree</Representation>
+							<ReadOnly>true</ReadOnly>
+							<ChangeRowSet>false</ChangeRowSet>
+							<ChangeRowOrder>false</ChangeRowOrder>
+							<Width>25</Width>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>ДеревоМетаданных</DataPath>
+							<ContextMenu name="ДеревоМетаданныхКонтекстноеМеню" id="2"/>
+							<AutoCommandBar name="ДеревоМетаданныхКоманднаяПанель" id="3">
+								<Autofill>false</Autofill>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ДеревоМетаданныхРасширеннаяПодсказка" id="4"/>
+							<SearchStringAddition name="ДеревоМетаданныхСтрокаПоиска" id="5">
+								<AdditionSource>
+									<Item>ДеревоМетаданных</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ДеревоМетаданныхСтрокаПоискаКонтекстноеМеню" id="6"/>
+								<ExtendedTooltip name="ДеревоМетаданныхСтрокаПоискаРасширеннаяПодсказка" id="7"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ДеревоМетаданныхСостояниеПросмотра" id="8">
+								<AdditionSource>
+									<Item>ДеревоМетаданных</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ДеревоМетаданныхСостояниеПросмотраКонтекстноеМеню" id="9"/>
+								<ExtendedTooltip name="ДеревоМетаданныхСостояниеПросмотраРасширеннаяПодсказка" id="10"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ДеревоМетаданныхУправлениеПоиском" id="11">
+								<AdditionSource>
+									<Item>ДеревоМетаданных</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ДеревоМетаданныхУправлениеПоискомКонтекстноеМеню" id="12"/>
+								<ExtendedTooltip name="ДеревоМетаданныхУправлениеПоискомРасширеннаяПодсказка" id="13"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<ColumnGroup name="ДеревоМетаданныхГруппаКолонок" id="54">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Дерево метаданных группа колонок</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Дерево метаданных группа колонок</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>InCell</Group>
+									<ExtendedTooltip name="ДеревоМетаданныхГруппаКолонокРасширеннаяПодсказка" id="55"/>
+									<ChildItems>
+										<PictureField name="ДеревоМетаданныхКартинака" id="51">
+											<DataPath>ДеревоМетаданных.Картинака</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ShowInHeader>false</ShowInHeader>
+											<ContextMenu name="ДеревоМетаданныхКартинакаКонтекстноеМеню" id="52"/>
+											<ExtendedTooltip name="ДеревоМетаданныхКартинакаРасширеннаяПодсказка" id="53"/>
+										</PictureField>
+										<InputField name="ДеревоМетаданныхУзелКореняМетаданных" id="14">
+											<DataPath>ДеревоМетаданных.УзелКореняМетаданных</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ДеревоМетаданныхУзелКореняМетаданныхКонтекстноеМеню" id="15"/>
+											<ExtendedTooltip name="ДеревоМетаданныхУзелКореняМетаданныхРасширеннаяПодсказка" id="16"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</UsualGroup>
+				<Table name="ДеревоМетаданныхОбъектыМетаданных" id="17">
+					<Representation>List</Representation>
+					<ReadOnly>true</ReadOnly>
+					<ChangeRowSet>false</ChangeRowSet>
+					<AutoInsertNewRow>true</AutoInsertNewRow>
+					<EnableStartDrag>true</EnableStartDrag>
+					<EnableDrag>true</EnableDrag>
+					<DataPath>Items.ДеревоМетаданных.CurrentData.ОбъектыМетаданных</DataPath>
+					<SearchStringLocation>Top</SearchStringLocation>
+					<RowFilter xsi:nil="true"/>
+					<ContextMenu name="ДеревоМетаданныхОбъектыМетаданныхКонтекстноеМеню" id="18"/>
+					<AutoCommandBar name="ДеревоМетаданныхОбъектыМетаданныхКоманднаяПанель" id="19">
+						<Autofill>false</Autofill>
+					</AutoCommandBar>
+					<ExtendedTooltip name="ДеревоМетаданныхОбъектыМетаданныхРасширеннаяПодсказка" id="20"/>
+					<SearchStringAddition name="ДеревоМетаданныхОбъектыМетаданныхСтрокаПоиска" id="21">
+						<AdditionSource>
+							<Item>ДеревоМетаданныхОбъектыМетаданных</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ДеревоМетаданныхОбъектыМетаданныхСтрокаПоискаКонтекстноеМеню" id="22"/>
+						<ExtendedTooltip name="ДеревоМетаданныхОбъектыМетаданныхСтрокаПоискаРасширеннаяПодсказка" id="23"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="ДеревоМетаданныхОбъектыМетаданныхСостояниеПросмотра" id="24">
+						<AdditionSource>
+							<Item>ДеревоМетаданныхОбъектыМетаданных</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ДеревоМетаданныхОбъектыМетаданныхСостояниеПросмотраКонтекстноеМеню" id="25"/>
+						<ExtendedTooltip name="ДеревоМетаданныхОбъектыМетаданныхСостояниеПросмотраРасширеннаяПодсказка" id="26"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="ДеревоМетаданныхОбъектыМетаданныхУправлениеПоиском" id="27">
+						<AdditionSource>
+							<Item>ДеревоМетаданныхОбъектыМетаданных</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="ДеревоМетаданныхОбъектыМетаданныхУправлениеПоискомКонтекстноеМеню" id="28"/>
+						<ExtendedTooltip name="ДеревоМетаданныхОбъектыМетаданныхУправлениеПоискомРасширеннаяПодсказка" id="29"/>
+					</SearchControlAddition>
+					<Events>
+						<Event name="Selection">ДеревоМетаданныхОбъектыМетаданныхВыбор</Event>
+						<Event name="OnActivateRow">ДеревоМетаданныхОбъектыМетаданныхПриАктивизацииСтроки</Event>
+					</Events>
+					<ChildItems>
+						<InputField name="ДеревоМетаданныхОбъектыМетаданныхОбъектМетаданных" id="30">
+							<DataPath>Items.ДеревоМетаданных.CurrentData.ОбъектыМетаданных.ОбъектМетаданных</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ДеревоМетаданныхОбъектыМетаданныхОбъектМетаданныхКонтекстноеМеню" id="31"/>
+							<ExtendedTooltip name="ДеревоМетаданныхОбъектыМетаданныхОбъектМетаданныхРасширеннаяПодсказка" id="32"/>
+						</InputField>
+					</ChildItems>
+				</Table>
+				<Table name="ДеревоМетаданныхОбъектыМетаданныхПоляОбъекта" id="33">
+					<Representation>List</Representation>
+					<ReadOnly>true</ReadOnly>
+					<ChangeRowSet>false</ChangeRowSet>
+					<ChangeRowOrder>false</ChangeRowOrder>
+					<AutoInsertNewRow>true</AutoInsertNewRow>
+					<EnableStartDrag>true</EnableStartDrag>
+					<EnableDrag>true</EnableDrag>
+					<DataPath>Items.ДеревоМетаданныхОбъектыМетаданных.CurrentData.ПоляОбъекта</DataPath>
+					<CommandSet>
+						<ExcludedCommand>Add</ExcludedCommand>
+						<ExcludedCommand>Change</ExcludedCommand>
+						<ExcludedCommand>Copy</ExcludedCommand>
+						<ExcludedCommand>Delete</ExcludedCommand>
+					</CommandSet>
+					<RowFilter xsi:nil="true"/>
+					<ContextMenu name="ДеревоМетаданныхОбъектыМетаданныхПоляОбъектаКонтекстноеМеню" id="34"/>
+					<AutoCommandBar name="ДеревоМетаданныхОбъектыМетаданныхПоляОбъектаКоманднаяПанель" id="35">
+						<ChildItems>
+							<Button name="ДеревоМетаданныхОбъектыМетаданныхПоляОбъектаВыделитьВсе" id="56">
+								<Type>CommandBarButton</Type>
+								<DefaultButton>true</DefaultButton>
+								<CommandName>Form.Command.ВыбратьВсе</CommandName>
+								<ExtendedTooltip name="ДеревоМетаданныхОбъектыМетаданныхПоляОбъектаВыделитьВсеРасширеннаяПодсказка" id="57"/>
+							</Button>
+							<Button name="ДеревоМетаданныхОбъектыМетаданныхПоляОбъектаВыбратьВыделенные" id="63">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.ВыбратьВыделенные</CommandName>
+								<ExtendedTooltip name="ДеревоМетаданныхОбъектыМетаданныхПоляОбъектаВыбратьВыделенныеРасширеннаяПодсказка" id="64"/>
+							</Button>
+						</ChildItems>
+					</AutoCommandBar>
+					<ExtendedTooltip name="ДеревоМетаданныхОбъектыМетаданныхПоляОбъектаРасширеннаяПодсказка" id="36"/>
+					<SearchStringAddition name="ДеревоМетаданныхОбъектыМетаданныхПоляОбъектаСтрокаПоиска" id="37">
+						<AdditionSource>
+							<Item>ДеревоМетаданныхОбъектыМетаданныхПоляОбъекта</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ДеревоМетаданныхОбъектыМетаданныхПоляОбъектаСтрокаПоискаКонтекстноеМеню" id="38"/>
+						<ExtendedTooltip name="ДеревоМетаданныхОбъектыМетаданныхПоляОбъектаСтрокаПоискаРасширеннаяПодсказка" id="39"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="ДеревоМетаданныхОбъектыМетаданныхПоляОбъектаСостояниеПросмотра" id="40">
+						<AdditionSource>
+							<Item>ДеревоМетаданныхОбъектыМетаданныхПоляОбъекта</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ДеревоМетаданныхОбъектыМетаданныхПоляОбъектаСостояниеПросмотраКонтекстноеМеню" id="41"/>
+						<ExtendedTooltip name="ДеревоМетаданныхОбъектыМетаданныхПоляОбъектаСостояниеПросмотраРасширеннаяПодсказка" id="42"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="ДеревоМетаданныхОбъектыМетаданныхПоляОбъектаУправлениеПоиском" id="43">
+						<AdditionSource>
+							<Item>ДеревоМетаданныхОбъектыМетаданныхПоляОбъекта</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="ДеревоМетаданныхОбъектыМетаданныхПоляОбъектаУправлениеПоискомКонтекстноеМеню" id="44"/>
+						<ExtendedTooltip name="ДеревоМетаданныхОбъектыМетаданныхПоляОбъектаУправлениеПоискомРасширеннаяПодсказка" id="45"/>
+					</SearchControlAddition>
+					<Events>
+						<Event name="Selection">ДеревоМетаданныхОбъектыМетаданныхПоляОбъектаВыбор</Event>
+					</Events>
+					<ChildItems>
+						<InputField name="ДеревоМетаданныхОбъектыМетаданныхПоляОбъектаПоле" id="46">
+							<DataPath>Items.ДеревоМетаданныхОбъектыМетаданных.CurrentData.ПоляОбъекта.Поле</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ДеревоМетаданныхОбъектыМетаданныхПоляОбъектаПолеКонтекстноеМеню" id="47"/>
+							<ExtendedTooltip name="ДеревоМетаданныхОбъектыМетаданныхПоляОбъектаПолеРасширеннаяПодсказка" id="48"/>
+						</InputField>
+					</ChildItems>
+				</Table>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:ExternalDataProcessorObject.КонсольЗапросовУправляемыеФормыSA</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="ДеревоМетаданных" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дерево метаданных</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTree</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="УзелКореняМетаданных" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Узел кореня метаданных</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ОбъектыМетаданных" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Объекты метаданных</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>v8:ValueTable</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Картинака" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Картинака</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>v8ui:Picture</v8:Type>
+					</Type>
+				</Column>
+				<AdditionalColumns table="ДеревоМетаданных.ОбъектыМетаданных">
+					<Column name="ОбъектМетаданных" id="1">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Объект метаданных</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>0</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
+						</Type>
+					</Column>
+					<Column name="ПоляОбъекта" id="2">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Поля объекта</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>v8:ValueTable</v8:Type>
+						</Type>
+					</Column>
+				</AdditionalColumns>
+				<AdditionalColumns table="ДеревоМетаданных.ОбъектыМетаданных.ПоляОбъекта">
+					<Column name="Поле" id="1">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Поле</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>0</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
+						</Type>
+					</Column>
+				</AdditionalColumns>
+			</Columns>
+		</Attribute>
+		<Attribute name="ОграничениеВыборки" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ограничение выборки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ВыбратьВсе" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбрать все</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбрать все</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВыбратьВсе</Action>
+		</Command>
+		<Command name="ВыбратьВыделенные" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбрать выделенные</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбрать выделенные</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВыбратьВыделенные</Action>
+		</Command>
+	</Commands>
+</Form>
