@@ -388,17 +388,17 @@
 					</Attribute>
 				</ChildObjects>
 			</TabularSection>
-			<Form>Форма</Form>
-			<Form>ФормаТабличногоДокумента</Form>
+			<Form>АнализЗапросов</Form>
+			<Form>БыстрыйКонструктор</Form>
+			<Form>ВводВыражения</Form>
+			<Form>ВыборПараметров</Form>
+			<Form>ОбОбработке</Form>
+			<Form>ОбщиеМодулиКлиент</Form>
 			<Form>ПоказателиВыделенныхЯчеек</Form>
 			<Form>РедакторТекста</Form>
-			<Form>АнализЗапросов</Form>
-			<Form>ВыборПараметров</Form>
+			<Form>Форма</Form>
 			<Form>ФормаЗначенияВОтдельномОкне</Form>
-			<Form>ОбщиеМодулиКлиент</Form>
-			<Form>ВводВыражения</Form>
-			<Form>ОбОбработке</Form>
-			<Form>БыстрыйКонструктор</Form>
+			<Form>ФормаТабличногоДокумента</Form>
 			<Template>ОформлениеРезультата</Template>
 			<Template>ПредопределенныеНастройки</Template>
 			<Template>СкриптРаскрашивания</Template>
