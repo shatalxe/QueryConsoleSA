@@ -8,6 +8,7 @@
 	</AutoCommandBar>
 	<Events>
 		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="BeforeClose">ПередЗакрытием</Event>
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
 	</Events>
 	<ChildItems>
@@ -138,6 +139,12 @@
 											<Type>CommandBarButton</Type>
 											<CommandName>Form.Command.ОбОбработке</CommandName>
 											<ExtendedTooltip name="ДеревоНастроекПроверитьОбновлениеРасширеннаяПодсказка" id="376"/>
+										</Button>
+										<Button name="ДеревоНастроекАвтоматическиСохранять" id="447">
+											<Type>CommandBarButton</Type>
+											<Check>true</Check>
+											<CommandName>Form.Command.АвтоматическиСохранятьПриЗакрытии</CommandName>
+											<ExtendedTooltip name="ДеревоНастроекАвтоматическиСохранятьРасширеннаяПодсказка" id="448"/>
 										</Button>
 									</ChildItems>
 								</CommandBar>
@@ -369,9 +376,14 @@
 															<ToolTip>
 																<v8:item>
 																	<v8:lang>ru</v8:lang>
-																	<v8:content>Группа кнопок временные таблицы</v8:content>
+																	<v8:content>Вернуть временную таблицу</v8:content>
 																</v8:item>
 															</ToolTip>
+															<Picture>
+																<xr:Ref>StdPicture.QueryWizardTempTable</xr:Ref>
+																<xr:LoadTransparent>true</xr:LoadTransparent>
+															</Picture>
+															<Representation>Picture</Representation>
 															<ExtendedTooltip name="ГруппаКнопокВременныеТаблицыРасширеннаяПодсказка" id="228"/>
 														</Popup>
 													</ChildItems>
@@ -1973,6 +1985,20 @@
 				<Field>ВариантСоединения</Field>
 			</Save>
 		</Attribute>
+		<Attribute name="АвтоматическиСохранятьПриЗакрытии" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Автоматически сохранять при закрытии</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<Save>
+				<Field>АвтоматическиСохранятьПриЗакрытии</Field>
+			</Save>
+		</Attribute>
 		<ConditionalAppearance>
 			<dcsset:item>
 				<dcsset:selection>
@@ -2505,6 +2531,21 @@
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
 			<Action>БыстрыйКонструктор</Action>
+		</Command>
+		<Command name="АвтоматическиСохранятьПриЗакрытии" id="27">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Автоматически сохранять при закрытии</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Автоматически сохранять при закрытии</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>АвтоматическиСохранятьПриЗакрытии</Action>
 		</Command>
 	</Commands>
 </Form>

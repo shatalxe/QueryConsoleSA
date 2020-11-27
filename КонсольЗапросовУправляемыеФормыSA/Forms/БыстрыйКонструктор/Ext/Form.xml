@@ -39,6 +39,7 @@
 							<v8:content>Группа лево</v8:content>
 						</v8:item>
 					</ToolTip>
+					<Width>25</Width>
 					<Representation>None</Representation>
 					<ShowTitle>false</ShowTitle>
 					<ExtendedTooltip name="ГруппаЛевоРасширеннаяПодсказка" id="62"/>
@@ -47,6 +48,7 @@
 							<DataPath>ОграничениеВыборки</DataPath>
 							<TitleLocation>None</TitleLocation>
 							<RadioButtonType>Tumbler</RadioButtonType>
+							<ColumnsCount>4</ColumnsCount>
 							<ChoiceList>
 								<xr:Item>
 									<xr:Presentation/>
@@ -81,19 +83,6 @@
 										<Presentation>
 											<v8:item>
 												<v8:lang>ru</v8:lang>
-												<v8:content>ПЕРВЫЕ 100</v8:content>
-											</v8:item>
-										</Presentation>
-										<Value xsi:type="xs:string">ПЕРВЫЕ 100</Value>
-									</xr:Value>
-								</xr:Item>
-								<xr:Item>
-									<xr:Presentation/>
-									<xr:CheckState>0</xr:CheckState>
-									<xr:Value xsi:type="FormChoiceListDesTimeValue">
-										<Presentation>
-											<v8:item>
-												<v8:lang>ru</v8:lang>
 												<v8:content>ПЕРВЫЕ 1000</v8:content>
 											</v8:item>
 										</Presentation>
@@ -109,7 +98,6 @@
 							<ReadOnly>true</ReadOnly>
 							<ChangeRowSet>false</ChangeRowSet>
 							<ChangeRowOrder>false</ChangeRowOrder>
-							<Width>25</Width>
 							<AutoInsertNewRow>true</AutoInsertNewRow>
 							<EnableStartDrag>true</EnableStartDrag>
 							<EnableDrag>true</EnableDrag>
@@ -226,12 +214,36 @@
 						<Event name="OnActivateRow">ДеревоМетаданныхОбъектыМетаданныхПриАктивизацииСтроки</Event>
 					</Events>
 					<ChildItems>
-						<InputField name="ДеревоМетаданныхОбъектыМетаданныхИсточникДанных" id="65">
-							<DataPath>Items.ДеревоМетаданных.CurrentData.ОбъектыМетаданных.ИсточникДанных</DataPath>
-							<EditMode>EnterOnInput</EditMode>
-							<ContextMenu name="ДеревоМетаданныхОбъектыМетаданныхИсточникДанныхКонтекстноеМеню" id="66"/>
-							<ExtendedTooltip name="ДеревоМетаданныхОбъектыМетаданныхИсточникДанныхРасширеннаяПодсказка" id="67"/>
-						</InputField>
+						<ColumnGroup name="ДеревоМетаданныхОбъектыМетаданныхГруппаКолонок" id="71">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Дерево метаданных объекты метаданных группа колонок</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Дерево метаданных объекты метаданных группа колонок</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>InCell</Group>
+							<ExtendedTooltip name="ДеревоМетаданныхОбъектыМетаданныхГруппаКолонокРасширеннаяПодсказка" id="72"/>
+							<ChildItems>
+								<PictureField name="ДеревоМетаданныхОбъектыМетаданныхКартинка" id="68">
+									<EditMode>EnterOnInput</EditMode>
+									<ShowInHeader>false</ShowInHeader>
+									<ContextMenu name="ДеревоМетаданныхОбъектыМетаданныхКартинкаКонтекстноеМеню" id="69"/>
+									<ExtendedTooltip name="ДеревоМетаданныхОбъектыМетаданныхКартинкаРасширеннаяПодсказка" id="70"/>
+								</PictureField>
+								<InputField name="ДеревоМетаданныхОбъектыМетаданныхИсточникДанных" id="65">
+									<DataPath>Items.ДеревоМетаданных.CurrentData.ОбъектыМетаданных.ИсточникДанных</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДеревоМетаданныхОбъектыМетаданныхИсточникДанныхКонтекстноеМеню" id="66"/>
+									<ExtendedTooltip name="ДеревоМетаданныхОбъектыМетаданныхИсточникДанныхРасширеннаяПодсказка" id="67"/>
+								</InputField>
+							</ChildItems>
+						</ColumnGroup>
 					</ChildItems>
 				</Table>
 				<Table name="ДеревоМетаданныхОбъектыМетаданныхПоляОбъекта" id="33">
@@ -239,6 +251,7 @@
 					<ReadOnly>true</ReadOnly>
 					<ChangeRowSet>false</ChangeRowSet>
 					<ChangeRowOrder>false</ChangeRowOrder>
+					<Width>20</Width>
 					<AutoInsertNewRow>true</AutoInsertNewRow>
 					<EnableStartDrag>true</EnableStartDrag>
 					<EnableDrag>true</EnableDrag>
