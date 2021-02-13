@@ -950,6 +950,9 @@
 									<ClearButton>true</ClearButton>
 									<ContextMenu name="ДеревоНастроекСписокПараметровЗначениеКонтекстноеМеню" id="112"/>
 									<ExtendedTooltip name="ДеревоНастроекСписокПараметровЗначениеРасширеннаяПодсказка" id="113"/>
+									<Events>
+										<Event name="StartChoice">ДеревоНастроекСписокПараметровЗначениеНачалоВыбора</Event>
+									</Events>
 								</InputField>
 							</ChildItems>
 						</Table>
@@ -2511,6 +2514,10 @@
 					<v8:content>Открыть расположение настроек</v8:content>
 				</v8:item>
 			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.SyncContents</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
 			<Action>ОткрытьРасположениеНастроек</Action>
 		</Command>
 		<Command name="БыстрыйКонструктор" id="28">

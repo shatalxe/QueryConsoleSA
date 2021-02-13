@@ -251,10 +251,38 @@
 			</c>
 		</row>
 	</rowsItem>
+	<rowsItem>
+		<index>5</index>
+		<row>
+			<c>
+				<c>
+					<f>0</f>
+					<tl>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ОбновитьСправочникМетаданных</v8:content>
+						</v8:item>
+					</tl>
+				</c>
+			</c>
+			<c>
+				<i>2</i>
+				<c>
+					<f>0</f>
+					<tl>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Справочники.ИдентификаторыОбъектовМетаданных.ОбновитьДанныеСправочника(Истина);</v8:content>
+						</v8:item>
+					</tl>
+				</c>
+			</c>
+		</row>
+	</rowsItem>
 	<templateMode>true</templateMode>
 	<defaultFormatIndex>5</defaultFormatIndex>
-	<height>5</height>
-	<vgRows>5</vgRows>
+	<height>6</height>
+	<vgRows>6</vgRows>
 	<format>
 		<width>203</width>
 	</format>
