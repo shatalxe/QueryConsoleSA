@@ -76,6 +76,7 @@
 		<TextDocumentField name="Текст" id="1">
 			<DataPath>Текст</DataPath>
 			<TitleLocation>None</TitleLocation>
+			<TextColor>#000000</TextColor>
 			<ContextMenu name="ТекстКонтекстноеМеню" id="2"/>
 			<ExtendedTooltip name="ТекстРасширеннаяПодсказка" id="3"/>
 		</TextDocumentField>
