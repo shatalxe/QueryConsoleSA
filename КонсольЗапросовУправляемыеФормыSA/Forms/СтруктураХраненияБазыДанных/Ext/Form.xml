@@ -1,0 +1,548 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.13">
+	<ScalingMode>Compact</ScalingMode>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаВверх" id="51">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа вверх</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа вверх</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Behavior>Usual</Behavior>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаВверхРасширеннаяПодсказка" id="52"/>
+			<ChildItems>
+				<Table name="ДеревоТаблиц" id="1">
+					<Representation>Tree</Representation>
+					<AutoInsertNewRow>true</AutoInsertNewRow>
+					<EnableStartDrag>true</EnableStartDrag>
+					<EnableDrag>true</EnableDrag>
+					<FileDragMode>AsFile</FileDragMode>
+					<DataPath>ДеревоХранения</DataPath>
+					<ContextMenu name="ДеревоТаблицКонтекстноеМеню" id="2"/>
+					<AutoCommandBar name="ДеревоТаблицКоманднаяПанель" id="3">
+						<ChildItems>
+							<Button name="ФормаОбновитьДерево" id="105">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.ОбновитьДерево</CommandName>
+								<ExtendedTooltip name="ФормаОбновитьДеревоРасширеннаяПодсказка" id="106"/>
+							</Button>
+						</ChildItems>
+					</AutoCommandBar>
+					<ExtendedTooltip name="ДеревоТаблицРасширеннаяПодсказка" id="4"/>
+					<SearchStringAddition name="ДеревоТаблицСтрокаПоиска" id="5">
+						<AdditionSource>
+							<Item>ДеревоТаблиц</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ДеревоТаблицСтрокаПоискаКонтекстноеМеню" id="6"/>
+						<ExtendedTooltip name="ДеревоТаблицСтрокаПоискаРасширеннаяПодсказка" id="7"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="ДеревоТаблицСостояниеПросмотра" id="8">
+						<AdditionSource>
+							<Item>ДеревоТаблиц</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ДеревоТаблицСостояниеПросмотраКонтекстноеМеню" id="9"/>
+						<ExtendedTooltip name="ДеревоТаблицСостояниеПросмотраРасширеннаяПодсказка" id="10"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="ДеревоТаблицУправлениеПоиском" id="11">
+						<AdditionSource>
+							<Item>ДеревоТаблиц</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="ДеревоТаблицУправлениеПоискомКонтекстноеМеню" id="12"/>
+						<ExtendedTooltip name="ДеревоТаблицУправлениеПоискомРасширеннаяПодсказка" id="13"/>
+					</SearchControlAddition>
+					<ChildItems>
+						<InputField name="ДеревоТаблицИмяТаблицы" id="17">
+							<DataPath>ДеревоХранения.ИмяТаблицы</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ДеревоТаблицИмяТаблицыКонтекстноеМеню" id="18"/>
+							<ExtendedTooltip name="ДеревоТаблицИмяТаблицыРасширеннаяПодсказка" id="19"/>
+						</InputField>
+						<InputField name="ДеревоТаблицИмяТаблицыХранения" id="14">
+							<DataPath>ДеревоХранения.ИмяТаблицыХранения</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ДеревоТаблицИмяТаблицыХраненияКонтекстноеМеню" id="15"/>
+							<ExtendedTooltip name="ДеревоТаблицИмяТаблицыХраненияРасширеннаяПодсказка" id="16"/>
+						</InputField>
+						<InputField name="ДеревоТаблицМетаданные" id="20">
+							<DataPath>ДеревоХранения.Метаданные</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ДеревоТаблицМетаданныеКонтекстноеМеню" id="21"/>
+							<ExtendedTooltip name="ДеревоТаблицМетаданныеРасширеннаяПодсказка" id="22"/>
+						</InputField>
+						<InputField name="ДеревоТаблицНазначение" id="23">
+							<DataPath>ДеревоХранения.Назначение</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ДеревоТаблицНазначениеКонтекстноеМеню" id="24"/>
+							<ExtendedTooltip name="ДеревоТаблицНазначениеРасширеннаяПодсказка" id="25"/>
+						</InputField>
+					</ChildItems>
+				</Table>
+				<Table name="ПоляТаблиц" id="26">
+					<Representation>List</Representation>
+					<AutoInsertNewRow>true</AutoInsertNewRow>
+					<EnableStartDrag>true</EnableStartDrag>
+					<EnableDrag>true</EnableDrag>
+					<FileDragMode>AsFile</FileDragMode>
+					<DataPath>Items.ДеревоТаблиц.CurrentData.Поля</DataPath>
+					<RowFilter xsi:nil="true"/>
+					<ContextMenu name="ПоляТаблицКонтекстноеМеню" id="27"/>
+					<AutoCommandBar name="ПоляТаблицКоманднаяПанель" id="28"/>
+					<ExtendedTooltip name="ПоляТаблицРасширеннаяПодсказка" id="29"/>
+					<SearchStringAddition name="ПоляТаблицСтрокаПоиска" id="30">
+						<AdditionSource>
+							<Item>ПоляТаблиц</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ПоляТаблицСтрокаПоискаКонтекстноеМеню" id="31"/>
+						<ExtendedTooltip name="ПоляТаблицСтрокаПоискаРасширеннаяПодсказка" id="32"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="ПоляТаблицСостояниеПросмотра" id="33">
+						<AdditionSource>
+							<Item>ПоляТаблиц</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ПоляТаблицСостояниеПросмотраКонтекстноеМеню" id="34"/>
+						<ExtendedTooltip name="ПоляТаблицСостояниеПросмотраРасширеннаяПодсказка" id="35"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="ПоляТаблицУправлениеПоиском" id="36">
+						<AdditionSource>
+							<Item>ПоляТаблиц</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="ПоляТаблицУправлениеПоискомКонтекстноеМеню" id="37"/>
+						<ExtendedTooltip name="ПоляТаблицУправлениеПоискомРасширеннаяПодсказка" id="38"/>
+					</SearchControlAddition>
+					<ChildItems>
+						<InputField name="ПоляТаблицИмяПоля" id="59">
+							<DataPath>Items.ДеревоТаблиц.CurrentData.Поля.ИмяПоля</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ПоляТаблицИмяПоляКонтекстноеМеню" id="60"/>
+							<ExtendedTooltip name="ПоляТаблицИмяПоляРасширеннаяПодсказка" id="61"/>
+						</InputField>
+						<InputField name="ПоляТаблицИмяПоляХранения" id="56">
+							<DataPath>Items.ДеревоТаблиц.CurrentData.Поля.ИмяПоляХранения</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ПоляТаблицИмяПоляХраненияКонтекстноеМеню" id="57"/>
+							<ExtendedTooltip name="ПоляТаблицИмяПоляХраненияРасширеннаяПодсказка" id="58"/>
+						</InputField>
+						<InputField name="ПоляТаблицМетаданные" id="62">
+							<DataPath>Items.ДеревоТаблиц.CurrentData.Поля.Метаданные</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ПоляТаблицМетаданныеКонтекстноеМеню" id="63"/>
+							<ExtendedTooltip name="ПоляТаблицМетаданныеРасширеннаяПодсказка" id="64"/>
+						</InputField>
+					</ChildItems>
+				</Table>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаНиз" id="65">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа низ</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа низ</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Behavior>Usual</Behavior>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаНизРасширеннаяПодсказка" id="66"/>
+			<ChildItems>
+				<Table name="ДеревоТаблицИндексы" id="67">
+					<Representation>List</Representation>
+					<AutoInsertNewRow>true</AutoInsertNewRow>
+					<EnableStartDrag>true</EnableStartDrag>
+					<EnableDrag>true</EnableDrag>
+					<FileDragMode>AsFile</FileDragMode>
+					<DataPath>Items.ДеревоТаблиц.CurrentData.Индексы</DataPath>
+					<RowFilter xsi:nil="true"/>
+					<ContextMenu name="ДеревоТаблицИндексыКонтекстноеМеню" id="68"/>
+					<AutoCommandBar name="ДеревоТаблицИндексыКоманднаяПанель" id="69"/>
+					<ExtendedTooltip name="ДеревоТаблицИндексыРасширеннаяПодсказка" id="70"/>
+					<SearchStringAddition name="ДеревоТаблицИндексыСтрокаПоиска" id="71">
+						<AdditionSource>
+							<Item>ДеревоТаблицИндексы</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ДеревоТаблицИндексыСтрокаПоискаКонтекстноеМеню" id="72"/>
+						<ExtendedTooltip name="ДеревоТаблицИндексыСтрокаПоискаРасширеннаяПодсказка" id="73"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="ДеревоТаблицИндексыСостояниеПросмотра" id="74">
+						<AdditionSource>
+							<Item>ДеревоТаблицИндексы</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ДеревоТаблицИндексыСостояниеПросмотраКонтекстноеМеню" id="75"/>
+						<ExtendedTooltip name="ДеревоТаблицИндексыСостояниеПросмотраРасширеннаяПодсказка" id="76"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="ДеревоТаблицИндексыУправлениеПоиском" id="77">
+						<AdditionSource>
+							<Item>ДеревоТаблицИндексы</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="ДеревоТаблицИндексыУправлениеПоискомКонтекстноеМеню" id="78"/>
+						<ExtendedTooltip name="ДеревоТаблицИндексыУправлениеПоискомРасширеннаяПодсказка" id="79"/>
+					</SearchControlAddition>
+					<ChildItems>
+						<InputField name="ДеревоТаблицИндексыИмяИндексаХранения" id="80">
+							<DataPath>Items.ДеревоТаблиц.CurrentData.Индексы.ИмяИндексаХранения</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ДеревоТаблицИндексыИмяИндексаХраненияКонтекстноеМеню" id="81"/>
+							<ExtendedTooltip name="ДеревоТаблицИндексыИмяИндексаХраненияРасширеннаяПодсказка" id="82"/>
+						</InputField>
+					</ChildItems>
+				</Table>
+				<Table name="ДеревоТаблицИндексыПоля" id="83">
+					<Representation>List</Representation>
+					<AutoInsertNewRow>true</AutoInsertNewRow>
+					<EnableStartDrag>true</EnableStartDrag>
+					<EnableDrag>true</EnableDrag>
+					<FileDragMode>AsFile</FileDragMode>
+					<DataPath>Items.ДеревоТаблицИндексы.CurrentData.Поля</DataPath>
+					<RowFilter xsi:nil="true"/>
+					<ContextMenu name="ДеревоТаблицИндексыПоляКонтекстноеМеню" id="84"/>
+					<AutoCommandBar name="ДеревоТаблицИндексыПоляКоманднаяПанель" id="85"/>
+					<ExtendedTooltip name="ДеревоТаблицИндексыПоляРасширеннаяПодсказка" id="86"/>
+					<SearchStringAddition name="ДеревоТаблицИндексыПоляСтрокаПоиска" id="87">
+						<AdditionSource>
+							<Item>ДеревоТаблицИндексыПоля</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ДеревоТаблицИндексыПоляСтрокаПоискаКонтекстноеМеню" id="88"/>
+						<ExtendedTooltip name="ДеревоТаблицИндексыПоляСтрокаПоискаРасширеннаяПодсказка" id="89"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="ДеревоТаблицИндексыПоляСостояниеПросмотра" id="90">
+						<AdditionSource>
+							<Item>ДеревоТаблицИндексыПоля</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ДеревоТаблицИндексыПоляСостояниеПросмотраКонтекстноеМеню" id="91"/>
+						<ExtendedTooltip name="ДеревоТаблицИндексыПоляСостояниеПросмотраРасширеннаяПодсказка" id="92"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="ДеревоТаблицИндексыПоляУправлениеПоиском" id="93">
+						<AdditionSource>
+							<Item>ДеревоТаблицИндексыПоля</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="ДеревоТаблицИндексыПоляУправлениеПоискомКонтекстноеМеню" id="94"/>
+						<ExtendedTooltip name="ДеревоТаблицИндексыПоляУправлениеПоискомРасширеннаяПодсказка" id="95"/>
+					</SearchControlAddition>
+					<ChildItems>
+						<InputField name="ДеревоТаблицИндексыПоляИмяПоля" id="99">
+							<DataPath>Items.ДеревоТаблицИндексы.CurrentData.Поля.ИмяПоля</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ДеревоТаблицИндексыПоляИмяПоляКонтекстноеМеню" id="100"/>
+							<ExtendedTooltip name="ДеревоТаблицИндексыПоляИмяПоляРасширеннаяПодсказка" id="101"/>
+						</InputField>
+						<InputField name="ДеревоТаблицИндексыПоляИмяПоляХранения" id="96">
+							<DataPath>Items.ДеревоТаблицИндексы.CurrentData.Поля.ИмяПоляХранения</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ДеревоТаблицИндексыПоляИмяПоляХраненияКонтекстноеМеню" id="97"/>
+							<ExtendedTooltip name="ДеревоТаблицИндексыПоляИмяПоляХраненияРасширеннаяПодсказка" id="98"/>
+						</InputField>
+						<InputField name="ДеревоТаблицИндексыПоляМетаданные" id="102">
+							<DataPath>Items.ДеревоТаблицИндексы.CurrentData.Поля.Метаданные</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ДеревоТаблицИндексыПоляМетаданныеКонтекстноеМеню" id="103"/>
+							<ExtendedTooltip name="ДеревоТаблицИндексыПоляМетаданныеРасширеннаяПодсказка" id="104"/>
+						</InputField>
+					</ChildItems>
+				</Table>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:ExternalDataProcessorObject.КонсольЗапросовУправляемыеФормыSA</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="ДеревоХранения" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дерево хранения</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTree</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="ИмяТаблицыХранения" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Имя таблицы хранения</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>100</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ИмяТаблицы" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Имя таблицы</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>1000</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Метаданные" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Метаданные</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>1000</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Назначение" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Назначение</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>100</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Поля" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Поля</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>v8:ValueTable</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Индексы" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Индексы</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>v8:ValueTable</v8:Type>
+					</Type>
+				</Column>
+				<AdditionalColumns table="ДеревоХранения.Поля">
+					<Column name="ИмяПоляХранения" id="2">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Имя поля хранения</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>100</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
+						</Type>
+					</Column>
+					<Column name="ИмяПоля" id="3">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Имя поля</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>100</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
+						</Type>
+					</Column>
+					<Column name="Метаданные" id="4">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Метаданные</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>1000</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
+						</Type>
+					</Column>
+				</AdditionalColumns>
+				<AdditionalColumns table="ДеревоХранения.Индексы">
+					<Column name="ИмяИндексаХранения" id="1">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Имя индекса хранения</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>100</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
+						</Type>
+					</Column>
+					<Column name="Поля" id="2">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Поля</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>v8:ValueTable</v8:Type>
+						</Type>
+					</Column>
+				</AdditionalColumns>
+				<AdditionalColumns table="ДеревоХранения.Индексы.Поля">
+					<Column name="ИмяПоляХранения" id="2">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Имя поля хранения</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>100</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
+						</Type>
+					</Column>
+					<Column name="ИмяПоля" id="3">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Имя поля</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>100</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
+						</Type>
+					</Column>
+					<Column name="Метаданные" id="4">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Метаданные</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>1000</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
+						</Type>
+					</Column>
+				</AdditionalColumns>
+			</Columns>
+		</Attribute>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ПоляТаблиц</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ПоляТаблиц.ИмяТаблицы</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="dcscor:Field">ДеревоТаблиц.ИмяТаблицы</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Отображать</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
+	</Attributes>
+	<Commands>
+		<Command name="ОбновитьДерево" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить дерево</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить дерево</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Shortcut>F5</Shortcut>
+			<Picture>
+				<xr:Ref>StdPicture.Refresh</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ОбновитьДерево</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

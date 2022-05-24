@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.13">
 	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
 	<VerticalScroll>useIfNecessary</VerticalScroll>
 	<ScalingMode>Compact</ScalingMode>
@@ -26,6 +26,7 @@
 				</v8:item>
 			</ToolTip>
 			<Group>Horizontal</Group>
+			<Behavior>Usual</Behavior>
 			<ShowTitle>false</ShowTitle>
 			<ExtendedTooltip name="НастройкиВыполненияРасширеннаяПодсказка" id="24"/>
 			<ChildItems>
@@ -43,6 +44,7 @@
 						</v8:item>
 					</ToolTip>
 					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
 					<Representation>None</Representation>
 					<ShowTitle>false</ShowTitle>
 					<ExtendedTooltip name="ГруппаДеревоНастроекРасширеннаяПодсказка" id="434"/>
@@ -62,6 +64,7 @@
 							</ToolTip>
 							<Width>25</Width>
 							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
 							<Representation>None</Representation>
 							<ShowTitle>false</ShowTitle>
 							<ExtendedTooltip name="ГруппаДеревоНастроекНизРасширеннаяПодсказка" id="442"/>
@@ -146,6 +149,28 @@
 											<CommandName>Form.Command.АвтоматическиСохранятьПриЗакрытии</CommandName>
 											<ExtendedTooltip name="ДеревоНастроекАвтоматическиСохранятьРасширеннаяПодсказка" id="448"/>
 										</Button>
+										<Popup name="ГруппаДополнительныеИнструменты" id="451">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Дополнительные инструменты</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа дополнительные инструменты</v8:content>
+												</v8:item>
+											</ToolTip>
+											<ExtendedTooltip name="ГруппаДополнительныеИнструментыРасширеннаяПодсказка" id="452"/>
+											<ChildItems>
+												<Button name="СтруктураХраненияБазыДанных" id="453">
+													<Type>CommandBarButton</Type>
+													<CommandName>Form.Command.СтруктураХраненияБазыДанных</CommandName>
+													<ExtendedTooltip name="СтруктураХраненияБазыДанныхРасширеннаяПодсказка" id="454"/>
+												</Button>
+											</ChildItems>
+										</Popup>
 									</ChildItems>
 								</CommandBar>
 								<Table name="ДеревоНастроек" id="65">
@@ -240,6 +265,7 @@
 							<v8:content>Текущие настройки</v8:content>
 						</v8:item>
 					</ToolTip>
+					<PagesRepresentation>TabsOnTop</PagesRepresentation>
 					<ExtendedTooltip name="ТекущиеНастройкиРасширеннаяПодсказка" id="82"/>
 					<Events>
 						<Event name="OnCurrentPageChange">ТекущиеНастройкиПриСменеСтраницы</Event>
@@ -445,6 +471,7 @@
 										</v8:item>
 									</ToolTip>
 									<Group>Horizontal</Group>
+									<Behavior>Usual</Behavior>
 									<ShowTitle>false</ShowTitle>
 									<ExtendedTooltip name="ПанельНастроекПроизвольныйКодРасширеннаяПодсказка" id="299"/>
 									<ChildItems>
@@ -705,6 +732,7 @@
 														</v8:item>
 													</ToolTip>
 													<Group>AlwaysHorizontal</Group>
+													<Behavior>Usual</Behavior>
 													<Representation>None</Representation>
 													<ShowTitle>false</ShowTitle>
 													<ExtendedTooltip name="ГруппаПараметрыПодключенияРасширеннаяПодсказка" id="391"/>
@@ -722,6 +750,7 @@
 																	<v8:content>Группа адрес внешней базы</v8:content>
 																</v8:item>
 															</ToolTip>
+															<Behavior>Usual</Behavior>
 															<ShowTitle>false</ShowTitle>
 															<ExtendedTooltip name="ГруппаАдресВнешнейБазыРасширеннаяПодсказка" id="393"/>
 															<ChildItems>
@@ -756,6 +785,7 @@
 																	<v8:content>Группа адрес внешней базы</v8:content>
 																</v8:item>
 															</ToolTip>
+															<Behavior>Usual</Behavior>
 															<ShowTitle>false</ShowTitle>
 															<ExtendedTooltip name="ГруппаПараметрыПодключенияВнешнейБазыРасширеннаяПодсказка" id="404"/>
 															<ChildItems>
@@ -976,6 +1006,7 @@
 				</v8:item>
 			</ToolTip>
 			<Group>Horizontal</Group>
+			<Behavior>Usual</Behavior>
 			<ShowTitle>false</ShowTitle>
 			<ExtendedTooltip name="ГруппаВыполнениеРасширеннаяПодсказка" id="56"/>
 			<ChildItems>
@@ -993,6 +1024,7 @@
 						</v8:item>
 					</ToolTip>
 					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
 					<ShowTitle>false</ShowTitle>
 					<ExtendedTooltip name="ВыполнениеВТекущейБазеРасширеннаяПодсказка" id="60"/>
 				</UsualGroup>
@@ -1070,6 +1102,7 @@
 											<v8:content>Группа результат</v8:content>
 										</v8:item>
 									</ToolTip>
+									<Behavior>Usual</Behavior>
 									<Representation>None</Representation>
 									<ShowTitle>false</ShowTitle>
 									<ExtendedTooltip name="ГруппаРезультатРасширеннаяПодсказка" id="353"/>
@@ -1129,6 +1162,7 @@
 											<v8:content>Группа таблицы значений</v8:content>
 										</v8:item>
 									</ToolTip>
+									<Behavior>Usual</Behavior>
 									<ShowTitle>false</ShowTitle>
 									<ExtendedTooltip name="ГруппаТаблицыЗначенийРасширеннаяПодсказка" id="317"/>
 								</UsualGroup>
@@ -1177,6 +1211,7 @@
 											<v8:content>Группа таблицы значений</v8:content>
 										</v8:item>
 									</ToolTip>
+									<Behavior>Usual</Behavior>
 									<ShowTitle>false</ShowTitle>
 									<ExtendedTooltip name="ГруппаДереваЗначенийРасширеннаяПодсказка" id="360"/>
 								</UsualGroup>
@@ -1255,6 +1290,7 @@
 										</v8:item>
 									</ToolTip>
 									<Group>Horizontal</Group>
+									<Behavior>Usual</Behavior>
 									<ShowTitle>false</ShowTitle>
 									<ExtendedTooltip name="ГруппаЗамерыРасширеннаяПодсказка" id="230"/>
 									<ChildItems>
@@ -1295,8 +1331,8 @@
 												<ExtendedTooltip name="РезультатыУправлениеПоискомРасширеннаяПодсказка" id="250"/>
 											</SearchControlAddition>
 											<Events>
-												<Event name="1282f000-23b6-4887-87f4-9e8e79db3d32">РезультатыВыбор</Event>
-												<Event name="60edb81d-887b-478e-94ee-7fef2b13393d">РезультатыПриАктивизацииСтроки</Event>
+												<Event name="Selection">РезультатыВыбор</Event>
+												<Event name="OnActivateRow">РезультатыПриАктивизацииСтроки</Event>
 											</Events>
 											<ChildItems>
 												<LabelField name="РезультатыНомерСтроки" id="251">
@@ -2580,6 +2616,21 @@
 			<Action>ВычислитьСумму</Action>
 			<Representation>Text</Representation>
 			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="СтруктураХраненияБазыДанных" id="30">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Структура хранения базы данных</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Структура хранения базы данных</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СтруктураХраненияБазыДанных</Action>
 		</Command>
 	</Commands>
 </Form>

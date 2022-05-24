@@ -125,6 +125,44 @@
 					<tl>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
+							<v8:content>СоставРегламентныхЗаданий</v8:content>
+						</v8:item>
+					</tl>
+				</c>
+			</c>
+			<c>
+				<i>2</i>
+				<c>
+					<f>0</f>
+					<tl>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Результат = Новый ТаблицаЗначений;		
+Результат.Колонки.Добавить("Задание",Новый ОписаниеТипов("Строка",,,,Новый КвалификаторыСтроки(50)));
+Результат.Колонки.Добавить("Метод",Новый ОписаниеТипов("Строка",,,,Новый КвалификаторыСтроки(50)));
+
+Для Каждого ТекОбъект Из Метаданные.РегламентныеЗадания Цикл
+		
+	НоваяСтрока = Результат.Добавить();		
+	НоваяСтрока.Задание = ТекОбъект.Имя;
+	НоваяСтрока.Метод  = ТекОбъект.ИмяМетода;
+		
+КонецЦикла;</v8:content>
+						</v8:item>
+					</tl>
+				</c>
+			</c>
+		</row>
+	</rowsItem>
+	<rowsItem>
+		<index>3</index>
+		<row>
+			<c>
+				<c>
+					<f>0</f>
+					<tl>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
 							<v8:content>ПодпискиНаСобытия</v8:content>
 						</v8:item>
 					</tl>
@@ -154,7 +192,7 @@
 		</row>
 	</rowsItem>
 	<rowsItem>
-		<index>3</index>
+		<index>4</index>
 		<row>
 			<formatIndex>4</formatIndex>
 			<c>
@@ -224,7 +262,7 @@
 		</row>
 	</rowsItem>
 	<rowsItem>
-		<index>4</index>
+		<index>5</index>
 		<row>
 			<c>
 				<c>
@@ -252,7 +290,7 @@
 		</row>
 	</rowsItem>
 	<rowsItem>
-		<index>5</index>
+		<index>6</index>
 		<row>
 			<c>
 				<c>
@@ -281,8 +319,8 @@
 	</rowsItem>
 	<templateMode>true</templateMode>
 	<defaultFormatIndex>5</defaultFormatIndex>
-	<height>6</height>
-	<vgRows>6</vgRows>
+	<height>7</height>
+	<vgRows>7</vgRows>
 	<format>
 		<width>203</width>
 	</format>
