@@ -365,6 +365,11 @@
 													<CommandName>Form.Command.АнализЗапроса</CommandName>
 													<ExtendedTooltip name="АнализЗапросаРасширеннаяПодсказка" id="310"/>
 												</Button>
+												<Button name="ПроверкаЗапроса" id="455">
+													<Type>CommandBarButton</Type>
+													<CommandName>Form.Command.ПроверкаЗапроса</CommandName>
+													<ExtendedTooltip name="ПроверкаЗапросаРасширеннаяПодсказка" id="456"/>
+												</Button>
 												<Button name="ВыполнитьЗапросВТекущейБазе" id="46">
 													<Type>CommandBarButton</Type>
 													<DefaultButton>true</DefaultButton>
@@ -439,6 +444,9 @@
 										</ChildItems>
 									</ContextMenu>
 									<ExtendedTooltip name="ДеревоНастроекТекстЗапросаРасширеннаяПодсказка" id="94"/>
+									<Events>
+										<Event name="OnChange">ДеревоНастроекТекстЗапросаПриИзменении</Event>
+									</Events>
 								</TextDocumentField>
 							</ChildItems>
 						</Page>
@@ -969,6 +977,9 @@
 								<ContextMenu name="ДеревоНастроекСписокПараметровУправлениеПоискомКонтекстноеМеню" id="106"/>
 								<ExtendedTooltip name="ДеревоНастроекСписокПараметровУправлениеПоискомРасширеннаяПодсказка" id="107"/>
 							</SearchControlAddition>
+							<Events>
+								<Event name="Selection">ДеревоНастроекСписокПараметровВыбор</Event>
+							</Events>
 							<ChildItems>
 								<InputField name="ДеревоНастроекСписокПараметровИмяПараметра" id="108">
 									<DataPath>Items.ДеревоНастроек.CurrentData.СписокПараметров.Имя</DataPath>
@@ -982,9 +993,6 @@
 									<ClearButton>true</ClearButton>
 									<ContextMenu name="ДеревоНастроекСписокПараметровЗначениеКонтекстноеМеню" id="112"/>
 									<ExtendedTooltip name="ДеревоНастроекСписокПараметровЗначениеРасширеннаяПодсказка" id="113"/>
-									<Events>
-										<Event name="StartChoice">ДеревоНастроекСписокПараметровЗначениеНачалоВыбора</Event>
-									</Events>
 								</InputField>
 							</ChildItems>
 						</Table>
@@ -1587,6 +1595,37 @@
 						</Title>
 						<Type/>
 					</Column>
+					<Column name="НеотображаемыйТип" id="3">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Неотображаемый тип</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:decimal</v8:Type>
+							<v8:NumberQualifiers>
+								<v8:Digits>10</v8:Digits>
+								<v8:FractionDigits>0</v8:FractionDigits>
+								<v8:AllowedSign>Any</v8:AllowedSign>
+							</v8:NumberQualifiers>
+						</Type>
+					</Column>
+					<Column name="АдресЗначения" id="4">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Адрес значения</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>0</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
+						</Type>
+					</Column>
 				</AdditionalColumns>
 			</Columns>
 		</Attribute>
@@ -2037,6 +2076,30 @@
 					</dcscor:item>
 				</dcsset:appearance>
 			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ДеревоНастроекСписокПараметровЗначение</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ДеревоНастроек.СписокПараметров.НеотображаемыйТип</dcsset:left>
+						<dcsset:comparisonType>NotEqual</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">win:Highlight</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ГоризонтальноеПоложение</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:HorizontalAlign">Center</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
 		</ConditionalAppearance>
 	</Attributes>
 	<Commands>
@@ -2109,7 +2172,7 @@
 				</v8:item>
 			</ToolTip>
 			<Picture>
-				<xr:Ref>StdPicture.Post</xr:Ref>
+				<xr:Ref>StdPicture.SaveValues</xr:Ref>
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
 			<Action>ПолучитьПараметрыИзЗапроса</Action>
@@ -2601,6 +2664,25 @@
 				</v8:item>
 			</ToolTip>
 			<Action>СтруктураХраненияБазыДанных</Action>
+		</Command>
+		<Command name="ПроверкаЗапроса" id="31">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверка запроса</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверка запроса</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.WriteAndClose</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ПроверкаЗапроса</Action>
 		</Command>
 	</Commands>
 </Form>
