@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.13">
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.15">
 	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
 	<VerticalScroll>useIfNecessary</VerticalScroll>
 	<ScalingMode>Compact</ScalingMode>
@@ -921,6 +921,7 @@
 							<EnableDrag>true</EnableDrag>
 							<FileDragMode>AsFile</FileDragMode>
 							<DataPath>Items.ДеревоНастроек.CurrentData.СписокПараметров</DataPath>
+							<RowPictureDataPath>Items.ДеревоНастроек.CurrentData.СписокПараметров.ТипПараметра</RowPictureDataPath>
 							<CommandSet>
 								<ExcludedCommand>CancelSearch</ExcludedCommand>
 								<ExcludedCommand>EndEdit</ExcludedCommand>
@@ -981,6 +982,25 @@
 								<Event name="Selection">ДеревоНастроекСписокПараметровВыбор</Event>
 							</Events>
 							<ChildItems>
+								<InputField name="ДеревоНастроекСписокПараметровНеотображаемыйТип" id="457">
+									<DataPath>Items.ДеревоНастроек.CurrentData.СписокПараметров.ТипПараметра</DataPath>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Тип параметра запроса</v8:content>
+										</v8:item>
+									</ToolTip>
+									<HorizontalAlign>Left</HorizontalAlign>
+									<EditMode>EnterOnInput</EditMode>
+									<FixingInTable>Left</FixingInTable>
+									<ShowInFooter>false</ShowInFooter>
+									<Width>1</Width>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<MaxWidth>1</MaxWidth>
+									<HorizontalStretch>false</HorizontalStretch>
+									<ContextMenu name="ДеревоНастроекСписокПараметровНеотображаемыйТипКонтекстноеМеню" id="458"/>
+									<ExtendedTooltip name="ДеревоНастроекСписокПараметровНеотображаемыйТипРасширеннаяПодсказка" id="459"/>
+								</InputField>
 								<InputField name="ДеревоНастроекСписокПараметровИмяПараметра" id="108">
 									<DataPath>Items.ДеревоНастроек.CurrentData.СписокПараметров.Имя</DataPath>
 									<EditMode>EnterOnInput</EditMode>
@@ -1595,19 +1615,19 @@
 						</Title>
 						<Type/>
 					</Column>
-					<Column name="НеотображаемыйТип" id="3">
+					<Column name="ТипПараметра" id="3">
 						<Title>
 							<v8:item>
 								<v8:lang>ru</v8:lang>
-								<v8:content>Неотображаемый тип</v8:content>
+								<v8:content>Тип</v8:content>
 							</v8:item>
 						</Title>
 						<Type>
 							<v8:Type>xs:decimal</v8:Type>
 							<v8:NumberQualifiers>
-								<v8:Digits>10</v8:Digits>
+								<v8:Digits>1</v8:Digits>
 								<v8:FractionDigits>0</v8:FractionDigits>
-								<v8:AllowedSign>Any</v8:AllowedSign>
+								<v8:AllowedSign>Nonnegative</v8:AllowedSign>
 							</v8:NumberQualifiers>
 						</Type>
 					</Column>
@@ -2057,6 +2077,7 @@
 		</Attribute>
 		<ConditionalAppearance>
 			<dcsset:item>
+				<dcsset:use>false</dcsset:use>
 				<dcsset:selection>
 					<dcsset:item>
 						<dcsset:field>Результаты</dcsset:field>
@@ -2077,6 +2098,7 @@
 				</dcsset:appearance>
 			</dcsset:item>
 			<dcsset:item>
+				<dcsset:use>false</dcsset:use>
 				<dcsset:selection>
 					<dcsset:item>
 						<dcsset:field>ДеревоНастроекСписокПараметровЗначение</dcsset:field>
@@ -2097,6 +2119,31 @@
 					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 						<dcscor:parameter>ГоризонтальноеПоложение</dcscor:parameter>
 						<dcscor:value xsi:type="v8ui:HorizontalAlign">Center</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ДеревоНастроекСписокПараметровНеотображаемыйТип</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ДеревоНастроек.СписокПараметров.ТипПараметра</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Текст</dcscor:parameter>
+						<dcscor:value xsi:type="v8:LocalStringType">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Параметр</v8:content>
+							</v8:item>
+						</dcscor:value>
 					</dcscor:item>
 				</dcsset:appearance>
 			</dcsset:item>
