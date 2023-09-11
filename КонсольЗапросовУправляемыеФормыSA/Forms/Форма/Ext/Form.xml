@@ -127,16 +127,16 @@
 											<CommandName>Form.Command.ОткрытьРасположениеНастроек</CommandName>
 											<ExtendedTooltip name="ДеревоНастроекОткрытьРасположениеНастроекРасширеннаяПодсказка" id="430"/>
 										</Button>
-										<Button name="ДеревоНастроекРазбитьЗапросПоЧастям" id="337">
-											<Type>CommandBarButton</Type>
-											<CommandName>Form.Command.РазбитьЗапросПоЧастям</CommandName>
-											<ExtendedTooltip name="ДеревоНастроекРазбитьЗапросПоЧастямРасширеннаяПодсказка" id="338"/>
-										</Button>
 										<Button name="ДеревоНастроекОбновитьПредопределенныеЗапросы" id="371">
 											<Type>CommandBarButton</Type>
 											<CommandName>Form.Command.ОбновитьПредопределенныеЗапросы</CommandName>
 											<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
 											<ExtendedTooltip name="ДеревоНастроекОбновитьПредопределенныеЗапросыРасширеннаяПодсказка" id="372"/>
+										</Button>
+										<Button name="ДобавитьИзОтладки" id="460">
+											<Type>CommandBarButton</Type>
+											<CommandName>Form.Command.ДобавитьИзОтладки</CommandName>
+											<ExtendedTooltip name="ДобавитьИзОтладкиРасширеннаяПодсказка" id="461"/>
 										</Button>
 										<Button name="ДеревоНастроекПроверитьОбновление" id="375">
 											<Type>CommandBarButton</Type>
@@ -168,6 +168,11 @@
 													<Type>CommandBarButton</Type>
 													<CommandName>Form.Command.СтруктураХраненияБазыДанных</CommandName>
 													<ExtendedTooltip name="СтруктураХраненияБазыДанныхРасширеннаяПодсказка" id="454"/>
+												</Button>
+												<Button name="ДеревоНастроекРазбитьЗапросПоЧастям" id="337">
+													<Type>CommandBarButton</Type>
+													<CommandName>Form.Command.РазбитьЗапросПоЧастям</CommandName>
+													<ExtendedTooltip name="ДеревоНастроекРазбитьЗапросПоЧастямРасширеннаяПодсказка" id="338"/>
 												</Button>
 											</ChildItems>
 										</Popup>
@@ -797,6 +802,40 @@
 															<ShowTitle>false</ShowTitle>
 															<ExtendedTooltip name="ГруппаПараметрыПодключенияВнешнейБазыРасширеннаяПодсказка" id="404"/>
 															<ChildItems>
+																<InputField name="Драйвер" id="462">
+																	<DataPath>Драйвер</DataPath>
+																	<DropListButton>true</DropListButton>
+																	<ChoiceList>
+																		<xr:Item>
+																			<xr:Presentation/>
+																			<xr:CheckState>0</xr:CheckState>
+																			<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																				<Presentation>
+																					<v8:item>
+																						<v8:lang>ru</v8:lang>
+																						<v8:content>SQL Server</v8:content>
+																					</v8:item>
+																				</Presentation>
+																				<Value xsi:type="xs:string">SQL Server</Value>
+																			</xr:Value>
+																		</xr:Item>
+																		<xr:Item>
+																			<xr:Presentation/>
+																			<xr:CheckState>0</xr:CheckState>
+																			<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																				<Presentation>
+																					<v8:item>
+																						<v8:lang>ru</v8:lang>
+																						<v8:content>PostgreSQL Unicode(x64)</v8:content>
+																					</v8:item>
+																				</Presentation>
+																				<Value xsi:type="xs:string">PostgreSQL Unicode(x64)</Value>
+																			</xr:Value>
+																		</xr:Item>
+																	</ChoiceList>
+																	<ContextMenu name="ДрайверКонтекстноеМеню" id="463"/>
+																	<ExtendedTooltip name="ДрайверРасширеннаяПодсказка" id="464"/>
+																</InputField>
 																<InputField name="Пользователь" id="405">
 																	<DataPath>Пользователь</DataPath>
 																	<ContextMenu name="ПользовательКонтекстноеМеню" id="406"/>
@@ -951,6 +990,12 @@
 										<CommandName>Form.Command.ЗаполнитьПараметрыИзДругойНастройки</CommandName>
 										<ExtendedTooltip name="ДеревоНастроекСписокПараметровЗаполнитьПараметрыИзДругойНастройкиРасширеннаяПодсказка" id="334"/>
 									</Button>
+									<Button name="ДеревоНастроекСписокПараметровЗаменитьЗапрещенныеТипыТЗ" id="465">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ЗаменитьЗапрещенныеТипыТЗ</CommandName>
+										<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+										<ExtendedTooltip name="ДеревоНастроекСписокПараметровЗаменитьЗапрещенныеТипыТЗРасширеннаяПодсказка" id="466"/>
+									</Button>
 								</ChildItems>
 							</AutoCommandBar>
 							<ExtendedTooltip name="ДеревоНастроекСписокПараметровРасширеннаяПодсказка" id="98"/>
@@ -1013,6 +1058,9 @@
 									<ClearButton>true</ClearButton>
 									<ContextMenu name="ДеревоНастроекСписокПараметровЗначениеКонтекстноеМеню" id="112"/>
 									<ExtendedTooltip name="ДеревоНастроекСписокПараметровЗначениеРасширеннаяПодсказка" id="113"/>
+									<Events>
+										<Event name="StartChoice">ДеревоНастроекСписокПараметровЗначениеНачалоВыбора</Event>
+									</Events>
 								</InputField>
 							</ChildItems>
 						</Table>
@@ -1708,9 +1756,6 @@
 					<v8:AllowedSign>Any</v8:AllowedSign>
 				</v8:NumberQualifiers>
 			</Type>
-			<Save>
-				<Field>ТекущаяСтрокаДеревоНастроек</Field>
-			</Save>
 		</Attribute>
 		<Attribute name="ТабличныйДокументЗагружен" id="16">
 			<Title>
@@ -2073,6 +2118,57 @@
 			</Type>
 			<Save>
 				<Field>АвтоматическиСохранятьПриЗакрытии</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="СтрокаОтладки" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Строка отладки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПутьКТекущейСтрокеДереваНастроек" id="23">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Путь к текущей строке дерева настроек</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<Save>
+				<Field>ПутьКТекущейСтрокеДереваНастроек</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="Драйвер" id="27">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Драйвер</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<Save>
+				<Field>Драйвер</Field>
 			</Save>
 		</Attribute>
 		<ConditionalAppearance>
@@ -2708,6 +2804,41 @@
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
 			<Action>ПроверкаЗапроса</Action>
+		</Command>
+		<Command name="ДобавитьИзОтладки" id="32">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить запрос из отладки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить из отладки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.DataCompositionNewNestedScheme</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ДобавитьИзОтладки</Action>
+			<Representation>Picture</Representation>
+		</Command>
+		<Command name="ЗаменитьЗапрещенныеТипыТЗ" id="33">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заменить запрещенные типы ТЗ (!сейчас команда удаляет параметры)</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заменить запрещенные типы ТЗ</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗаменитьЗапрещенныеТипыТЗ</Action>
 		</Command>
 	</Commands>
 </Form>

@@ -127,7 +127,6 @@
 							</SearchControlAddition>
 							<Events>
 								<Event name="Selection">СтуктураЗапросаВыбор</Event>
-								<Event name="OnActivateRow">СтуктураЗапросаПриАктивизацииСтроки</Event>
 							</Events>
 							<ChildItems>
 								<InputField name="СтуктураЗапросаЭлементЗапроса" id="23">
@@ -142,6 +141,12 @@
 									<EditMode>EnterOnInput</EditMode>
 									<ContextMenu name="СтуктураЗапросаЗначениеЭлементаКонтекстноеМеню" id="33"/>
 									<ExtendedTooltip name="СтуктураЗапросаЗначениеЭлементаРасширеннаяПодсказка" id="34"/>
+								</InputField>
+								<InputField name="СтуктураЗапросаПсевдоним" id="90">
+									<DataPath>СтуктураЗапроса.Псевдоним</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СтуктураЗапросаПсевдонимКонтекстноеМеню" id="91"/>
+									<ExtendedTooltip name="СтуктураЗапросаПсевдонимРасширеннаяПодсказка" id="92"/>
 								</InputField>
 								<InputField name="СтуктураЗапросаНомерСтрокиНачало" id="26">
 									<DataPath>СтуктураЗапроса.НомерСтрокиНачало</DataPath>
@@ -192,58 +197,57 @@
 							<Collapsed>true</Collapsed>
 							<ExtendedTooltip name="ГруппаДанныеЭлементаРасширеннаяПодсказка" id="65"/>
 							<ChildItems>
-								<Table name="Индексы" id="40">
+								<Table name="СтуктураЗапросаИндексы" id="68">
 									<Representation>Tree</Representation>
 									<AutoInsertNewRow>true</AutoInsertNewRow>
 									<EnableStartDrag>true</EnableStartDrag>
 									<EnableDrag>true</EnableDrag>
-									<FileDragMode>AsFile</FileDragMode>
-									<DataPath>ДеревоИндексов</DataPath>
-									<ContextMenu name="ИндексыКонтекстноеМеню" id="41"/>
-									<AutoCommandBar name="ИндексыКоманднаяПанель" id="42"/>
-									<ExtendedTooltip name="ИндексыРасширеннаяПодсказка" id="43"/>
-									<SearchStringAddition name="ИндексыСтрокаПоиска" id="44">
+									<DataPath>Items.СтуктураЗапроса.CurrentData.Индексы</DataPath>
+									<ContextMenu name="СтуктураЗапросаИндексыКонтекстноеМеню" id="69"/>
+									<AutoCommandBar name="СтуктураЗапросаИндексыКоманднаяПанель" id="70"/>
+									<ExtendedTooltip name="СтуктураЗапросаИндексыРасширеннаяПодсказка" id="71"/>
+									<SearchStringAddition name="СтуктураЗапросаИндексыСтрокаПоиска" id="72">
 										<AdditionSource>
-											<Item>Индексы</Item>
+											<Item>СтуктураЗапросаИндексы</Item>
 											<Type>SearchStringRepresentation</Type>
 										</AdditionSource>
-										<ContextMenu name="ИндексыСтрокаПоискаКонтекстноеМеню" id="45"/>
-										<ExtendedTooltip name="ИндексыСтрокаПоискаРасширеннаяПодсказка" id="46"/>
+										<ContextMenu name="СтуктураЗапросаИндексыСтрокаПоискаКонтекстноеМеню" id="73"/>
+										<ExtendedTooltip name="СтуктураЗапросаИндексыСтрокаПоискаРасширеннаяПодсказка" id="74"/>
 									</SearchStringAddition>
-									<ViewStatusAddition name="ИндексыСостояниеПросмотра" id="47">
+									<ViewStatusAddition name="СтуктураЗапросаИндексыСостояниеПросмотра" id="75">
 										<AdditionSource>
-											<Item>Индексы</Item>
+											<Item>СтуктураЗапросаИндексы</Item>
 											<Type>ViewStatusRepresentation</Type>
 										</AdditionSource>
-										<ContextMenu name="ИндексыСостояниеПросмотраКонтекстноеМеню" id="48"/>
-										<ExtendedTooltip name="ИндексыСостояниеПросмотраРасширеннаяПодсказка" id="49"/>
+										<ContextMenu name="СтуктураЗапросаИндексыСостояниеПросмотраКонтекстноеМеню" id="76"/>
+										<ExtendedTooltip name="СтуктураЗапросаИндексыСостояниеПросмотраРасширеннаяПодсказка" id="77"/>
 									</ViewStatusAddition>
-									<SearchControlAddition name="ИндексыУправлениеПоиском" id="50">
+									<SearchControlAddition name="СтуктураЗапросаИндексыУправлениеПоиском" id="78">
 										<AdditionSource>
-											<Item>Индексы</Item>
+											<Item>СтуктураЗапросаИндексы</Item>
 											<Type>SearchControl</Type>
 										</AdditionSource>
-										<ContextMenu name="ИндексыУправлениеПоискомКонтекстноеМеню" id="51"/>
-										<ExtendedTooltip name="ИндексыУправлениеПоискомРасширеннаяПодсказка" id="52"/>
+										<ContextMenu name="СтуктураЗапросаИндексыУправлениеПоискомКонтекстноеМеню" id="79"/>
+										<ExtendedTooltip name="СтуктураЗапросаИндексыУправлениеПоискомРасширеннаяПодсказка" id="80"/>
 									</SearchControlAddition>
 									<ChildItems>
-										<InputField name="ИндексыИндекс" id="53">
-											<DataPath>ДеревоИндексов.ИмяИндексаХранения</DataPath>
+										<InputField name="СтуктураЗапросаИндексыИмяИндексаХранения" id="81">
+											<DataPath>Items.СтуктураЗапроса.CurrentData.Индексы.ИмяИндексаХранения</DataPath>
 											<EditMode>EnterOnInput</EditMode>
-											<ContextMenu name="ИндексыИндексКонтекстноеМеню" id="54"/>
-											<ExtendedTooltip name="ИндексыИндексРасширеннаяПодсказка" id="55"/>
+											<ContextMenu name="СтуктураЗапросаИндексыИмяИндексаХраненияКонтекстноеМеню" id="82"/>
+											<ExtendedTooltip name="СтуктураЗапросаИндексыИмяИндексаХраненияРасширеннаяПодсказка" id="83"/>
 										</InputField>
-										<InputField name="ИндексыИмяПоля" id="56">
-											<DataPath>ДеревоИндексов.ИмяПоля</DataPath>
+										<InputField name="СтуктураЗапросаИндексыИмяПоля" id="84">
+											<DataPath>Items.СтуктураЗапроса.CurrentData.Индексы.ИмяПоля</DataPath>
 											<EditMode>EnterOnInput</EditMode>
-											<ContextMenu name="ИндексыИмяПоляКонтекстноеМеню" id="57"/>
-											<ExtendedTooltip name="ИндексыИмяПоляРасширеннаяПодсказка" id="58"/>
+											<ContextMenu name="СтуктураЗапросаИндексыИмяПоляКонтекстноеМеню" id="85"/>
+											<ExtendedTooltip name="СтуктураЗапросаИндексыИмяПоляРасширеннаяПодсказка" id="86"/>
 										</InputField>
-										<InputField name="ИндексыИмяПоляХранения" id="59">
-											<DataPath>ДеревоИндексов.ИмяПоляХранения</DataPath>
+										<InputField name="СтуктураЗапросаИндексыИмяПоляХранения" id="87">
+											<DataPath>Items.СтуктураЗапроса.CurrentData.Индексы.ИмяПоляХранения</DataPath>
 											<EditMode>EnterOnInput</EditMode>
-											<ContextMenu name="ИндексыИмяПоляХраненияКонтекстноеМеню" id="60"/>
-											<ExtendedTooltip name="ИндексыИмяПоляХраненияРасширеннаяПодсказка" id="61"/>
+											<ContextMenu name="СтуктураЗапросаИндексыИмяПоляХраненияКонтекстноеМеню" id="88"/>
+											<ExtendedTooltip name="СтуктураЗапросаИндексыИмяПоляХраненияРасширеннаяПодсказка" id="89"/>
 										</InputField>
 									</ChildItems>
 								</Table>
@@ -391,24 +395,22 @@
 						</v8:NumberQualifiers>
 					</Type>
 				</Column>
-			</Columns>
-		</Attribute>
-		<Attribute name="ДеревоИндексов" id="4">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Дерево индексов</v8:content>
-				</v8:item>
-			</Title>
-			<Type>
-				<v8:Type>v8:ValueTree</v8:Type>
-			</Type>
-			<Columns>
-				<Column name="ИмяИндексаХранения" id="1">
+				<Column name="Индексы" id="8">
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Имя индекса хранения</v8:content>
+							<v8:content>Индексы</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>v8:ValueTree</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Псевдоним" id="9">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Псевдоним</v8:content>
 						</v8:item>
 					</Title>
 					<Type>
@@ -419,36 +421,53 @@
 						</v8:StringQualifiers>
 					</Type>
 				</Column>
-				<Column name="ИмяПоля" id="2">
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Имя поля</v8:content>
-						</v8:item>
-					</Title>
-					<Type>
-						<v8:Type>xs:string</v8:Type>
-						<v8:StringQualifiers>
-							<v8:Length>0</v8:Length>
-							<v8:AllowedLength>Variable</v8:AllowedLength>
-						</v8:StringQualifiers>
-					</Type>
-				</Column>
-				<Column name="ИмяПоляХранения" id="3">
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Имя поля хранения</v8:content>
-						</v8:item>
-					</Title>
-					<Type>
-						<v8:Type>xs:string</v8:Type>
-						<v8:StringQualifiers>
-							<v8:Length>0</v8:Length>
-							<v8:AllowedLength>Variable</v8:AllowedLength>
-						</v8:StringQualifiers>
-					</Type>
-				</Column>
+				<AdditionalColumns table="СтуктураЗапроса.Индексы">
+					<Column name="ИмяИндексаХранения" id="1">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Имя индекса хранения</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>0</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
+						</Type>
+					</Column>
+					<Column name="ИмяПоля" id="2">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Имя поля</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>0</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
+						</Type>
+					</Column>
+					<Column name="ИмяПоляХранения" id="3">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Имя поля хранения</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>0</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
+						</Type>
+					</Column>
+				</AdditionalColumns>
 			</Columns>
 		</Attribute>
 		<ConditionalAppearance>
