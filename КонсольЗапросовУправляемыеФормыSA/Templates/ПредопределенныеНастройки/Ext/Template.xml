@@ -318,10 +318,79 @@
 			</c>
 		</row>
 	</rowsItem>
+	<rowsItem>
+		<index>7</index>
+		<row>
+			<c>
+				<c>
+					<f>0</f>
+					<tl>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ping</v8:content>
+						</v8:item>
+					</tl>
+				</c>
+			</c>
+			<c>
+				<i>2</i>
+				<c>
+					<f>0</f>
+					<tl>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Адрес = "ya.ru";
+objShell = Новый COMОбъект("WScript.Shell");
+objScriptExec = objShell.Exec("ping.exe -n 1 " + Адрес);
+strPingResults = НРег(objScriptExec.StdOut.ReadAll());
+Результат = strPingResults;</v8:content>
+						</v8:item>
+					</tl>
+				</c>
+			</c>
+		</row>
+	</rowsItem>
+	<rowsItem>
+		<index>8</index>
+		<row>
+			<c>
+				<c>
+					<f>0</f>
+					<tl>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Powershell_МестоНаДиске</v8:content>
+						</v8:item>
+					</tl>
+				</c>
+			</c>
+			<c>
+				<i>2</i>
+				<c>
+					<f>0</f>
+					<tl>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ФайлЛога = ПолучитьИмяВременногоФайла("txt");
+	
+Скрипт = СтрШаблон("Powershell Get-CimInstance win32_logicaldisk | Out-File -FilePath %1 ", ФайлЛога);
+ЗапуститьПриложение(Скрипт,,Истина);
+
+ТекстДок = Новый ТекстовыйДокумент;
+ТекстДок.Прочитать(ФайлЛога);
+
+Результат = СокрЛП(ТекстДок.ПолучитьТекст()); 
+УдалитьФайлы(ФайлЛога);</v8:content>
+						</v8:item>
+					</tl>
+				</c>
+			</c>
+		</row>
+	</rowsItem>
 	<templateMode>true</templateMode>
 	<defaultFormatIndex>5</defaultFormatIndex>
-	<height>7</height>
-	<vgRows>7</vgRows>
+	<height>9</height>
+	<vgRows>9</vgRows>
 	<format>
 		<width>203</width>
 	</format>
