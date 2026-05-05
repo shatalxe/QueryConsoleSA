@@ -1,10 +1,12 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.15">
-	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:pal="http://v8.1c.ru/8.1/data/ui/colors/palette" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.21">
+	<WindowOpeningMode>LockOwner</WindowOpeningMode>
 	<AutoTitle>false</AutoTitle>
+	<Group>Vertical</Group>
 	<CommandBarLocation>Bottom</CommandBarLocation>
 	<ScalingMode>Compact</ScalingMode>
 	<ShowTitle>false</ShowTitle>
+	<ShowCommandBar>true</ShowCommandBar>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
 		<HorizontalAlign>Right</HorizontalAlign>
 		<Autofill>false</Autofill>
@@ -19,6 +21,7 @@
 				<Type>CommandBarButton</Type>
 				<DefaultButton>true</DefaultButton>
 				<CommandName>Form.Command.ОК</CommandName>
+				<ButtonImportance>Main</ButtonImportance>
 				<ExtendedTooltip name="ФормаОКРасширеннаяПодсказка" id="5"/>
 			</Button>
 			<Button name="ФормаОтмена" id="6">
@@ -54,6 +57,7 @@
 			</ToolTip>
 			<Group>Horizontal</Group>
 			<Behavior>Usual</Behavior>
+			<Representation>WeakSeparation</Representation>
 			<ShowTitle>false</ShowTitle>
 			<ExtendedTooltip name="ГруппаАнализЗапросовРасширеннаяПодсказка" id="9"/>
 			<ChildItems>
@@ -79,11 +83,16 @@
 					</ToolTip>
 					<Group>Vertical</Group>
 					<Behavior>Usual</Behavior>
+					<Representation>WeakSeparation</Representation>
 					<ShowTitle>false</ShowTitle>
 					<ExtendedTooltip name="ГруппаСтруктураЗапросаРасширеннаяПодсказка" id="63"/>
 					<ChildItems>
 						<Table name="СтуктураЗапроса" id="10">
 							<Representation>Tree</Representation>
+							<RowSelectionMode>Cell</RowSelectionMode>
+							<HorizontalLinesBWA>false</HorizontalLinesBWA>
+							<VerticalLinesBWA>false</VerticalLinesBWA>
+							<UseAlternationRowColorBWA>false</UseAlternationRowColorBWA>
 							<AutoInsertNewRow>true</AutoInsertNewRow>
 							<EnableStartDrag>true</EnableStartDrag>
 							<EnableDrag>true</EnableDrag>
@@ -132,6 +141,7 @@
 								<InputField name="СтуктураЗапросаЭлементЗапроса" id="23">
 									<DataPath>СтуктураЗапроса.ЭлементЗапроса</DataPath>
 									<EditMode>EnterOnInput</EditMode>
+									<AutoEditMode>true</AutoEditMode>
 									<Width>10</Width>
 									<ContextMenu name="СтуктураЗапросаЭлементЗапросаКонтекстноеМеню" id="24"/>
 									<ExtendedTooltip name="СтуктураЗапросаЭлементЗапросаРасширеннаяПодсказка" id="25"/>
@@ -139,24 +149,28 @@
 								<InputField name="СтуктураЗапросаЗначениеЭлемента" id="32">
 									<DataPath>СтуктураЗапроса.ЗначениеЭлемента</DataPath>
 									<EditMode>EnterOnInput</EditMode>
+									<AutoEditMode>true</AutoEditMode>
 									<ContextMenu name="СтуктураЗапросаЗначениеЭлементаКонтекстноеМеню" id="33"/>
 									<ExtendedTooltip name="СтуктураЗапросаЗначениеЭлементаРасширеннаяПодсказка" id="34"/>
 								</InputField>
 								<InputField name="СтуктураЗапросаПсевдоним" id="90">
 									<DataPath>СтуктураЗапроса.Псевдоним</DataPath>
 									<EditMode>EnterOnInput</EditMode>
+									<AutoEditMode>true</AutoEditMode>
 									<ContextMenu name="СтуктураЗапросаПсевдонимКонтекстноеМеню" id="91"/>
 									<ExtendedTooltip name="СтуктураЗапросаПсевдонимРасширеннаяПодсказка" id="92"/>
 								</InputField>
 								<InputField name="СтуктураЗапросаНомерСтрокиНачало" id="26">
 									<DataPath>СтуктураЗапроса.НомерСтрокиНачало</DataPath>
 									<EditMode>EnterOnInput</EditMode>
+									<AutoEditMode>true</AutoEditMode>
 									<ContextMenu name="СтуктураЗапросаНомерСтрокиНачалоКонтекстноеМеню" id="27"/>
 									<ExtendedTooltip name="СтуктураЗапросаНомерСтрокиНачалоРасширеннаяПодсказка" id="28"/>
 								</InputField>
 								<InputField name="СтуктураЗапросаНомерСтрокиКонец" id="29">
 									<DataPath>СтуктураЗапроса.НомерСтрокиКонец</DataPath>
 									<EditMode>EnterOnInput</EditMode>
+									<AutoEditMode>true</AutoEditMode>
 									<ContextMenu name="СтуктураЗапросаНомерСтрокиКонецКонтекстноеМеню" id="30"/>
 									<ExtendedTooltip name="СтуктураЗапросаНомерСтрокиКонецРасширеннаяПодсказка" id="31"/>
 								</InputField>
@@ -174,6 +188,9 @@
 										<xr:Ref>StdPicture.ShowData</xr:Ref>
 										<xr:LoadTransparent>true</xr:LoadTransparent>
 									</HeaderPicture>
+									<AutoEditMode>true</AutoEditMode>
+									<CellHyperlinkRepresentation>Show</CellHyperlinkRepresentation>
+									<CellHyperlinkDisplayVariant>Always</CellHyperlinkDisplayVariant>
 									<Hiperlink>true</Hiperlink>
 									<ContextMenu name="СтуктураЗапросаКоличествоПредупрежденийКонтекстноеМеню" id="38"/>
 									<ExtendedTooltip name="СтуктураЗапросаКоличествоПредупрежденийРасширеннаяПодсказка" id="39"/>
@@ -193,12 +210,18 @@
 									<v8:content>Группа данные элемента</v8:content>
 								</v8:item>
 							</ToolTip>
+							<Group>HorizontalIfPossible</Group>
 							<Behavior>Collapsible</Behavior>
 							<Collapsed>true</Collapsed>
+							<Representation>WeakSeparation</Representation>
 							<ExtendedTooltip name="ГруппаДанныеЭлементаРасширеннаяПодсказка" id="65"/>
 							<ChildItems>
 								<Table name="СтуктураЗапросаИндексы" id="68">
 									<Representation>Tree</Representation>
+									<RowSelectionMode>Cell</RowSelectionMode>
+									<HorizontalLinesBWA>false</HorizontalLinesBWA>
+									<VerticalLinesBWA>false</VerticalLinesBWA>
+									<UseAlternationRowColorBWA>false</UseAlternationRowColorBWA>
 									<AutoInsertNewRow>true</AutoInsertNewRow>
 									<EnableStartDrag>true</EnableStartDrag>
 									<EnableDrag>true</EnableDrag>
@@ -234,18 +257,21 @@
 										<InputField name="СтуктураЗапросаИндексыИмяИндексаХранения" id="81">
 											<DataPath>Items.СтуктураЗапроса.CurrentData.Индексы.ИмяИндексаХранения</DataPath>
 											<EditMode>EnterOnInput</EditMode>
+											<AutoEditMode>true</AutoEditMode>
 											<ContextMenu name="СтуктураЗапросаИндексыИмяИндексаХраненияКонтекстноеМеню" id="82"/>
 											<ExtendedTooltip name="СтуктураЗапросаИндексыИмяИндексаХраненияРасширеннаяПодсказка" id="83"/>
 										</InputField>
 										<InputField name="СтуктураЗапросаИндексыИмяПоля" id="84">
 											<DataPath>Items.СтуктураЗапроса.CurrentData.Индексы.ИмяПоля</DataPath>
 											<EditMode>EnterOnInput</EditMode>
+											<AutoEditMode>true</AutoEditMode>
 											<ContextMenu name="СтуктураЗапросаИндексыИмяПоляКонтекстноеМеню" id="85"/>
 											<ExtendedTooltip name="СтуктураЗапросаИндексыИмяПоляРасширеннаяПодсказка" id="86"/>
 										</InputField>
 										<InputField name="СтуктураЗапросаИндексыИмяПоляХранения" id="87">
 											<DataPath>Items.СтуктураЗапроса.CurrentData.Индексы.ИмяПоляХранения</DataPath>
 											<EditMode>EnterOnInput</EditMode>
+											<AutoEditMode>true</AutoEditMode>
 											<ContextMenu name="СтуктураЗапросаИндексыИмяПоляХраненияКонтекстноеМеню" id="88"/>
 											<ExtendedTooltip name="СтуктураЗапросаИндексыИмяПоляХраненияРасширеннаяПодсказка" id="89"/>
 										</InputField>

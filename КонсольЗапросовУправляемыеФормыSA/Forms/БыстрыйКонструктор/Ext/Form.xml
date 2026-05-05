@@ -1,5 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.15">
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:pal="http://v8.1c.ru/8.1/data/ui/colors/palette" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.21">
+	<WindowOpeningMode>DontBlock</WindowOpeningMode>
+	<Group>Vertical</Group>
 	<ScalingMode>Compact</ScalingMode>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
 		<Autofill>false</Autofill>
@@ -41,6 +43,7 @@
 						</v8:item>
 					</ToolTip>
 					<Width>25</Width>
+					<Group>HorizontalIfPossible</Group>
 					<Behavior>Usual</Behavior>
 					<Representation>None</Representation>
 					<ShowTitle>false</ShowTitle>
@@ -100,6 +103,10 @@
 							<ReadOnly>true</ReadOnly>
 							<ChangeRowSet>false</ChangeRowSet>
 							<ChangeRowOrder>false</ChangeRowOrder>
+							<RowSelectionMode>Cell</RowSelectionMode>
+							<HorizontalLinesBWA>false</HorizontalLinesBWA>
+							<VerticalLinesBWA>false</VerticalLinesBWA>
+							<UseAlternationRowColorBWA>false</UseAlternationRowColorBWA>
 							<AutoInsertNewRow>true</AutoInsertNewRow>
 							<EnableStartDrag>true</EnableStartDrag>
 							<EnableDrag>true</EnableDrag>
@@ -157,12 +164,14 @@
 											<DataPath>ДеревоМетаданных.Картинака</DataPath>
 											<EditMode>EnterOnInput</EditMode>
 											<ShowInHeader>false</ShowInHeader>
+											<AutoEditMode>true</AutoEditMode>
 											<ContextMenu name="ДеревоМетаданныхКартинакаКонтекстноеМеню" id="52"/>
 											<ExtendedTooltip name="ДеревоМетаданныхКартинакаРасширеннаяПодсказка" id="53"/>
 										</PictureField>
 										<InputField name="ДеревоМетаданныхУзелКорняМетаданных" id="14">
 											<DataPath>ДеревоМетаданных.УзелКорняМетаданных</DataPath>
 											<EditMode>EnterOnInput</EditMode>
+											<AutoEditMode>true</AutoEditMode>
 											<ContextMenu name="ДеревоМетаданныхУзелКорняМетаданныхКонтекстноеМеню" id="15"/>
 											<ExtendedTooltip name="ДеревоМетаданныхУзелКорняМетаданныхРасширеннаяПодсказка" id="16"/>
 										</InputField>
@@ -176,6 +185,10 @@
 					<Representation>List</Representation>
 					<ReadOnly>true</ReadOnly>
 					<ChangeRowSet>false</ChangeRowSet>
+					<RowSelectionMode>Cell</RowSelectionMode>
+					<HorizontalLinesBWA>false</HorizontalLinesBWA>
+					<VerticalLinesBWA>false</VerticalLinesBWA>
+					<UseAlternationRowColorBWA>false</UseAlternationRowColorBWA>
 					<AutoInsertNewRow>true</AutoInsertNewRow>
 					<EnableStartDrag>true</EnableStartDrag>
 					<EnableDrag>true</EnableDrag>
@@ -235,12 +248,14 @@
 								<PictureField name="ДеревоМетаданныхОбъектыМетаданныхКартинка" id="68">
 									<EditMode>EnterOnInput</EditMode>
 									<ShowInHeader>false</ShowInHeader>
+									<AutoEditMode>true</AutoEditMode>
 									<ContextMenu name="ДеревоМетаданныхОбъектыМетаданныхКартинкаКонтекстноеМеню" id="69"/>
 									<ExtendedTooltip name="ДеревоМетаданныхОбъектыМетаданныхКартинкаРасширеннаяПодсказка" id="70"/>
 								</PictureField>
 								<InputField name="ДеревоМетаданныхОбъектыМетаданныхИсточникДанных" id="65">
 									<DataPath>Items.ДеревоМетаданных.CurrentData.ОбъектыМетаданных.ИсточникДанных</DataPath>
 									<EditMode>EnterOnInput</EditMode>
+									<AutoEditMode>true</AutoEditMode>
 									<ContextMenu name="ДеревоМетаданныхОбъектыМетаданныхИсточникДанныхКонтекстноеМеню" id="66"/>
 									<ExtendedTooltip name="ДеревоМетаданныхОбъектыМетаданныхИсточникДанныхРасширеннаяПодсказка" id="67"/>
 								</InputField>
@@ -254,6 +269,10 @@
 					<ChangeRowSet>false</ChangeRowSet>
 					<ChangeRowOrder>false</ChangeRowOrder>
 					<Width>20</Width>
+					<RowSelectionMode>Cell</RowSelectionMode>
+					<HorizontalLinesBWA>false</HorizontalLinesBWA>
+					<VerticalLinesBWA>false</VerticalLinesBWA>
+					<UseAlternationRowColorBWA>false</UseAlternationRowColorBWA>
 					<AutoInsertNewRow>true</AutoInsertNewRow>
 					<EnableStartDrag>true</EnableStartDrag>
 					<EnableDrag>true</EnableDrag>
@@ -264,14 +283,17 @@
 						<ExcludedCommand>Copy</ExcludedCommand>
 						<ExcludedCommand>Delete</ExcludedCommand>
 					</CommandSet>
+					<SearchStringLocation>None</SearchStringLocation>
 					<RowFilter xsi:nil="true"/>
 					<ContextMenu name="ДеревоМетаданныхОбъектыМетаданныхПоляОбъектаКонтекстноеМеню" id="34"/>
 					<AutoCommandBar name="ДеревоМетаданныхОбъектыМетаданныхПоляОбъектаКоманднаяПанель" id="35">
+						<Autofill>false</Autofill>
 						<ChildItems>
 							<Button name="ДеревоМетаданныхОбъектыМетаданныхПоляОбъектаВыделитьВсе" id="56">
 								<Type>CommandBarButton</Type>
 								<DefaultButton>true</DefaultButton>
 								<CommandName>Form.Command.ВыбратьВсе</CommandName>
+								<ButtonImportance>Main</ButtonImportance>
 								<ExtendedTooltip name="ДеревоМетаданныхОбъектыМетаданныхПоляОбъектаВыделитьВсеРасширеннаяПодсказка" id="57"/>
 							</Button>
 							<Button name="ДеревоМетаданныхОбъектыМетаданныхПоляОбъектаВыбратьВыделенные" id="63">
@@ -313,11 +335,42 @@
 						<InputField name="ДеревоМетаданныхОбъектыМетаданныхПоляОбъектаПоле" id="46">
 							<DataPath>Items.ДеревоМетаданныхОбъектыМетаданных.CurrentData.ПоляОбъекта.Поле</DataPath>
 							<EditMode>EnterOnInput</EditMode>
+							<AutoEditMode>true</AutoEditMode>
 							<ContextMenu name="ДеревоМетаданныхОбъектыМетаданныхПоляОбъектаПолеКонтекстноеМеню" id="47"/>
 							<ExtendedTooltip name="ДеревоМетаданныхОбъектыМетаданныхПоляОбъектаПолеРасширеннаяПодсказка" id="48"/>
 						</InputField>
 					</ChildItems>
 				</Table>
+				<UsualGroup name="ГруппаФункции" id="73">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Функции</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа функции</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>WeakSeparation</Representation>
+					<ExtendedTooltip name="ГруппаФункцииРасширеннаяПодсказка" id="74"/>
+					<ChildItems>
+						<Button name="КоличествоСтрок" id="75">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.КоличествоСтрок</CommandName>
+							<ExtendedTooltip name="КоличествоСтрокРасширеннаяПодсказка" id="76"/>
+						</Button>
+						<Button name="УникальныеИдентификаторы" id="77">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.УникальныеИдентификаторы</CommandName>
+							<ExtendedTooltip name="УникальныеИдентификаторыРасширеннаяПодсказка" id="78"/>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
 			</ChildItems>
 		</UsualGroup>
 	</ChildItems>
@@ -343,7 +396,7 @@
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Узел корня метаданных</v8:content>
+							<v8:content>Тип метаданных</v8:content>
 						</v8:item>
 					</Title>
 					<Type>
@@ -514,6 +567,36 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ВыбратьВыделенные</Action>
+		</Command>
+		<Command name="КоличествоСтрок" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество строк</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество строк</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КоличествоСтрок</Action>
+		</Command>
+		<Command name="УникальныеИдентификаторы" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Уникальные идентификаторы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Уникальные идентификаторы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>УникальныеИдентификаторы</Action>
 		</Command>
 	</Commands>
 </Form>

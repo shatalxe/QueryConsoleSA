@@ -1,5 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.15">
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:pal="http://v8.1c.ru/8.1/data/ui/colors/palette" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.21">
+	<WindowOpeningMode>DontBlock</WindowOpeningMode>
+	<Group>Vertical</Group>
 	<ScalingMode>Compact</ScalingMode>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
 		<Autofill>false</Autofill>
@@ -8,6 +10,7 @@
 				<Type>CommandBarButton</Type>
 				<DefaultButton>true</DefaultButton>
 				<CommandName>Form.Command.Выбрать</CommandName>
+				<ButtonImportance>Main</ButtonImportance>
 				<ExtendedTooltip name="ФормаВыбратьРасширеннаяПодсказка" id="43"/>
 			</Button>
 		</ChildItems>
@@ -29,7 +32,9 @@
 					<v8:content>Группа дерево настроек</v8:content>
 				</v8:item>
 			</ToolTip>
+			<Group>HorizontalIfPossible</Group>
 			<Behavior>Usual</Behavior>
+			<Representation>WeakSeparation</Representation>
 			<ShowTitle>false</ShowTitle>
 			<ExtendedTooltip name="ГруппаДеревоНастроекРасширеннаяПодсказка" id="45"/>
 			<ChildItems>
@@ -38,6 +43,10 @@
 					<ChangeRowSet>false</ChangeRowSet>
 					<ChangeRowOrder>false</ChangeRowOrder>
 					<ChoiceMode>true</ChoiceMode>
+					<RowSelectionMode>Cell</RowSelectionMode>
+					<HorizontalLinesBWA>false</HorizontalLinesBWA>
+					<VerticalLinesBWA>false</VerticalLinesBWA>
+					<UseAlternationRowColorBWA>false</UseAlternationRowColorBWA>
 					<AutoInsertNewRow>true</AutoInsertNewRow>
 					<InitialTreeView>ExpandTopLevel</InitialTreeView>
 					<EnableStartDrag>true</EnableStartDrag>
@@ -80,18 +89,21 @@
 						<InputField name="ДеревоНастроекИмяНастройки" id="14">
 							<DataPath>ДеревоНастроек.ИмяНастройки</DataPath>
 							<EditMode>EnterOnInput</EditMode>
+							<AutoEditMode>true</AutoEditMode>
 							<ContextMenu name="ДеревоНастроекИмяНастройкиКонтекстноеМеню" id="15"/>
 							<ExtendedTooltip name="ДеревоНастроекИмяНастройкиРасширеннаяПодсказка" id="16"/>
 						</InputField>
 						<InputField name="ДеревоНастроекТекстЗапроса" id="17">
 							<DataPath>ДеревоНастроек.ТекстЗапроса</DataPath>
 							<EditMode>EnterOnInput</EditMode>
+							<AutoEditMode>true</AutoEditMode>
 							<ContextMenu name="ДеревоНастроекТекстЗапросаКонтекстноеМеню" id="18"/>
 							<ExtendedTooltip name="ДеревоНастроекТекстЗапросаРасширеннаяПодсказка" id="19"/>
 						</InputField>
 						<InputField name="ДеревоНастроекПроизвольныйКод" id="20">
 							<DataPath>ДеревоНастроек.ПроизвольныйКод</DataPath>
 							<EditMode>EnterOnInput</EditMode>
+							<AutoEditMode>true</AutoEditMode>
 							<ContextMenu name="ДеревоНастроекПроизвольныйКодКонтекстноеМеню" id="21"/>
 							<ExtendedTooltip name="ДеревоНастроекПроизвольныйКодРасширеннаяПодсказка" id="22"/>
 						</InputField>
@@ -101,6 +113,10 @@
 					<Representation>List</Representation>
 					<ChangeRowSet>false</ChangeRowSet>
 					<ChangeRowOrder>false</ChangeRowOrder>
+					<RowSelectionMode>Cell</RowSelectionMode>
+					<HorizontalLinesBWA>false</HorizontalLinesBWA>
+					<VerticalLinesBWA>false</VerticalLinesBWA>
+					<UseAlternationRowColorBWA>false</UseAlternationRowColorBWA>
 					<AutoInsertNewRow>true</AutoInsertNewRow>
 					<EnableStartDrag>true</EnableStartDrag>
 					<EnableDrag>true</EnableDrag>
@@ -140,12 +156,14 @@
 						<InputField name="ДеревоНастроекСписокПараметровИмяПараметра" id="36">
 							<DataPath>Items.ДеревоНастроек.CurrentData.СписокПараметров.Имя</DataPath>
 							<EditMode>EnterOnInput</EditMode>
+							<AutoEditMode>true</AutoEditMode>
 							<ContextMenu name="ДеревоНастроекСписокПараметровИмяПараметраКонтекстноеМеню" id="37"/>
 							<ExtendedTooltip name="ДеревоНастроекСписокПараметровИмяПараметраРасширеннаяПодсказка" id="38"/>
 						</InputField>
 						<InputField name="ДеревоНастроекСписокПараметровЗначение" id="39">
 							<DataPath>Items.ДеревоНастроек.CurrentData.СписокПараметров.Значение</DataPath>
 							<EditMode>EnterOnInput</EditMode>
+							<AutoEditMode>true</AutoEditMode>
 							<ContextMenu name="ДеревоНастроекСписокПараметровЗначениеКонтекстноеМеню" id="40"/>
 							<ExtendedTooltip name="ДеревоНастроекСписокПараметровЗначениеРасширеннаяПодсказка" id="41"/>
 						</InputField>

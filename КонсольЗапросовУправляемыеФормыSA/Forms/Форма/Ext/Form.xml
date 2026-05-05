@@ -1,6 +1,8 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.15">
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:pal="http://v8.1c.ru/8.1/data/ui/colors/palette" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.21">
+	<WindowOpeningMode>DontBlock</WindowOpeningMode>
 	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
+	<Group>Vertical</Group>
 	<VerticalScroll>useIfNecessary</VerticalScroll>
 	<ScalingMode>Compact</ScalingMode>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
@@ -27,6 +29,7 @@
 			</ToolTip>
 			<Group>Horizontal</Group>
 			<Behavior>Usual</Behavior>
+			<Representation>WeakSeparation</Representation>
 			<ShowTitle>false</ShowTitle>
 			<ExtendedTooltip name="НастройкиВыполненияРасширеннаяПодсказка" id="24"/>
 			<ChildItems>
@@ -167,6 +170,10 @@
 												<Button name="СтруктураХраненияБазыДанных" id="453">
 													<Type>CommandBarButton</Type>
 													<CommandName>Form.Command.СтруктураХраненияБазыДанных</CommandName>
+													<Picture>
+														<xr:Ref>StdPicture.ExternalDataSourceTable</xr:Ref>
+														<xr:LoadTransparent>true</xr:LoadTransparent>
+													</Picture>
 													<ExtendedTooltip name="СтруктураХраненияБазыДанныхРасширеннаяПодсказка" id="454"/>
 												</Button>
 												<Button name="ДеревоНастроекРазбитьЗапросПоЧастям" id="337">
@@ -180,8 +187,12 @@
 								</CommandBar>
 								<Table name="ДеревоНастроек" id="65">
 									<Representation>Tree</Representation>
-									<Width>55</Width>
+									<Width>50</Width>
 									<MaxWidth>50</MaxWidth>
+									<RowSelectionMode>Cell</RowSelectionMode>
+									<HorizontalLinesBWA>false</HorizontalLinesBWA>
+									<VerticalLinesBWA>false</VerticalLinesBWA>
+									<UseAlternationRowColorBWA>false</UseAlternationRowColorBWA>
 									<AutoInsertNewRow>true</AutoInsertNewRow>
 									<EnableStartDrag>true</EnableStartDrag>
 									<EnableDrag>true</EnableDrag>
@@ -197,7 +208,28 @@
 										<ExcludedCommand>Tree</ExcludedCommand>
 									</CommandSet>
 									<ContextMenu name="ДеревоНастроекКонтекстноеМеню" id="66">
+										<Autofill>false</Autofill>
 										<ChildItems>
+											<Button name="ДеревоНастроекКонтекстноеМенюДобавитьНастройку" id="475">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.ДобавитьНастройку</CommandName>
+												<ExtendedTooltip name="ДеревоНастроекКонтекстноеМенюДобавитьНастройкуРасширеннаяПодсказка" id="476"/>
+											</Button>
+											<Button name="ДеревоНастроекКонтекстноеМенюДобавитьВложеннуюНастройку" id="467">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.ДобавитьВложеннуюНастройку</CommandName>
+												<ExtendedTooltip name="ДеревоНастроекКонтекстноеМенюДобавитьВложеннуюНастройкуРасширеннаяПодсказка" id="468"/>
+											</Button>
+											<Button name="ДеревоНастроекКонтекстноеМенюСкопировать" id="471">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Item.ДеревоНастроек.StandardCommand.Copy</CommandName>
+												<ExtendedTooltip name="ДеревоНастроекКонтекстноеМенюСкопироватьРасширеннаяПодсказка" id="472"/>
+											</Button>
+											<Button name="ДеревоНастроекКонтекстноеМенюДобавитьИзОтладки" id="469">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.ДобавитьИзОтладки</CommandName>
+												<ExtendedTooltip name="ДеревоНастроекКонтекстноеМенюДобавитьИзОтладкиРасширеннаяПодсказка" id="470"/>
+											</Button>
 											<Button name="ДеревоНастроекКонтекстноеМенюРазбитьЗапросПоЧастям" id="335">
 												<Type>CommandBarButton</Type>
 												<CommandName>Form.Command.РазбитьЗапросПоЧастям</CommandName>
@@ -208,6 +240,11 @@
 												<CommandName>Form.Command.ОбновитьПредопределенныеЗапросы</CommandName>
 												<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
 												<ExtendedTooltip name="ДеревоНастроекКонтекстноеМенюОбновитьПредопределенныеЗапросыРасширеннаяПодсказка" id="374"/>
+											</Button>
+											<Button name="ДеревоНастроекКонтекстноеМенюУдалить" id="473">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Item.ДеревоНастроек.StandardCommand.Delete</CommandName>
+												<ExtendedTooltip name="ДеревоНастроекКонтекстноеМенюУдалитьРасширеннаяПодсказка" id="474"/>
 											</Button>
 										</ChildItems>
 									</ContextMenu>
@@ -248,6 +285,7 @@
 										<InputField name="ДеревоНастроекИмяНастройки" id="78">
 											<DataPath>ДеревоНастроек.ИмяНастройки</DataPath>
 											<EditMode>EnterOnInput</EditMode>
+											<AutoEditMode>true</AutoEditMode>
 											<ContextMenu name="ДеревоНастроекИмяНастройкиКонтекстноеМеню" id="79"/>
 											<ExtendedTooltip name="ДеревоНастроекИмяНастройкиРасширеннаяПодсказка" id="80"/>
 										</InputField>
@@ -289,6 +327,8 @@
 									<v8:content>Страница текст запроса</v8:content>
 								</v8:item>
 							</ToolTip>
+							<Group>Vertical</Group>
+							<ScrollOnCompress>false</ScrollOnCompress>
 							<ExtendedTooltip name="СтраницаТекстЗапросаРасширеннаяПодсказка" id="84"/>
 							<ChildItems>
 								<CommandBar name="ПанельНастроекЗапроса" id="134">
@@ -380,6 +420,7 @@
 													<DefaultButton>true</DefaultButton>
 													<CommandName>Form.Command.ВыполнитьЗапрос</CommandName>
 													<Font ref="style:TextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+													<ButtonImportance>Main</ButtonImportance>
 													<ExtendedTooltip name="ВыполнитьЗапросВТекущейБазеРасширеннаяПодсказка" id="47"/>
 												</Button>
 												<Button name="ВыполнитьПакет" id="201">
@@ -468,6 +509,8 @@
 									<v8:content>Страница произвольный код</v8:content>
 								</v8:item>
 							</ToolTip>
+							<Group>Vertical</Group>
+							<ScrollOnCompress>false</ScrollOnCompress>
 							<ExtendedTooltip name="СтраницаПроизвольныйКодРасширеннаяПодсказка" id="88"/>
 							<ChildItems>
 								<UsualGroup name="ПанельНастроекПроизвольныйКод" id="298">
@@ -485,6 +528,7 @@
 									</ToolTip>
 									<Group>Horizontal</Group>
 									<Behavior>Usual</Behavior>
+									<Representation>WeakSeparation</Representation>
 									<ShowTitle>false</ShowTitle>
 									<ExtendedTooltip name="ПанельНастроекПроизвольныйКодРасширеннаяПодсказка" id="299"/>
 									<ChildItems>
@@ -629,6 +673,8 @@
 									<v8:content>Страница параметры</v8:content>
 								</v8:item>
 							</ToolTip>
+							<Group>Vertical</Group>
+							<ScrollOnCompress>false</ScrollOnCompress>
 							<ExtendedTooltip name="СтраницаПараметрыРасширеннаяПодсказка" id="86"/>
 						</Page>
 						<Page name="СтраницаВнешнееСоединение" id="140">
@@ -644,6 +690,8 @@
 									<v8:content>Страница внешнее соединение</v8:content>
 								</v8:item>
 							</ToolTip>
+							<Group>Vertical</Group>
+							<ScrollOnCompress>false</ScrollOnCompress>
 							<ExtendedTooltip name="СтраницаВнешнееСоединениеРасширеннаяПодсказка" id="141"/>
 							<ChildItems>
 								<Pages name="СтраницыВнешнееСоединение" id="381">
@@ -681,6 +729,8 @@
 												<xr:Ref>StdPicture.ReportSettings</xr:Ref>
 												<xr:LoadTransparent>true</xr:LoadTransparent>
 											</Picture>
+											<Group>Vertical</Group>
+											<ScrollOnCompress>false</ScrollOnCompress>
 											<ExtendedTooltip name="СтраницаВнешнееСоединениеНастройкиРасширеннаяПодсказка" id="384"/>
 											<ChildItems>
 												<RadioButtonField name="ВариантСоединения" id="413">
@@ -763,7 +813,9 @@
 																	<v8:content>Группа адрес внешней базы</v8:content>
 																</v8:item>
 															</ToolTip>
+															<Group>HorizontalIfPossible</Group>
 															<Behavior>Usual</Behavior>
+															<Representation>WeakSeparation</Representation>
 															<ShowTitle>false</ShowTitle>
 															<ExtendedTooltip name="ГруппаАдресВнешнейБазыРасширеннаяПодсказка" id="393"/>
 															<ChildItems>
@@ -798,7 +850,9 @@
 																	<v8:content>Группа адрес внешней базы</v8:content>
 																</v8:item>
 															</ToolTip>
+															<Group>HorizontalIfPossible</Group>
 															<Behavior>Usual</Behavior>
+															<Representation>WeakSeparation</Representation>
 															<ShowTitle>false</ShowTitle>
 															<ExtendedTooltip name="ГруппаПараметрыПодключенияВнешнейБазыРасширеннаяПодсказка" id="404"/>
 															<ChildItems>
@@ -875,6 +929,8 @@
 												<xr:Ref>StdPicture.GenerateReport</xr:Ref>
 												<xr:LoadTransparent>true</xr:LoadTransparent>
 											</Picture>
+											<Group>Vertical</Group>
+											<ScrollOnCompress>false</ScrollOnCompress>
 											<ExtendedTooltip name="СтраницаВнешнееСоединениеВыполнениеРасширеннаяПодсказка" id="386"/>
 											<ChildItems>
 												<CommandBar name="ПанельНастроекВнешнееСоединение" id="419">
@@ -943,6 +999,7 @@
 							<v8:content>Параметры</v8:content>
 						</v8:item>
 					</ToolTip>
+					<Group>HorizontalIfPossible</Group>
 					<Behavior>Collapsible</Behavior>
 					<CollapsedRepresentationTitle>
 						<v8:item>
@@ -950,11 +1007,16 @@
 							<v8:content>&lt;&lt;</v8:content>
 						</v8:item>
 					</CollapsedRepresentationTitle>
-					<Collapsed>true</Collapsed>
+					<Representation>WeakSeparation</Representation>
 					<ExtendedTooltip name="ГруппаПараметрыРасширеннаяПодсказка" id="153"/>
 					<ChildItems>
 						<Table name="ДеревоНастроекСписокПараметров" id="95">
 							<Representation>List</Representation>
+							<Width>20</Width>
+							<RowSelectionMode>Cell</RowSelectionMode>
+							<HorizontalLinesBWA>false</HorizontalLinesBWA>
+							<VerticalLinesBWA>false</VerticalLinesBWA>
+							<UseAlternationRowColorBWA>false</UseAlternationRowColorBWA>
 							<AutoInsertNewRow>true</AutoInsertNewRow>
 							<EnableStartDrag>true</EnableStartDrag>
 							<EnableDrag>true</EnableDrag>
@@ -1039,6 +1101,7 @@
 									<EditMode>EnterOnInput</EditMode>
 									<FixingInTable>Left</FixingInTable>
 									<ShowInFooter>false</ShowInFooter>
+									<AutoEditMode>true</AutoEditMode>
 									<Width>1</Width>
 									<AutoMaxWidth>false</AutoMaxWidth>
 									<MaxWidth>1</MaxWidth>
@@ -1049,12 +1112,14 @@
 								<InputField name="ДеревоНастроекСписокПараметровИмяПараметра" id="108">
 									<DataPath>Items.ДеревоНастроек.CurrentData.СписокПараметров.Имя</DataPath>
 									<EditMode>EnterOnInput</EditMode>
+									<AutoEditMode>true</AutoEditMode>
 									<ContextMenu name="ДеревоНастроекСписокПараметровИмяПараметраКонтекстноеМеню" id="109"/>
 									<ExtendedTooltip name="ДеревоНастроекСписокПараметровИмяПараметраРасширеннаяПодсказка" id="110"/>
 								</InputField>
 								<InputField name="ДеревоНастроекСписокПараметровЗначение" id="111">
 									<DataPath>Items.ДеревоНастроек.CurrentData.СписокПараметров.Значение</DataPath>
 									<EditMode>EnterOnInput</EditMode>
+									<AutoEditMode>true</AutoEditMode>
 									<ClearButton>true</ClearButton>
 									<ContextMenu name="ДеревоНастроекСписокПараметровЗначениеКонтекстноеМеню" id="112"/>
 									<ExtendedTooltip name="ДеревоНастроекСписокПараметровЗначениеРасширеннаяПодсказка" id="113"/>
@@ -1083,6 +1148,7 @@
 			</ToolTip>
 			<Group>Horizontal</Group>
 			<Behavior>Usual</Behavior>
+			<Representation>WeakSeparation</Representation>
 			<ShowTitle>false</ShowTitle>
 			<ExtendedTooltip name="ГруппаВыполнениеРасширеннаяПодсказка" id="56"/>
 			<ChildItems>
@@ -1101,6 +1167,7 @@
 					</ToolTip>
 					<Group>Vertical</Group>
 					<Behavior>Usual</Behavior>
+					<Representation>WeakSeparation</Representation>
 					<ShowTitle>false</ShowTitle>
 					<ExtendedTooltip name="ВыполнениеВТекущейБазеРасширеннаяПодсказка" id="60"/>
 				</UsualGroup>
@@ -1162,7 +1229,9 @@
 								<xr:Ref>StdPicture.InputFieldSelect</xr:Ref>
 								<xr:LoadTransparent>true</xr:LoadTransparent>
 							</Picture>
+							<Group>Vertical</Group>
 							<ShowTitle>false</ShowTitle>
+							<ScrollOnCompress>false</ScrollOnCompress>
 							<ExtendedTooltip name="СтраницаРезультатаПоУмолчаниюРасширеннаяПодсказка" id="348"/>
 							<ChildItems>
 								<UsualGroup name="ГруппаРезультат" id="352">
@@ -1178,6 +1247,7 @@
 											<v8:content>Группа результат</v8:content>
 										</v8:item>
 									</ToolTip>
+									<Group>HorizontalIfPossible</Group>
 									<Behavior>Usual</Behavior>
 									<Representation>None</Representation>
 									<ShowTitle>false</ShowTitle>
@@ -1212,7 +1282,9 @@
 								<xr:Ref>StdPicture.ListViewModeList</xr:Ref>
 								<xr:LoadTransparent>true</xr:LoadTransparent>
 							</Picture>
+							<Group>Vertical</Group>
 							<ShowTitle>false</ShowTitle>
+							<ScrollOnCompress>false</ScrollOnCompress>
 							<ExtendedTooltip name="СтраницаТаблицаЗначенийРасширеннаяПодсказка" id="312"/>
 							<ChildItems>
 								<LabelDecoration name="ДекорацияНетДанныхСтраницаТаблицаЗначений" id="349">
@@ -1238,7 +1310,9 @@
 											<v8:content>Группа таблицы значений</v8:content>
 										</v8:item>
 									</ToolTip>
+									<Group>HorizontalIfPossible</Group>
 									<Behavior>Usual</Behavior>
+									<Representation>WeakSeparation</Representation>
 									<ShowTitle>false</ShowTitle>
 									<ExtendedTooltip name="ГруппаТаблицыЗначенийРасширеннаяПодсказка" id="317"/>
 								</UsualGroup>
@@ -1261,7 +1335,9 @@
 								<xr:Ref>StdPicture.ListViewModeTree</xr:Ref>
 								<xr:LoadTransparent>true</xr:LoadTransparent>
 							</Picture>
+							<Group>Vertical</Group>
 							<ShowTitle>false</ShowTitle>
+							<ScrollOnCompress>false</ScrollOnCompress>
 							<ExtendedTooltip name="СтраницаДеревоЗначенийРасширеннаяПодсказка" id="355"/>
 							<ChildItems>
 								<LabelDecoration name="ДекорацияНетДанныхСтраницаДеревоЗначений" id="356">
@@ -1287,7 +1363,9 @@
 											<v8:content>Группа таблицы значений</v8:content>
 										</v8:item>
 									</ToolTip>
+									<Group>HorizontalIfPossible</Group>
 									<Behavior>Usual</Behavior>
+									<Representation>WeakSeparation</Representation>
 									<ShowTitle>false</ShowTitle>
 									<ExtendedTooltip name="ГруппаДереваЗначенийРасширеннаяПодсказка" id="360"/>
 								</UsualGroup>
@@ -1304,7 +1382,9 @@
 								<xr:Ref>StdPicture.FixTable</xr:Ref>
 								<xr:LoadTransparent>true</xr:LoadTransparent>
 							</Picture>
+							<Group>Vertical</Group>
 							<ShowTitle>false</ShowTitle>
+							<ScrollOnCompress>false</ScrollOnCompress>
 							<ExtendedTooltip name="СтраницаТабличныйДокументРасширеннаяПодсказка" id="131"/>
 							<ChildItems>
 								<SpreadSheetDocumentField name="ТабличныйДокумент" id="125">
@@ -1349,7 +1429,9 @@
 								<xr:Ref>StdPicture.Chart</xr:Ref>
 								<xr:LoadTransparent>true</xr:LoadTransparent>
 							</Picture>
+							<Group>Vertical</Group>
 							<ShowTitle>false</ShowTitle>
+							<ScrollOnCompress>false</ScrollOnCompress>
 							<ExtendedTooltip name="СтраницаЗамерыРасширеннаяПодсказка" id="169"/>
 							<ChildItems>
 								<UsualGroup name="ГруппаЗамеры" id="229">
@@ -1367,10 +1449,15 @@
 									</ToolTip>
 									<Group>Horizontal</Group>
 									<Behavior>Usual</Behavior>
+									<Representation>WeakSeparation</Representation>
 									<ShowTitle>false</ShowTitle>
 									<ExtendedTooltip name="ГруппаЗамерыРасширеннаяПодсказка" id="230"/>
 									<ChildItems>
 										<Table name="Результаты" id="238">
+											<RowSelectionMode>Cell</RowSelectionMode>
+											<HorizontalLinesBWA>false</HorizontalLinesBWA>
+											<VerticalLinesBWA>false</VerticalLinesBWA>
+											<UseAlternationRowColorBWA>false</UseAlternationRowColorBWA>
 											<AutoInsertNewRow>true</AutoInsertNewRow>
 											<EnableStartDrag>true</EnableStartDrag>
 											<EnableDrag>true</EnableDrag>
@@ -1414,6 +1501,7 @@
 												<LabelField name="РезультатыНомерСтроки" id="251">
 													<DataPath>Объект.Результаты.LineNumber</DataPath>
 													<EditMode>EnterOnInput</EditMode>
+													<AutoEditMode>true</AutoEditMode>
 													<Width>2</Width>
 													<HorizontalStretch>false</HorizontalStretch>
 													<ContextMenu name="РезультатыНомерСтрокиКонтекстноеМеню" id="252"/>
@@ -1423,6 +1511,9 @@
 													<DataPath>Объект.Результаты.СтрокаВыполнения</DataPath>
 													<EditMode>EnterOnInput</EditMode>
 													<CellHyperlink>true</CellHyperlink>
+													<AutoEditMode>true</AutoEditMode>
+													<CellHyperlinkRepresentation>Show</CellHyperlinkRepresentation>
+													<CellHyperlinkDisplayVariant>Always</CellHyperlinkDisplayVariant>
 													<ContextMenu name="РезультатыСтрокаВыполненияКонтекстноеМеню" id="255"/>
 													<ExtendedTooltip name="РезультатыСтрокаВыполненияРасширеннаяПодсказка" id="256"/>
 												</InputField>
@@ -1438,6 +1529,7 @@
 													<HorizontalAlign>Right</HorizontalAlign>
 													<EditMode>EnterOnInput</EditMode>
 													<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
+													<AutoEditMode>true</AutoEditMode>
 													<ContextMenu name="РезультатыВремяВыполненияКонтекстноеМеню" id="267"/>
 													<ExtendedTooltip name="РезультатыВремяВыполненияРасширеннаяПодсказка" id="268"/>
 												</InputField>
@@ -1453,6 +1545,7 @@
 													<HorizontalAlign>Right</HorizontalAlign>
 													<EditMode>EnterOnInput</EditMode>
 													<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
+													<AutoEditMode>true</AutoEditMode>
 													<ContextMenu name="РезультатыВремяОбщееКонтекстноеМеню" id="275"/>
 													<ExtendedTooltip name="РезультатыВремяОбщееРасширеннаяПодсказка" id="276"/>
 												</InputField>
@@ -2374,6 +2467,7 @@
 			</Picture>
 			<Action>ДобавитьНастройку</Action>
 			<Representation>Picture</Representation>
+			<ModifiesSavedData>true</ModifiesSavedData>
 			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="Закомментировать" id="8">
@@ -2853,6 +2947,26 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ЗаменитьЗапрещенныеТипыТЗ</Action>
+		</Command>
+		<Command name="ДобавитьВложеннуюНастройку" id="34">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить вложенную настройку</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить вложенную настройку</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.CreateListItem</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ДобавитьВложеннуюНастройку</Action>
+			<ModifiesSavedData>true</ModifiesSavedData>
 		</Command>
 	</Commands>
 </Form>
