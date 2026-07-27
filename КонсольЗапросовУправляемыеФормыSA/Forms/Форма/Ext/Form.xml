@@ -130,6 +130,11 @@
 											<CommandName>Form.Command.ОткрытьРасположениеНастроек</CommandName>
 											<ExtendedTooltip name="ДеревоНастроекОткрытьРасположениеНастроекРасширеннаяПодсказка" id="430"/>
 										</Button>
+										<Button name="ПеречитатьНастройки" id="594">
+											<Type>CommandBarButton</Type>
+											<CommandName>Form.Command.ПеречитатьНастройки</CommandName>
+											<ExtendedTooltip name="ПеречитатьНастройкиРасширеннаяПодсказка" id="595"/>
+										</Button>
 										<Button name="ДеревоНастроекОбновитьПредопределенныеЗапросы" id="371">
 											<Type>CommandBarButton</Type>
 											<CommandName>Form.Command.ОбновитьПредопределенныеЗапросы</CommandName>
@@ -2967,6 +2972,25 @@
 			</Picture>
 			<Action>ДобавитьВложеннуюНастройку</Action>
 			<ModifiesSavedData>true</ModifiesSavedData>
+		</Command>
+		<Command name="ПеречитатьНастройки" id="35">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перечитать настройки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перечитать настройки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.RestoreValues</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ПеречитатьНастройки</Action>
 		</Command>
 	</Commands>
 </Form>
